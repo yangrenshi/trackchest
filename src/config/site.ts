@@ -3,17 +3,18 @@ import { SiteConfig } from "@/types";
 /**
  * ==============================================================================
  * TrackChest 全站核心配置 (Single Source of Truth)
- * 品牌名: TrackChest (严禁使用侵权词 "Chest Tracker" 作为商标)
+ * 域名统一为非 www: https://trackchest.com (与 Cloudflare 301 重定向终点完全一致)
  * 核心词: chest tracker fortnite (KD 19.4)
  * ==============================================================================
  */
 export const siteConfig: SiteConfig = {
-  // 1. 品牌与域名基础信息
+  // 1. 品牌与域名基础信息 (全站统一为非 www)
   name: "TrackChest",
-  tagline: "Fortnite Chest Tracker — Free Online Chest Counter",
-  description: "Track every chest you open in Fortnite. Free online chest tracker and counter for solos or squads — no login, no Epic account. See your totals, milestones and Pirate Token odds.",
+  tagline: "Free Online Fortnite Chest Counter & Tracker",
+  // 精确控制在 145~155 字符之间，杜绝 Google SERP 截断
+  description: "Track every chest you open in Fortnite. Free online chest tracker & counter for solos or squads — no login, no Epic account needed.",
   domain: "trackchest.com",
-  url: "https://www.trackchest.com",
+  url: "https://trackchest.com",
   author: "TrackChest Studio",
   dashboardStyle: "lite" as "pro" | "lite",
   databaseProvider: "d1" as "d1" | "supabase",
@@ -23,14 +24,14 @@ export const siteConfig: SiteConfig = {
   refundEmail: "support@trackchest.com",
   companyAddress: "Independent Fan Project • Fortnite Community Tools",
   
-  // 3. 统计分析
-  gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-XXXXXXXXXX",
+  // 3. 统计分析 (如果未配置真实 ID 则不渲染，杜绝 G-XXXXXXXXXX 占位符暴露)
+  gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "",
   googleClientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "",
   
   // 4. 社交媒体与开源社区
   socials: {
     twitter: "https://x.com/trackchest",
-    github: "https://github.com/trackchest/trackchest",
+    github: "https://github.com/yangrenshi/trackchest",
     producthunt: "https://www.producthunt.com/products/trackchest",
   },
   
@@ -44,11 +45,11 @@ export const siteConfig: SiteConfig = {
     {
       icon: "ShieldCheck",
       title: "No Epic Login Required",
-      description: "100% safe. We never ask for your Epic Games login, password, or account credentials. Zero risk of account bans or credential leaks.",
+      description: "100% safe. We never ask for your Epic Games login, password, or credentials. Zero risk of account bans or leaks.",
     },
     {
       icon: "Layers",
-      title: "Multi-Rarity Breakdown",
+      title: "Multi-Rarity Classification",
       description: "Accurately log Regular Chests, Rare/Mythic Chests, Sprite Chests, Pirate Token chests, and Bunkers with one tap.",
     },
     {
@@ -68,11 +69,11 @@ export const siteConfig: SiteConfig = {
     },
   ],
   
-  // 6. 定价方案 (当前 100% 免费)
+  // 6. 定价方案 (第一阶段纯粹 100% 免费)
   pricing: [
     {
       id: "free",
-      name: "Community Free",
+      name: "Community Free Pass",
       price: "$0",
       period: "forever",
       description: "Everything you need to track solo chest routes and daily loot milestones",
@@ -89,43 +90,9 @@ export const siteConfig: SiteConfig = {
       buttonText: "Start Tracking Free",
       buttonHref: "/#tracker-app",
     },
-    {
-      id: "squad_pass",
-      name: "Squad Sync (Phase 2)",
-      price: "$2.99",
-      period: "/month",
-      description: "Collaborative live room sync for competitive 4-player squads",
-      credits: 99999,
-      features: [
-        "All Community Free features",
-        "Shared 4-player squad live room",
-        "5-second auto real-time sync",
-        "POI route heatmaps (Coming soon)",
-        "Ad-free clean gaming layout",
-      ],
-      isPopular: false,
-      buttonText: "Coming in Season 2",
-      buttonHref: "/#tracker-app",
-    },
-    {
-      id: "lifetime",
-      name: "Founder Pass",
-      price: "$9.99",
-      period: "one-time",
-      description: "Support community tool development with permanent squad access",
-      credits: 99999,
-      features: [
-        "Lifetime squad sync rooms",
-        "Early access to Pirate Token odds tools",
-        "Discord VIP badge & direct roadmap voting",
-      ],
-      isPopular: false,
-      buttonText: "Coming Soon",
-      buttonHref: "/#tracker-app",
-    },
   ],
   
-  // 7. FAQ 玩家深度问答 (注入 FAQPage Schema)
+  // 7. FAQ 玩家深度问答 (注入 FAQPage Schema 并完整输出于 HTML)
   faqs: [
     {
       q: "Is TrackChest affiliated with Epic Games or Fortnite?",
@@ -160,7 +127,7 @@ export const siteConfig: SiteConfig = {
     {
       q: "Will my chest counts be lost if I refresh or close the tab?",
       a: "No. TrackChest continuously saves your state to your device's LocalStorage. Even if you restart your phone or close the browser, your daily total, personal best, and all-time records remain intact. You can also use the 'Backup' button to export a JSON file anytime.",
-      question: "Will my chest counts be lost if My tab refreshes?",
+      question: "Will my chest counts be lost if I refresh or close the tab?",
       answer: "No. TrackChest continuously saves your state to your device's LocalStorage. Even if you restart your phone or close the browser, your daily total, personal best, and all-time records remain intact. You can also use the 'Backup' button to export a JSON file anytime.",
     },
   ],

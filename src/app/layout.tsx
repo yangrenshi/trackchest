@@ -13,18 +13,17 @@ export const metadata: Metadata = {
     template: "%s | TrackChest",
   },
   description: siteConfig.description,
-  keywords: [
-    "chest tracker fortnite",
-    "fortnite chest tracker",
-    "chest counter fortnite",
-    "fortnite chest counter",
-    "pirate token odds",
-    "how to check how many chests you opened in fortnite",
-    "fortnite chest map",
-    "fortnite chest spawns",
-  ],
   alternates: {
     canonical: siteConfig.url,
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   authors: [{ name: "TrackChest Studio", url: siteConfig.url }],
   creator: "TrackChest Studio",
@@ -90,10 +89,16 @@ export default function RootLayout({
     })),
   };
 
+  // 只有当环境变量配置了真实的 GA4 ID（非占位符）时才注入脚本
+  const hasValidGA =
+    siteConfig.gaMeasurementId &&
+    siteConfig.gaMeasurementId.startsWith("G-") &&
+    siteConfig.gaMeasurementId !== "G-XXXXXXXXXX";
+
   return (
     <html lang="en" className="scroll-smooth dark">
       <head>
-        {/* Google Fonts: Chakra Petch & Rajdhani for Tactical Esports Aesthetics */}
+        {/* Google Fonts: Chakra Petch & Rajdhani */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -111,8 +116,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
-        {/* Google Analytics 4 */}
-        {siteConfig.gaMeasurementId && (
+
+        {/* Google Analytics 4 (仅有效 ID 加载) */}
+        {hasValidGA && (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gaMeasurementId}`}

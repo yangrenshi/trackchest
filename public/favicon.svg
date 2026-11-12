@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Shield -->
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#07090E" stroke="#F59E0B" stroke-width="2"/>
+  <!-- Chest Body -->
+  <path d="M12 26 H52 V48 C52 51 50 53 47 53 H17 C14 53 12 51 12 48 Z" fill="url(#gold)"/>
+  <!-- Chest Lid -->
+  <path d="M12 24 C12 18 16 13 22 13 H42 C48 13 52 18 52 24 V26 H12 Z" fill="url(#gold)"/>
+  <!-- Lock Buckle -->
+  <rect x="27" y="22" width="10" height="12" rx="3" fill="#0F172A" stroke="#FEF08A" stroke-width="1.5"/>
+  <circle cx="32" cy="27" r="1.5" fill="#FDE047"/>
+</svg>

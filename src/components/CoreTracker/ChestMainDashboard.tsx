@@ -127,17 +127,6 @@ export function ChestMainDashboard() {
     setTimeout(() => setCopiedShare(false), 2000);
   };
 
-  if (!isLoaded) {
-    return (
-      <div className="w-full max-w-4xl mx-auto p-12 rounded-3xl bg-void-900/80 border border-slate-800 animate-pulse text-center">
-        <div className="w-12 h-12 mx-auto rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3">
-          <Box className="w-6 h-6 animate-spin" />
-        </div>
-        <p className="text-sm font-tech uppercase tracking-widest text-amber-400">Arming TrackChest Reactor...</p>
-      </div>
-    );
-  }
-
   // 下一个里程碑进度
   const nextMilestone = MILESTONES.find((m) => m > state.todayTotal) || 1000;
   const progressPercent = Math.min(100, Math.round((state.todayTotal / nextMilestone) * 100));

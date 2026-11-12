@@ -21,11 +21,13 @@ export function HeroSection() {
           </span>
         </div>
 
-        {/* H1 核心词绝对主轴 (带金色金属发光) */}
+        {/* H1 核心词绝对主轴 (包含完整词组 Fortnite Chest Tracker) */}
         <h1 className="font-tech text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-white leading-none mb-4">
-          TRACK EVERY CHEST YOU OPEN IN{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-500 text-glow-gold">
-            FORTNITE
+            FORTNITE CHEST TRACKER
+          </span>
+          <span className="block text-2xl sm:text-3xl md:text-4xl text-slate-200 font-bold mt-2 tracking-normal">
+            Track Every Chest You Open
           </span>
         </h1>
 

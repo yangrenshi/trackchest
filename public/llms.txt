@@ -1,0 +1,14 @@
+# VideoToQuiz AI / Universal SaaS
+> Turn Any YouTube Video or Learning Resource into Interactive Quizzes & Flashcards in 10s.
+
+## Core Features
+- Automatic transcript and caption extraction
+- Academic-level question generation with explanations
+- One-click Anki (.apkg) & Markdown export
+- Lifetime access and flexible credit bundles
+
+## Technical Architecture
+- Framework: Next.js 15 (App Router) + React 19 + TypeScript
+- Styling: Tailwind CSS
+- Payment: Compliant Merchant of Record with Visa/Mastercard/Apple Pay
+- Privacy: GDPR & CCPA compliant

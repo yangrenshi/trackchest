@@ -26,6 +26,19 @@ export const metadata: Metadata = {
 };
 
 export default function ChestTypesPage() {
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Fortnite Chest Types & Rarities Encyclopedia",
+    description: "Overview of all active chest variants and rarities in Fortnite Battle Royale.",
+    itemListElement: CHEST_TYPES.map((chest, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: chest.name,
+      description: `${chest.rarity} tier chest: ${chest.typicalLoot}. ${chest.oddsNote}`,
+    })),
+  };
+
   const getRarityClass = (rarity: string) => {
     switch (rarity) {
       case "Common":
@@ -45,6 +58,11 @@ export default function ChestTypesPage() {
 
   return (
     <div className="py-10 px-4 max-w-4xl mx-auto space-y-10 text-sm text-[#d4d4d4]">
+      {/* 专享 ItemList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <div>
         <Link
           href="/"

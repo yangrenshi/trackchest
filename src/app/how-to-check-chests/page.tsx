@@ -25,8 +25,40 @@ export const metadata: Metadata = {
 };
 
 export default function HowToCheckChestsPage() {
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Check How Many Chests You Opened in Fortnite",
+    description: "Step-by-step guide to finding your chest opening statistics in Fortnite Battle Royale.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Check Seasonal Milestones Tab",
+        text: "Launch Fortnite, open the Quests menu from the Lobby, choose Milestones, and check the Search Chests or Ammo Boxes counter.",
+        url: `${siteConfig.url}/how-to-check-chests#step-1`,
+      },
+      {
+        "@type": "HowToStep",
+        name: "Inspect Post-Match Accolades",
+        text: "After each match, view the post-match summary for Chest Specialist (7+ chests) or Chest Expert (12+ chests) accolades.",
+        url: `${siteConfig.url}/how-to-check-chests#step-2`,
+      },
+      {
+        "@type": "HowToStep",
+        name: "Use Live Companion Tracker",
+        text: "Use TrackChest alongside your match on a second screen or mobile device to record opens instantly.",
+        url: `${siteConfig.url}/how-to-check-chests#step-3`,
+      },
+    ],
+  };
+
   return (
     <article className="py-10 px-4 max-w-3xl mx-auto space-y-8 leading-relaxed text-sm text-[#d4d4d4]">
+      {/* 专享 HowTo JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       <div>
         <Link
           href="/"

@@ -2,60 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 248, 250, 252;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 248, 250, 252;
-    --background-start-rgb: 15, 23, 42;
-    --background-end-rgb: 2, 6, 23;
+    --bg-void: #07090e;
+    --bg-surface: #0d121d;
+    --bg-card: #131926;
+    --accent-gold: #f59e0b;
+    --accent-glow: rgba(245, 158, 11, 0.35);
+  }
+
+  body {
+    background-color: var(--bg-void);
+    color: #f1f5f9;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  min-height: 100vh;
+/* 战术网格与微纹理 */
+.tactical-grid-bg {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
 }
 
-/* Custom scrollbar */
+.tactical-dots {
+  background-image: radial-gradient(rgba(245, 158, 11, 0.18) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* 霓虹发光滤镜 */
+.glow-gold {
+  box-shadow: 0 0 25px -3px rgba(245, 158, 11, 0.4), 0 0 10px -2px rgba(251, 191, 36, 0.3);
+}
+
+.glow-gold-lg {
+  box-shadow: 0 0 45px -5px rgba(245, 158, 11, 0.5), 0 0 20px -2px rgba(251, 191, 36, 0.4), inset 0 0 20px rgba(254, 240, 138, 0.2);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px -3px rgba(56, 189, 248, 0.4);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.6), 0 0 25px rgba(251, 191, 36, 0.3);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+/* 战术切角美学 */
+.clip-tactical {
+  clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);
+}
+
+.clip-corner-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+}
+
+.clip-corner-tl-br {
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+
+/* 粒子浮动上升动效 */
+@keyframes float-up-fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-55px) scale(1.2);
+  }
+}
+
+.animate-float-up {
+  animation: float-up-fade 0.75s ease-out forwards;
+}
+
+/* 呼吸式光晕扫描 */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 连击爆发震颤 */
+@keyframes shake-mild {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px) rotate(-0.5deg); }
+  75% { transform: translateX(2px) rotate(0.5deg); }
+}
+
+.animate-shake {
+  animation: shake-mild 0.15s ease-in-out;
+}
+
+/* 滚动条 */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #07090e;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
+  background: #1e293b;
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* 关键词密度防护工具类: 通过 CSS content 渲染列表重复按钮，规避爬虫词频稀释 */
-.btn-action-play::after {
-  content: "Play Now";
-}
-.btn-action-convert::after {
-  content: "Convert";
-}
-.btn-action-generate::after {
-  content: "Generate";
-}
-.btn-action-download::after {
-  content: "Download";
-}
-.btn-action-try::after {
-  content: "Try Free";
+  background: #f59e0b;
 }

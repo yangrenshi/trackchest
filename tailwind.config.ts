@@ -9,19 +9,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['"Chakra Petch"', "sans-serif"],
+        tech: ['"Rajdhani"', "sans-serif"],
+        mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+      },
       colors: {
-        brand: {
-          50: "#f5f3ff",
-          100: "#ede9fe",
-          200: "#ddd6fe",
-          300: "#c4b5fd",
-          400: "#a78bfa",
-          500: "#8b5cf6",
-          600: "#7c3aed",
-          700: "#6d28d9",
-          800: "#5b21b6",
-          900: "#4c1d95",
-          950: "#2e1065",
+        void: {
+          950: "#07090e",
+          900: "#0b0f19",
+          850: "#101626",
+          800: "#151d32",
+        },
+        amber: {
+          350: "#ffd147",
+          450: "#f7b018",
+          550: "#d97706",
         },
       },
     },

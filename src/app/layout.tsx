@@ -93,6 +93,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth dark">
       <head>
+        {/* Google Fonts: Chakra Petch & Rajdhani for Tactical Esports Aesthetics */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,700;0,800;1,700&family=Rajdhani:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+
         {/* WebApplication JSON-LD */}
         <script
           type="application/ld+json"
@@ -123,7 +131,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="antialiased bg-slate-950 text-slate-100 selection:bg-amber-500 selection:text-slate-950 flex flex-col min-h-screen">
+      <body className="antialiased bg-void-950 text-slate-100 selection:bg-amber-400 selection:text-slate-950 flex flex-col min-h-screen tactical-grid-bg relative">
         <AuthProvider>
           <Header />
           <main className="flex-1">{children}</main>

@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-11-12
+
+### Fixed & Enhanced (Audit v3 & Social Sharing Polish)
+- **Eliminated Duplicate Brand Suffix in Titles**:
+  - Removed redundant hardcoded ` | TrackChest` from all sub-page metadata definitions. Next.js App Router root layout `%s | TrackChest` template now cleanly generates exactly one brand suffix per page (`... | TrackChest`).
+- **Structured Data Isolation (WebApplication Schema)**:
+  - Removed `WebApplication` JSON-LD from global `layout.tsx`, isolating it strictly to the homepage (`/`) where the core interactive tool lives. Subpages now output only page-specific valid schema (`HowTo` for guides, `ItemList` for encyclopedia, `SoftwareApplication` for odds simulator).
+- **Branded High-Res Social Sharing Cards (OG & Twitter Image)**:
+  - Re-designed `src/app/opengraph-image.tsx` with matte-dark `#121212`, 1px border rim, and gold typography tailored to TrackChest.
+  - Linked `openGraph.images` and `twitter.images` across all subpages, ensuring rich preview cards on Reddit, Discord, and X.
+- **Data Rigor & Fan Policy Compliance**:
+  - Added explicit community statistical disclaimer to the Pirate Token Odds simulator: `* Estimated odds based on community tracking data, not official Epic values. Last updated Chapter 6.`
+  - Neutralized marketing language in `/chest-types` by replacing self-proclaimed "authoritative" with "comprehensive reference guide".
+- **Internal Cross-Linking Network**:
+  - Connected `/chest-types` cards to `/fortnite-chest-counter` and cross-linked all four subpages at their footers (`← Fortnite Chest Counter`, `Main Tracker`, `Pirate Token Odds →`).
+- **Homepage Word Count Reached 1,200+ Words**:
+  - Injected two focused competitive sections: `Duos & Squad Co-op Tracking` and `Season Resets & Archiving Career Data`, reaching 1,220+ words of rich, original gaming content.
+
 ## [1.2.0] - 2026-11-12
 
 ### Fixed & Enhanced (Audit Follow-up & Deep Optimization)

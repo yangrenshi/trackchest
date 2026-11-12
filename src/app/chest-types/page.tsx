@@ -6,10 +6,22 @@ import { CHEST_TYPES } from "@/config/chestTypes";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot",
+  title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot | TrackChest",
   description: "Complete guide to all Fortnite chest types. Learn spawn rates, guaranteed loot tiers, and optimal drop spots for Standard, Rare, Sprite, and Vault chests.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
+  },
+  openGraph: {
+    title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot",
+    description: "Complete guide to all Fortnite chest types: Standard, Rare, Sprite, and Vault chests.",
+    url: `${siteConfig.url}/chest-types`,
+    siteName: siteConfig.name,
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fortnite Chest Types Encyclopedia",
+    description: "Learn spawn rates and guaranteed drops across all Fortnite chest rarities.",
   },
 };
 

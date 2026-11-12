@@ -48,7 +48,7 @@ export function ComparisonTable() {
     <section id="comparison" className="py-12 px-4 max-w-4xl mx-auto scroll-mt-16">
       <div className="mb-6">
         <h2 className="text-xl sm:text-2xl font-bold text-white">
-          Fortnite Chest Types &amp; Spawn Odds
+          Fortnite Chest Tracker: Chest Types &amp; Spawn Odds
         </h2>
         <p className="text-sm text-[#9a9a9a] mt-1">
           Spawn frequencies, guaranteed loot tiers, and optimal POI locations across Chapter 6.

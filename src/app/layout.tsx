@@ -75,20 +75,6 @@ export default function RootLayout({
     ],
   };
 
-  // 2. FAQPage 结构化数据
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: siteConfig.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question || faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer || faq.a,
-      },
-    })),
-  };
-
   const hasValidGA =
     siteConfig.gaMeasurementId &&
     siteConfig.gaMeasurementId.startsWith("G-") &&
@@ -109,11 +95,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
-        />
-        {/* FAQPage JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
 
         {/* Google Analytics 4 */}

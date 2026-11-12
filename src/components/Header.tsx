@@ -42,12 +42,12 @@ export function Header() {
 
         {/* Action */}
         <div className="hidden sm:flex items-center space-x-2">
-          <a
-            href="#tracker-app"
+          <Link
+            href="/#tracker-app"
             className="px-3.5 py-1.5 rounded-lg bg-[#ffc93c] hover:bg-[#ffd766] text-[#121212] font-semibold text-xs transition-colors btn-press"
           >
             Open Counter
-          </a>
+          </Link>
         </div>
 
         {/* Mobile menu toggle */}

@@ -2,21 +2,32 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { CHEST_TYPES } from "@/config/chestTypes";
-import { CoreToolSlot } from "@/components/CoreToolSlot";
+import { CategorizedCounterView } from "@/components/CategorizedCounterView";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Counter — Categorized Multi-Chest Counter",
-  description: "Free Fortnite chest counter tool. Track standard, rare, and event chests by category with instant tap counting for solos and competitive teams.",
+  title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter | TrackChest",
+  description: "Dedicated 4-column Fortnite chest counter. Track Standard, Rare, Sprite, and Vault chests in parallel columns with instant tap buttons.",
   alternates: {
     canonical: `${siteConfig.url}/fortnite-chest-counter`,
+  },
+  openGraph: {
+    title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
+    description: "Dedicated 4-column Fortnite chest counter. Track Standard, Rare, Sprite, and Vault chests in parallel columns.",
+    url: `${siteConfig.url}/fortnite-chest-counter`,
+    siteName: siteConfig.name,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
+    description: "Dedicated 4-column Fortnite chest counter for competitive players.",
   },
 };
 
 export default function ChestCounterPage() {
   return (
-    <div className="py-10 px-4 max-w-4xl mx-auto space-y-10">
+    <div className="py-10 px-4 max-w-4xl mx-auto space-y-10 text-sm text-[#d4d4d4]">
       <div>
         <Link
           href="/"
@@ -29,40 +40,37 @@ export default function ChestCounterPage() {
 
       <div className="space-y-2">
         <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
-          Categorized Multi-Crate Counter
+          4-Column Parallel Tally
         </span>
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
           Fortnite Chest Counter
         </h1>
-        <p className="text-sm text-[#9a9a9a] max-w-2xl">
-          Log your opened crates categorized by rarity tiers to calculate your drop rate efficiency and shield probability.
+        <p className="text-xs text-[#9a9a9a]">
+          Independent multi-column counter designed for players tracking specific crate categories simultaneously.
         </p>
       </div>
 
-      <CoreToolSlot />
+      {/* 专享四列独立大按键分栏计数台 */}
+      <CategorizedCounterView />
 
-      <section className="p-6 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-4">
-        <h2 className="text-lg font-bold text-white">
-          Why Use a Categorized Chest Counter Over a Generic Tally?
+      {/* 专属科普知识 */}
+      <section className="p-6 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-3">
+        <h2 className="text-base font-bold text-white">
+          Why Use a Multi-Column Counter Over a Single Button?
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          Standard tally counters only record a single total. In modern competitive Fortnite, knowing whether you opened 5 standard chests or 3 rare chests determines your expected shield and surge firepower. 
-          Our categorized counter splits counts between:
+          While our homepage focuses on zero-distraction solo speed-tapping, competitive duo and squad teams often assign players specific POI sections (e.g. Player 1 loots standard attics, Player 2 cracks open the underground vault).
+        </p>
+        <p className="text-xs text-[#9a9a9a] leading-relaxed">
+          With this 4-column categorized counter, your team maintains exact tallies across all four major container rarities without losing individual breakdowns.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-          {CHEST_TYPES.map((t) => (
-            <div key={t.id} className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e] space-y-1">
-              <span className="font-semibold text-white block">{t.name}</span>
-              <p className="text-[#9a9a9a] text-[11px]">{t.typicalLoot}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="pt-3 border-t border-[#2e2e2e] flex items-center justify-between text-xs text-[#9a9a9a]">
-          <span>Explore our full companion suite:</span>
+        <div className="pt-3 border-t border-[#2e2e2e] flex items-center justify-between text-xs">
           <Link href="/" className="text-[#ffc93c] hover:underline">
-            &larr; Return to Home Tracker
+            &larr; Return to Single-Button Tracker
+          </Link>
+          <Link href="/chest-types" className="text-[#9a9a9a] hover:text-white underline">
+            View Chest Types Encyclopedia &rarr;
           </Link>
         </div>
       </section>

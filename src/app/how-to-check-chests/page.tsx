@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How to Check How Many Chests You Opened in Fortnite (Full Guide) | TrackChest",
+  title: "How to Check How Many Chests You Opened in Fortnite (Full Guide)",
   description: "Learn how to check how many chests you opened in Fortnite. Step-by-step tutorial on viewing milestone quests, match accolades, and live companion tracking.",
   alternates: {
     canonical: `${siteConfig.url}/how-to-check-chests`,
@@ -16,11 +16,20 @@ export const metadata: Metadata = {
     url: `${siteConfig.url}/how-to-check-chests`,
     siteName: siteConfig.name,
     type: "article",
+    images: [
+      {
+        url: `${siteConfig.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "How to Check Chests in Fortnite — TrackChest Guide",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "How to Check How Many Chests You Opened in Fortnite",
     description: "Find out how many chests you have searched across Battle Royale seasons.",
+    images: [`${siteConfig.url}/opengraph-image`],
   },
 };
 

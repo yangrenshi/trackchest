@@ -6,7 +6,7 @@ import { CHEST_TYPES } from "@/config/chestTypes";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot | TrackChest",
+  title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot",
   description: "Complete guide to all Fortnite chest types. Learn spawn rates, guaranteed loot tiers, and optimal drop spots for Standard, Rare, Sprite, and Vault chests.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
@@ -17,11 +17,20 @@ export const metadata: Metadata = {
     url: `${siteConfig.url}/chest-types`,
     siteName: siteConfig.name,
     type: "article",
+    images: [
+      {
+        url: `${siteConfig.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "Fortnite Chest Types Encyclopedia — TrackChest",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Chest Types Encyclopedia",
+    title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot",
     description: "Learn spawn rates and guaranteed drops across all Fortnite chest rarities.",
+    images: [`${siteConfig.url}/opengraph-image`],
   },
 };
 
@@ -81,7 +90,7 @@ export default function ChestTypesPage() {
           Fortnite Chest Types &amp; Rarities
         </h1>
         <p className="text-xs text-[#9a9a9a]">
-          An authoritative reference to every chest variant currently active in Fortnite Battle Royale Chapter 6.
+          Comprehensive reference guide to all chest variants and spawn tiers in Fortnite Chapter 6.
         </p>
       </div>
 
@@ -89,6 +98,7 @@ export default function ChestTypesPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         {CHEST_TYPES.map((chest) => {
           const rarityClass = getRarityClass(chest.rarity);
+          const destinationUrl = chest.id === "regular" ? "/#tracker-app" : "/fortnite-chest-counter";
 
           return (
             <div
@@ -110,10 +120,10 @@ export default function ChestTypesPage() {
 
               <div className="pt-2 border-t border-white/10 flex justify-end">
                 <Link
-                  href="/#tracker-app"
+                  href={destinationUrl}
                   className="text-xs text-[#ffc93c] hover:underline font-medium"
                 >
-                  Track in Live Counter &rarr;
+                  {chest.id === "regular" ? "Track in Single Counter →" : "Track in 4-Column Counter →"}
                 </Link>
               </div>
             </div>
@@ -121,9 +131,12 @@ export default function ChestTypesPage() {
         })}
       </div>
 
-      <div className="pt-6 border-t border-[#2e2e2e] flex items-center justify-between text-xs">
-        <Link href="/" className="text-[#ffc93c] hover:underline">
-          &larr; Back to Main Tracker
+      <div className="pt-6 border-t border-[#2e2e2e] flex flex-wrap items-center justify-between gap-3 text-xs">
+        <Link href="/fortnite-chest-counter" className="text-[#9a9a9a] hover:text-white underline">
+          &larr; Fortnite Chest Counter
+        </Link>
+        <Link href="/" className="text-[#ffc93c] hover:underline font-medium">
+          Main Tracker
         </Link>
         <Link href="/pirate-token-odds" className="text-[#9a9a9a] hover:text-white underline">
           Pirate Token Odds &rarr;

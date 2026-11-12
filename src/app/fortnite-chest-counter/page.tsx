@@ -6,7 +6,7 @@ import { CategorizedCounterView } from "@/components/CategorizedCounterView";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter | TrackChest",
+  title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
   description: "Dedicated 4-column Fortnite chest counter. Track Standard, Rare, Sprite, and Vault chests in parallel columns with instant tap buttons.",
   alternates: {
     canonical: `${siteConfig.url}/fortnite-chest-counter`,
@@ -17,11 +17,20 @@ export const metadata: Metadata = {
     url: `${siteConfig.url}/fortnite-chest-counter`,
     siteName: siteConfig.name,
     type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "Fortnite Chest Counter — TrackChest 4-Column Tool",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
     description: "Dedicated 4-column Fortnite chest counter for competitive players.",
+    images: [`${siteConfig.url}/opengraph-image`],
   },
 };
 

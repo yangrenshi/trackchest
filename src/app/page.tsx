@@ -10,6 +10,29 @@ import { FaqSection } from "@/components/FaqSection";
 import { SeoContentSection } from "@/components/SeoContentSection";
 
 export default function HomePage() {
+  // 首页专享 WebApplication 结构化数据 (核心应用根路径)
+  const webAppSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "TrackChest - Fortnite Chest Tracker",
+    url: siteConfig.url,
+    applicationCategory: "GameApplication",
+    operatingSystem: "All",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    description: siteConfig.description,
+    featureList: [
+      "Real-time tap counter for Fortnite chests",
+      "Categorized tracking for Regular, Rare, Sprite, and Vault chests",
+      "Session, Daily, and All-Time career totals",
+      "LocalStorage offline persistence",
+      "Zero login or Epic Games account required",
+    ],
+  };
+
   // 首页专享 FAQPage 结构化数据 (与正文 6 条问答严格一致)
   const faqSchema = {
     "@context": "https://schema.org",
@@ -26,6 +49,12 @@ export default function HomePage() {
 
   return (
     <div>
+      {/* 首页专享 WebApplication JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+      />
+
       {/* 首页专享 FAQPage JSON-LD */}
       <script
         type="application/ld+json"

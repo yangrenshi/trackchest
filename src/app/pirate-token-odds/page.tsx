@@ -6,7 +6,7 @@ import { PirateTokenCalculator } from "@/components/PirateTokenCalculator";
 import { ArrowLeft, Compass, CheckCircle2, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Pirate Token Odds Calculator — Fortnite Chest Drop Rates | TrackChest",
+  title: "Pirate Token Odds Calculator — Fortnite Chest Drop Rates",
   description: "Calculate exact drop odds for Fortnite Pirate Token chests, Buried Treasure maps, and Medallion vaults. Chapter 6 updated loot odds simulator.",
   alternates: {
     canonical: `${siteConfig.url}/pirate-token-odds`,
@@ -17,17 +17,46 @@ export const metadata: Metadata = {
     url: `${siteConfig.url}/pirate-token-odds`,
     siteName: siteConfig.name,
     type: "article",
+    images: [
+      {
+        url: `${siteConfig.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "Pirate Token Odds Calculator — TrackChest",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pirate Token Odds Calculator — Fortnite Chest Drop Rates",
     description: "Calculate exact drop odds for Fortnite Pirate Token chests and Buried Treasure maps.",
+    images: [`${siteConfig.url}/opengraph-image`],
   },
 };
 
 export default function PirateTokenOddsPage() {
+  const calculatorSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Fortnite Pirate Token Odds Calculator",
+    applicationCategory: "GameApplication",
+    operatingSystem: "All",
+    url: `${siteConfig.url}/pirate-token-odds`,
+    description: "Statistical loot probability calculator for Fortnite Pirate Token crates and Buried Treasure maps.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
     <div className="py-10 px-4 max-w-3xl mx-auto space-y-10 text-sm text-[#d4d4d4]">
+      {/* 专享 SoftwareApplication JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorSchema) }}
+      />
       <div>
         <Link
           href="/"

@@ -34,12 +34,21 @@ export const metadata: Metadata = {
     title: "Fortnite Chest Tracker — Free Online Chest Counter",
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "Fortnite Chest Tracker — TrackChest",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Fortnite Chest Tracker — Free Online Chest Counter",
     description: siteConfig.description,
     creator: "@trackchest",
+    images: [`${siteConfig.url}/opengraph-image`],
   },
   robots: {
     index: true,
@@ -52,29 +61,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // 1. WebApplication 结构化数据
-  const webAppSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "TrackChest - Fortnite Chest Tracker",
-    url: siteConfig.url,
-    applicationCategory: "GameApplication",
-    operatingSystem: "All",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-    description: siteConfig.description,
-    featureList: [
-      "Real-time tap counter for Fortnite chests",
-      "Categorized tracking for Regular, Rare, Sprite, and Vault chests",
-      "Session, Daily, and All-Time career totals",
-      "LocalStorage offline persistence",
-      "Zero login or Epic Games account required",
-    ],
-  };
-
   const hasValidGA =
     siteConfig.gaMeasurementId &&
     siteConfig.gaMeasurementId.startsWith("G-") &&
@@ -89,12 +75,6 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
-        />
-
-        {/* WebApplication JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
         />
 
         {/* Google Analytics 4 */}

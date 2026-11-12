@@ -54,6 +54,29 @@ export function SeoContentSection() {
         </ol>
       </section>
 
+      {/* 章节 2.5: 组队协同与赛季保留 */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section className="p-5 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2.5">
+          <h3 className="text-sm font-bold text-white flex items-center space-x-2">
+            <span className="w-2 h-2 rounded-full bg-[#ffc93c]"></span>
+            <span>Duos &amp; Squad Co-op Tracking</span>
+          </h3>
+          <p className="text-xs text-[#9a9a9a] leading-relaxed">
+            In competitive team modes, assign designated POI zones to each squad member (e.g. Player 1 sweeps roof attics, Player 2 loots the vault basement). Because TrackChest runs entirely client-side without account lockouts, each teammate keeps a browser tab open to log their sector. Before rotating to zone, the IGL quickly tallies total squad containers to confirm whether shield and surge rifle quotas are met.
+          </p>
+        </section>
+
+        <section className="p-5 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2.5">
+          <h3 className="text-sm font-bold text-white flex items-center space-x-2">
+            <span className="w-2 h-2 rounded-full bg-[#49d6ff]"></span>
+            <span>Season Resets &amp; Archiving Career Data</span>
+          </h3>
+          <p className="text-xs text-[#9a9a9a] leading-relaxed">
+            Whenever Epic Games rolls out a new Fortnite season, in-game milestone quests reset to zero, wiping your seasonal container tally. With TrackChest, your career logs stay safely preserved in browser LocalStorage. Use the built-in &ldquo;Backup&rdquo; button at the end of each season to export your historical JSON snapshot, allowing you to archive lifetime chest milestones across all Chapters.
+          </p>
+        </section>
+      </div>
+
       {/* 章节 3: 内链导航 */}
       <section className="space-y-3 pt-2">
         <h3 className="text-base font-bold text-white">

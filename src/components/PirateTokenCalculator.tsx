@@ -107,6 +107,12 @@ export function PirateTokenCalculator() {
           <span className="text-2xl font-bold font-mono text-white tnum">~{odds.goldAverage}</span>
         </div>
       </div>
+
+      <div className="pt-2 text-center sm:text-left">
+        <p className="text-[11px] text-[#888]">
+          * Estimated odds based on community tracking data, not official Epic values. Last updated Chapter 6.
+        </p>
+      </div>
     </div>
   );
 }

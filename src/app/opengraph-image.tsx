@@ -14,7 +14,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)",
+          background: "#121212",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -23,67 +23,90 @@ export default async function Image() {
           justifyContent: "center",
           padding: "60px",
           fontFamily: "sans-serif",
+          position: "relative",
         }}
       >
+        {/* 外框高光边 */}
+        <div
+          style={{
+            position: "absolute",
+            inset: "20px",
+            border: "1px solid #2e2e2e",
+            borderRadius: "24px",
+            pointerEvents: "none",
+          }}
+        />
+
+        {/* 顶部标签 */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "12px",
-            background: "rgba(99, 102, 241, 0.15)",
-            border: "1px solid rgba(129, 140, 248, 0.3)",
+            gap: "10px",
+            background: "#1d1d1d",
+            border: "1px solid #2e2e2e",
             borderRadius: "9999px",
-            padding: "8px 24px",
-            color: "#a5b4fc",
-            fontSize: "20px",
-            fontWeight: 600,
-            marginBottom: "32px",
+            padding: "8px 22px",
+            color: "#ffc93c",
+            fontSize: "18px",
+            fontWeight: 700,
+            textTransform: "uppercase",
+            letterSpacing: "2px",
+            marginBottom: "28px",
           }}
         >
-          <span>🚀 Instant AI Tool</span>
+          <span>FORTNITE CHAPTER 6 • FREE TOOL</span>
         </div>
 
+        {/* 品牌主标题 */}
         <h1
           style={{
-            fontSize: "64px",
-            fontWeight: 800,
+            fontSize: "68px",
+            fontWeight: 900,
             color: "#ffffff",
             textAlign: "center",
-            lineHeight: 1.15,
-            marginBottom: "24px",
-            maxWidth: "1000px",
+            lineHeight: 1.1,
+            marginBottom: "18px",
+            letterSpacing: "-1px",
           }}
         >
-          {siteConfig.name}
+          TrackChest
         </h1>
 
+        {/* 核心副标 */}
         <p
           style={{
             fontSize: "28px",
-            color: "#cbd5e1",
+            color: "#9a9a9a",
             textAlign: "center",
             lineHeight: 1.4,
-            maxWidth: "900px",
+            maxWidth: "920px",
+            marginBottom: "40px",
           }}
         >
-          {siteConfig.tagline}
+          Live Fortnite Chest Tracker &amp; Drop Odds Calculator
         </p>
 
+        {/* 4 大核心特性横幅 */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "16px",
-            marginTop: "48px",
-            fontSize: "20px",
-            color: "#94a3b8",
+            gap: "24px",
+            background: "#1d1d1d",
+            border: "1px solid #2e2e2e",
+            borderRadius: "16px",
+            padding: "16px 36px",
+            fontSize: "19px",
+            color: "#ffffff",
+            fontWeight: 600,
           }}
         >
-          <span>{siteConfig.domain}</span>
-          <span>•</span>
-          <span>100% Free Trial</span>
-          <span>•</span>
-          <span>No Credit Card Required</span>
+          <span style={{ color: "#49d6ff" }}>4-Column Live Tally</span>
+          <span style={{ color: "#2e2e2e" }}>•</span>
+          <span style={{ color: "#f0a6ff" }}>Pirate Token Odds</span>
+          <span style={{ color: "#2e2e2e" }}>•</span>
+          <span style={{ color: "#ffd510" }}>100% Free Companion</span>
         </div>
       </div>
     ),

@@ -1,160 +1,123 @@
 import React from "react";
 import Link from "next/link";
-import { BookOpen, MapPin, Target, Sparkles, Shield, Compass, HelpCircle, ChevronRight, Crosshair } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function SeoContentSection() {
   return (
-    <article className="py-20 px-4 md:px-6 max-w-4xl mx-auto text-slate-300 space-y-14 leading-relaxed font-sans">
-      {/* 模块标头 */}
-      <div className="border-b border-slate-800/80 pb-10 text-center sm:text-left">
-        <div className="inline-flex items-center space-x-2 text-xs font-tech font-bold uppercase tracking-widest text-amber-400 bg-void-900 px-3.5 py-1.5 rounded-full border border-amber-500/30 mb-4 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
-          <BookOpen className="w-4 h-4" />
-          <span>TACTICAL LOOT INTELLIGENCE</span>
-        </div>
-        <h2 className="font-tech text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          THE ULTIMATE GUIDE TO FORTNITE CHEST TRACKING &amp; DROP SPAWNS
+    <article className="py-12 px-4 max-w-4xl mx-auto text-[#d4d4d4] space-y-10 leading-relaxed text-sm">
+      <div className="border-b border-[#2e2e2e] pb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+          Guide to Fortnite Chest Spawns, Odds, and Drop Paths
         </h2>
-        <p className="text-sm sm:text-base text-slate-400 mt-2">
-          Master early-game RNG, optimize competitive drop spots, and track chest routes like FNCS champions.
+        <p className="text-sm text-[#9a9a9a] mt-1">
+          How competitive players optimize early-game shield RNG and track chest paths.
         </p>
       </div>
 
-      {/* 章节 1: 为什么职业选手要追踪开箱数 */}
-      <section className="space-y-4">
-        <h3 className="font-tech text-2xl font-bold uppercase tracking-wide text-white flex items-center space-x-2.5">
-          <Target className="w-5 h-5 text-amber-400" />
-          <span>Why Competitive Players Use a Fortnite Chest Tracker</span>
+      {/* 章节 1 */}
+      <section className="space-y-3">
+        <h3 className="text-base font-bold text-white">
+          Why Competitive Players Track Chest Counts
         </h3>
-        <p className="text-sm sm:text-base text-slate-300">
-          In Fortnite Battle Royale, the early game is won or lost during the first 90 seconds after landing. 
-          Professional tournament players in FNCS and Cash Cups meticulously practice predetermined landing routes—known as <strong>chest paths</strong>. 
-          Tracking how many chests you reliably open before encountering the first enemy engagement is crucial for three reasons:
+        <p className="text-[#9a9a9a] leading-relaxed">
+          In Fortnite Battle Royale, tournament players practice predetermined landing routes known as chest paths. 
+          Tracking chest volume per drop helps optimize loadouts before the first storm surge:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-          <div className="p-4 rounded-2xl bg-void-900 border border-slate-800">
-            <h4 className="font-tech text-sm uppercase tracking-wider font-bold text-amber-300 mb-1">01. Shield RNG</h4>
-            <p className="text-xs text-slate-400">Opening &lt;3 chests severely drops your odds of reaching 100 Shield before early fights.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+          <div className="p-3.5 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e]">
+            <h4 className="font-semibold text-white text-xs mb-1">Shield Reliability</h4>
+            <p className="text-xs text-[#9a9a9a]">Opening fewer than three chests significantly lowers your odds of achieving 100 Shield before the first contest.</p>
           </div>
-          <div className="p-4 rounded-2xl bg-void-900 border border-slate-800">
-            <h4 className="font-tech text-sm uppercase tracking-wider font-bold text-amber-300 mb-1">02. Team Loadout</h4>
-            <p className="text-xs text-slate-400">Squad IGLs predict ammo counts, surge guns, and mobility items per POI.</p>
+          <div className="p-3.5 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e]">
+            <h4 className="font-semibold text-white text-xs mb-1">Squad Distribution</h4>
+            <p className="text-xs text-[#9a9a9a]">Team IGLs predict ammunition volume, surge weapons, and mobility items per POI.</p>
           </div>
-          <div className="p-4 rounded-2xl bg-void-900 border border-slate-800">
-            <h4 className="font-tech text-sm uppercase tracking-wider font-bold text-amber-300 mb-1">03. Quest XP</h4>
-            <p className="text-xs text-slate-400">Easily pace and clear 50, 100, and 250 seasonal chest opening milestones.</p>
+          <div className="p-3.5 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e]">
+            <h4 className="font-semibold text-white text-xs mb-1">Quest Milestones</h4>
+            <p className="text-xs text-[#9a9a9a]">Easily verify progress across 50, 100, and 250 seasonal container quests.</p>
           </div>
         </div>
       </section>
 
-      {/* 章节 2: 怎么在游戏里查自己开了多少箱 */}
-      <section className="space-y-4 p-6 sm:p-8 rounded-[2rem] bg-void-900 border-2 border-indigo-500/20 shadow-[0_0_30px_-5px_rgba(99,102,241,0.15)]">
-        <h3 className="font-tech text-2xl font-bold uppercase tracking-wide text-white flex items-center space-x-2.5">
-          <HelpCircle className="w-5 h-5 text-indigo-400" />
-          <span>How to Check How Many Chests You Opened in Fortnite</span>
+      {/* 章节 2 */}
+      <section className="p-5 sm:p-6 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-3">
+        <h3 className="text-base font-bold text-white">
+          How to Check How Many Chests You Opened in Fortnite
         </h3>
-        <p className="text-sm text-slate-300">
-          A common question among players is: <em>&ldquo;How can I check how many chests I opened in my Fortnite career?&rdquo;</em> 
-          Unlike eliminations and Victory Royales which are visible in public career tabs, Epic Games does not display a cumulative lifetime chest counter in the main lobby.
+        <p className="text-xs text-[#9a9a9a] leading-relaxed">
+          Epic Games does not provide a lifetime chest counter in the lobby Career tab. To verify chest statistics, players use three methods:
         </p>
-        <p className="text-sm text-slate-300 font-semibold">
-          To verify your chest numbers, players use three distinct methods:
-        </p>
-        <div className="space-y-3 pt-2">
-          <div className="p-4 rounded-xl bg-void-850 border border-slate-800 flex items-start space-x-3">
-            <div className="font-tech text-lg font-black text-indigo-400 px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-500/30">1</div>
-            <div>
-              <h4 className="text-sm font-bold text-white">Seasonal Milestones Tab</h4>
-              <p className="text-xs text-slate-400 mt-0.5">Head to Quests &gt; Milestones in the lobby. Check the &ldquo;Search Chests or Ammo Boxes&rdquo; counter for active season progress.</p>
-            </div>
-          </div>
-          <div className="p-4 rounded-xl bg-void-850 border border-slate-800 flex items-start space-x-3">
-            <div className="font-tech text-lg font-black text-indigo-400 px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-500/30">2</div>
-            <div>
-              <h4 className="text-sm font-bold text-white">Post-Match Accolades</h4>
-              <p className="text-xs text-slate-400 mt-0.5">Inspect your end-of-game accolades for achievements like &ldquo;Chest Specialist&rdquo; (7+ chests in a single game).</p>
-            </div>
-          </div>
-          <div className="p-4 rounded-xl bg-void-850 border border-slate-800 flex items-start space-x-3">
-            <div className="font-tech text-lg font-black text-indigo-400 px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-500/30">3</div>
-            <div>
-              <h4 className="text-sm font-bold text-white">Live Tracking with TrackChest</h4>
-              <p className="text-xs text-slate-400 mt-0.5">Use <Link href="#tracker-app" className="text-amber-400 font-bold underline">TrackChest</Link> on your phone while playing to count per match without waiting for replay replays.</p>
-            </div>
-          </div>
-        </div>
+        <ol className="list-decimal pl-5 space-y-1.5 text-xs text-[#9a9a9a]">
+          <li><strong className="text-white">Milestones Tab:</strong> Navigate to Quests &gt; Milestones in the lobby and check &ldquo;Search Chests or Ammo Boxes&rdquo;.</li>
+          <li><strong className="text-white">Match Accolades:</strong> Inspect end-of-game accolades like &ldquo;Chest Specialist&rdquo; (7+ chests in one game).</li>
+          <li><strong className="text-white">Live Companion:</strong> Use <Link href="/" className="text-[#ffc93c] underline font-medium">TrackChest</Link> on mobile while playing to log each open with zero delay.</li>
+        </ol>
       </section>
 
-      {/* 章节 3: 宝箱刷新机制与掉落概率 */}
-      <section className="space-y-4">
-        <h3 className="font-tech text-2xl font-bold uppercase tracking-wide text-white flex items-center space-x-2.5">
-          <Sparkles className="w-5 h-5 text-amber-400" />
-          <span>Fortnite Chest Spawns &amp; Probability Mechanics</span>
+      {/* 章节 3: 内链导航 */}
+      <section className="space-y-3 pt-2">
+        <h3 className="text-base font-bold text-white">
+          Related Tools &amp; Guides
         </h3>
-        <p className="text-sm text-slate-300">
-          In competitive and casual battle royale modes, chest spawn rates range between <strong>70% and 100%</strong> depending on the POI tier. Standard golden chests spawn a weapon (Grey to Rare), matching ammo, one consumable shield or heal, and 30 wood/stone/metal materials.
-        </p>
-        <p className="text-sm text-slate-300">
-          Rare Chests (blue pulsating glow) have an estimated <strong>2.5% to 5% roll chance</strong>, guaranteeing at least an Epic or Legendary item.
-        </p>
-      </section>
-
-      {/* 章节 4: 内链拓展矩阵 */}
-      <section className="p-7 rounded-[2rem] bg-void-900 border border-slate-800 space-y-4">
-        <h3 className="font-tech text-xl font-bold uppercase tracking-wide text-white flex items-center space-x-2">
-          <MapPin className="w-4 h-4 text-amber-400" />
-          <span>COMPANION CHEST SUITE &amp; GUIDES</span>
-        </h3>
-        <p className="text-xs text-slate-400">
-          Explore specialized sub-tools in our battle royale companion network:
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1 text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
           <Link
             href="/fortnite-chest-counter"
-            className="p-4 rounded-2xl bg-void-850 hover:bg-void-800 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col group"
+            className="p-3.5 rounded-xl bg-[#1d1d1d] hover:bg-[#242424] border border-[#2e2e2e] transition-colors flex items-center justify-between group"
           >
-            <span className="font-tech text-sm uppercase tracking-wide font-bold text-amber-300 group-hover:text-amber-400">
-              Fortnite Chest Counter View &rarr;
-            </span>
-            <span className="text-slate-400 text-[11px] mt-1">Multi-column breakdown view for counting Standard, Rare, and Vault chests simultaneously.</span>
+            <div>
+              <span className="font-semibold text-white group-hover:text-[#ffc93c] transition-colors block">
+                Fortnite Chest Counter View
+              </span>
+              <span className="text-[#888] text-[11px]">Multi-column breakdown view for counting crates by category.</span>
+            </div>
+            <ArrowRight className="w-4 h-4 text-[#666] group-hover:text-white shrink-0 ml-2" />
           </Link>
+
           <Link
             href="/how-to-check-chests"
-            className="p-4 rounded-2xl bg-void-850 hover:bg-void-800 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col group"
+            className="p-3.5 rounded-xl bg-[#1d1d1d] hover:bg-[#242424] border border-[#2e2e2e] transition-colors flex items-center justify-between group"
           >
-            <span className="font-tech text-sm uppercase tracking-wide font-bold text-amber-300 group-hover:text-amber-400">
-              How to Check Opened Chests Guide &rarr;
-            </span>
-            <span className="text-slate-400 text-[11px] mt-1">Full tutorial on viewing your career milestone accolades in-game.</span>
+            <div>
+              <span className="font-semibold text-white group-hover:text-[#ffc93c] transition-colors block">
+                How to Check Opened Chests Guide
+              </span>
+              <span className="text-[#888] text-[11px]">Tutorial on finding milestone stats and match accolades.</span>
+            </div>
+            <ArrowRight className="w-4 h-4 text-[#666] group-hover:text-white shrink-0 ml-2" />
           </Link>
+
           <Link
             href="/pirate-token-odds"
-            className="p-4 rounded-2xl bg-void-850 hover:bg-void-800 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col group"
+            className="p-3.5 rounded-xl bg-[#1d1d1d] hover:bg-[#242424] border border-[#2e2e2e] transition-colors flex items-center justify-between group"
           >
-            <span className="font-tech text-sm uppercase tracking-wide font-bold text-amber-300 group-hover:text-amber-400">
-              Pirate Token Odds Calculator &rarr;
-            </span>
-            <span className="text-slate-400 text-[11px] mt-1">Calculate exact drop probabilities for pirate event chests and treasure maps.</span>
+            <div>
+              <span className="font-semibold text-white group-hover:text-[#ffc93c] transition-colors block">
+                Pirate Token Odds Calculator
+              </span>
+              <span className="text-[#888] text-[11px]">Calculate drop probabilities for pirate event chests and maps.</span>
+            </div>
+            <ArrowRight className="w-4 h-4 text-[#666] group-hover:text-white shrink-0 ml-2" />
           </Link>
+
           <Link
             href="/chest-types"
-            className="p-4 rounded-2xl bg-void-850 hover:bg-void-800 border border-slate-800 hover:border-amber-500/50 transition-all flex flex-col group"
+            className="p-3.5 rounded-xl bg-[#1d1d1d] hover:bg-[#242424] border border-[#2e2e2e] transition-colors flex items-center justify-between group"
           >
-            <span className="font-tech text-sm uppercase tracking-wide font-bold text-amber-300 group-hover:text-amber-400">
-              Fortnite Chest Types Encyclopedia &rarr;
-            </span>
-            <span className="text-slate-400 text-[11px] mt-1">Visual glossary of Standard, Rare, Sprite, and Vault Bunkers.</span>
+            <div>
+              <span className="font-semibold text-white group-hover:text-[#ffc93c] transition-colors block">
+                Fortnite Chest Types Encyclopedia
+              </span>
+              <span className="text-[#888] text-[11px]">Visual guide covering Standard, Rare, Sprite, and Vault Bunkers.</span>
+            </div>
+            <ArrowRight className="w-4 h-4 text-[#666] group-hover:text-white shrink-0 ml-2" />
           </Link>
         </div>
       </section>
 
-      {/* 章节 5: 合规免责声明 */}
-      <section className="pt-8 border-t border-slate-800/80 text-xs text-slate-500 space-y-2">
-        <div className="flex items-center space-x-2 text-slate-400 font-tech font-bold uppercase tracking-wider">
-          <Shield className="w-4 h-4 text-slate-400" />
-          <span>Epic Games Fan Content Policy Compliance</span>
-        </div>
-        <p className="leading-relaxed">
-          TrackChest is an independent, non-commercial fan utility tool. Portions of the materials used are trademarks and/or copyrighted works of Epic Games, Inc. All rights reserved by Epic. This material is not official and is not endorsed by Epic Games. TrackChest does not alter game files, inject software, or interact directly with Epic Games servers.
+      {/* 免责声明 */}
+      <section className="pt-6 border-t border-[#2e2e2e] text-[11px] text-[#777] leading-relaxed">
+        <p>
+          TrackChest is an independent community fan utility tool. Portions of the materials used are trademarks and/or copyrighted works of Epic Games, Inc. All rights reserved by Epic. This material is not official and is not endorsed by Epic Games.
         </p>
       </section>
     </article>

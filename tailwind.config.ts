@@ -10,22 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Chakra Petch"', "sans-serif"],
-        tech: ['"Rajdhani"', "sans-serif"],
-        mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        mono: ["Geist Mono", "JetBrains Mono", "ui-monospace", "monospace"],
+        logo: ['"Chakra Petch"', "sans-serif"],
       },
       colors: {
-        void: {
-          950: "#07090e",
-          900: "#0b0f19",
-          850: "#101626",
-          800: "#151d32",
-        },
-        amber: {
-          350: "#ffd147",
-          450: "#f7b018",
-          550: "#d97706",
-        },
+        base: "#121212",
+        card: "#1d1d1d",
+        "card-hover": "#242424",
+        chip: "#2b2b2b",
+        dim: "#9a9a9a",
+        line: "#2e2e2e",
+        accent: "#ffc93c",
+        "accent-hover": "#ffd766",
       },
     },
   },

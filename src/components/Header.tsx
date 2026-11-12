@@ -3,105 +3,101 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Box, Menu, X, Sparkles, Crosshair } from "lucide-react";
+import { Box, Menu, X } from "lucide-react";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-void-950/85 border-b border-slate-800/80 transition-colors shadow-2xl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Logo & Brand */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-500 flex items-center justify-center text-slate-950 shadow-[0_0_15px_rgba(245,158,11,0.4)] group-hover:scale-105 group-hover:rotate-3 transition-transform">
-            <Box className="w-6 h-6 fill-slate-950" />
+    <header className="sticky top-0 z-40 w-full bg-[#121212]/90 backdrop-blur-md border-b border-[#2e2e2e]">
+      <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2.5">
+          <div className="w-7 h-7 rounded-lg bg-[#ffc93c] flex items-center justify-center text-[#121212]">
+            <Box className="w-4 h-4 fill-current" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-tech text-2xl font-black text-white tracking-wide uppercase leading-none">
-              {siteConfig.name}
-            </span>
-            <span className="font-tech text-[10px] tracking-widest text-amber-400 uppercase font-bold">
-              LOOT COUNTER HUD
-            </span>
-          </div>
+          <span className="font-logo text-xl font-bold tracking-wide text-white">
+            {siteConfig.name}
+          </span>
         </Link>
 
-        {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-7 font-tech text-sm uppercase tracking-wider font-bold text-slate-300">
-          <Link href="/#tracker-app" className="hover:text-amber-400 transition-colors">
-            Live Tracker
+        {/* Desktop Nav */}
+        <nav className="hidden sm:flex items-center space-x-6 text-xs font-medium text-[#9a9a9a]">
+          <Link href="/#tracker-app" className="hover:text-white transition-colors">
+            Tracker
           </Link>
-          <Link href="/#comparison" className="hover:text-amber-400 transition-colors">
+          <Link href="/#comparison" className="hover:text-white transition-colors">
             Spawn Odds
           </Link>
-          <Link href="/#features" className="hover:text-amber-400 transition-colors">
-            Features
+          <Link href="/fortnite-chest-counter" className="hover:text-white transition-colors">
+            Counter View
           </Link>
-          <Link href="/#faq" className="hover:text-amber-400 transition-colors">
+          <Link href="/pirate-token-odds" className="hover:text-white transition-colors">
+            Token Odds
+          </Link>
+          <Link href="/#faq" className="hover:text-white transition-colors">
             FAQ
           </Link>
         </nav>
 
-        {/* Action Button */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Action */}
+        <div className="hidden sm:flex items-center space-x-2">
           <a
             href="#tracker-app"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl font-tech text-xs uppercase tracking-wider font-extrabold bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 shadow-[0_0_20px_rgba(245,158,11,0.3)] active:scale-95 transition-all"
+            className="px-3.5 py-1.5 rounded-lg bg-[#ffc93c] hover:bg-[#ffd766] text-[#121212] font-semibold text-xs transition-colors btn-press"
           >
-            <Sparkles className="w-4 h-4" />
-            <span>START TRACKING</span>
+            Open Counter
           </a>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile menu toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-slate-400 hover:text-white rounded-lg focus:outline-none"
-          aria-label="Toggle Navigation"
+          className="sm:hidden p-1.5 text-[#9a9a9a] hover:text-white"
+          aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-800 bg-void-950/98 px-5 pt-3 pb-6 space-y-3 font-tech text-sm tracking-wider uppercase font-bold">
+        <div className="sm:hidden border-b border-[#2e2e2e] bg-[#1d1d1d] px-4 py-3 space-y-2 text-xs font-medium">
           <Link
             href="/#tracker-app"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-slate-300 hover:text-amber-400"
+            className="block py-1.5 text-white"
           >
             Live Tracker
           </Link>
           <Link
             href="/#comparison"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-slate-300 hover:text-amber-400"
+            className="block py-1.5 text-[#9a9a9a] hover:text-white"
           >
             Spawn Odds
           </Link>
           <Link
-            href="/#features"
+            href="/fortnite-chest-counter"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-slate-300 hover:text-amber-400"
+            className="block py-1.5 text-[#9a9a9a] hover:text-white"
           >
-            Features
+            Counter View
+          </Link>
+          <Link
+            href="/pirate-token-odds"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-1.5 text-[#9a9a9a] hover:text-white"
+          >
+            Token Odds
           </Link>
           <Link
             href="/#faq"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-slate-300 hover:text-amber-400"
+            className="block py-1.5 text-[#9a9a9a] hover:text-white"
           >
             FAQ
           </Link>
-          <a
-            href="#tracker-app"
-            onClick={() => setMobileMenuOpen(false)}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-amber-400 text-slate-950 font-black"
-          >
-            <Sparkles className="w-4 h-4" />
-            <span>START TRACKING</span>
-          </a>
         </div>
       )}
     </header>

@@ -89,7 +89,6 @@ export default function RootLayout({
     })),
   };
 
-  // 只有当环境变量配置了真实的 GA4 ID（非占位符）时才注入脚本
   const hasValidGA =
     siteConfig.gaMeasurementId &&
     siteConfig.gaMeasurementId.startsWith("G-") &&
@@ -98,11 +97,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth dark">
       <head>
-        {/* Google Fonts: Chakra Petch & Rajdhani */}
+        {/* Google Fonts: Inter (Body) + Chakra Petch (Logo Only) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,700;0,800;1,700&family=Rajdhani:wght@500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
 
@@ -117,7 +116,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
 
-        {/* Google Analytics 4 (仅有效 ID 加载) */}
+        {/* Google Analytics 4 */}
         {hasValidGA && (
           <>
             <Script
@@ -137,7 +136,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="antialiased bg-void-950 text-slate-100 selection:bg-amber-400 selection:text-slate-950 flex flex-col min-h-screen tactical-grid-bg relative">
+      <body className="antialiased bg-[#121212] text-white selection:bg-[#ffc93c] selection:text-black flex flex-col min-h-screen">
         <AuthProvider>
           <Header />
           <main className="flex-1">{children}</main>

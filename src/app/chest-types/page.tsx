@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { CHEST_TYPES } from "@/config/chestTypes";
-import { ArrowLeft, Box, Sparkles, Shield, MapPin, Zap } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot",
@@ -14,88 +14,90 @@ export const metadata: Metadata = {
 };
 
 export default function ChestTypesPage() {
+  const getRarityClass = (rarity: string) => {
+    switch (rarity) {
+      case "Common":
+        return "rarity-common";
+      case "Rare":
+        return "rarity-rare";
+      case "Epic":
+        return "rarity-epic";
+      case "Special":
+        return "rarity-legendary";
+      case "Mythic":
+        return "rarity-mythic";
+      default:
+        return "rarity-common";
+    }
+  };
+
   return (
-    <div className="py-12 px-4 md:px-6 max-w-5xl mx-auto space-y-12 leading-relaxed font-sans">
-      {/* 顶部返回导航 */}
+    <div className="py-10 px-4 max-w-4xl mx-auto space-y-10 text-sm text-[#d4d4d4]">
       <div>
         <Link
           href="/"
-          className="inline-flex items-center space-x-1.5 text-xs font-tech font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors bg-void-900 border border-slate-800 px-3 py-1.5 rounded-xl"
+          className="inline-flex items-center space-x-1.5 text-xs font-medium text-[#9a9a9a] hover:text-white transition-colors bg-[#1d1d1d] border border-[#2e2e2e] px-3 py-1.5 rounded-lg"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
-          <span>BACK TO TRACKCHEST HOME</span>
+          <span>Back to Main Tracker</span>
         </Link>
       </div>
 
-      {/* 标头区 */}
-      <div className="text-center max-w-2xl mx-auto space-y-3">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-void-900 border border-amber-500/30 text-amber-400 text-xs font-tech font-bold uppercase tracking-widest">
-          <Box className="w-3.5 h-3.5" />
-          <span>LOOT CRATE GLOSSARY</span>
-        </div>
-        <h1 className="font-tech text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
-          FORTNITE CHEST TYPES &amp; RARITY TIERS
+      <div className="space-y-2">
+        <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
+          Loot Crate Glossary
+        </span>
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+          Fortnite Chest Types &amp; Rarities
         </h1>
-        <p className="text-sm sm:text-base text-slate-300">
-          An authoritative reference guide to every chest variant currently active in Fortnite Battle Royale Chapter 6.
+        <p className="text-xs text-[#9a9a9a]">
+          An authoritative reference to every chest variant currently active in Fortnite Battle Royale Chapter 6.
         </p>
       </div>
 
-      {/* 6 大宝箱详细卡片 */}
-      <div className="space-y-6">
-        {CHEST_TYPES.map((chest) => (
-          <div
-            key={chest.id}
-            className="p-6 sm:p-8 rounded-[2rem] bg-void-900 border border-slate-800 shadow-xl hover:border-slate-700 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
-          >
-            <div className="space-y-2 max-w-xl">
-              <div className="flex items-center space-x-2">
-                <span
-                  className="font-tech text-xs uppercase tracking-widest font-extrabold px-2.5 py-0.5 rounded border"
-                  style={{
-                    backgroundColor: `${chest.color}15`,
-                    borderColor: `${chest.color}40`,
-                    color: chest.color,
-                  }}
-                >
-                  {chest.rarity} TIER
-                </span>
-                <span className="text-xs font-mono text-slate-500">Spawn: {chest.oddsNote}</span>
-              </div>
-              <h2 className="font-tech text-2xl font-bold uppercase text-white">
-                {chest.name}
-              </h2>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                <strong className="text-slate-200">Guaranteed Loot:</strong> {chest.typicalLoot}
-              </p>
-            </div>
+      {/* 6 大宝箱卡片 */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        {CHEST_TYPES.map((chest) => {
+          const rarityClass = getRarityClass(chest.rarity);
 
-            <div className="shrink-0 w-full md:w-auto">
-              <Link
-                href="/#tracker-app"
-                className="w-full md:w-auto inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl font-tech text-xs uppercase tracking-wider font-extrabold bg-void-850 hover:bg-amber-400 hover:text-slate-950 text-slate-200 border border-slate-700 transition-colors"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>TRACK THIS CHEST &rarr;</span>
-              </Link>
+          return (
+            <div
+              key={chest.id}
+              className={`p-4 rounded-xl flex flex-col justify-between space-y-3 ${rarityClass}`}
+            >
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-[10px] font-semibold text-[#9a9a9a] uppercase tracking-wider">
+                    {chest.rarity}
+                  </span>
+                  <span className="text-[10px] font-mono text-[#888]">Spawn: {chest.oddsNote}</span>
+                </div>
+                <h2 className="text-base font-bold text-white">{chest.name}</h2>
+                <p className="text-xs text-[#9a9a9a] mt-1.5 leading-relaxed">
+                  <strong className="text-white">Drops:</strong> {chest.typicalLoot}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-white/10 flex justify-end">
+                <Link
+                  href="/#tracker-app"
+                  className="text-xs text-[#ffc93c] hover:underline font-medium"
+                >
+                  Track in Live Counter &rarr;
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {/* 底部内链导航 */}
-      <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-        <Link href="/" className="text-amber-400 font-bold hover:underline">
-          &larr; Back to TrackChest Live Counter
+      <div className="pt-6 border-t border-[#2e2e2e] flex items-center justify-between text-xs">
+        <Link href="/" className="text-[#ffc93c] hover:underline">
+          &larr; Back to Main Tracker
         </Link>
-        <div className="flex items-center space-x-4">
-          <Link href="/fortnite-chest-counter" className="text-slate-400 hover:text-amber-400 underline">
-            Chest Counter View
-          </Link>
-          <Link href="/pirate-token-odds" className="text-slate-400 hover:text-amber-400 underline">
-            Pirate Token Odds
-          </Link>
-        </div>
+        <Link href="/pirate-token-odds" className="text-[#9a9a9a] hover:text-white underline">
+          Pirate Token Odds &rarr;
+        </Link>
       </div>
     </div>
   );

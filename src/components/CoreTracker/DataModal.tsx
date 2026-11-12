@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Download, Upload, Copy, Check, ShieldCheck, Terminal } from "lucide-react";
+import { X, Download, Upload, Copy, Check, Database } from "lucide-react";
 
 interface DataModalProps {
   isOpen: boolean;
@@ -51,83 +51,73 @@ export function DataModal({ isOpen, onClose, exportData, importData }: DataModal
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
-      <div className="bg-void-900 border-2 border-amber-500/40 rounded-[2rem] max-w-lg w-full p-6 text-white shadow-[0_0_50px_rgba(245,158,11,0.25)] relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+      <div className="bg-[#1d1d1d] border border-[#2e2e2e] rounded-2xl max-w-md w-full p-6 text-white shadow-2xl relative">
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 text-slate-400 hover:text-white rounded-xl hover:bg-void-800 transition-colors"
+          className="absolute top-4 right-4 p-1.5 text-[#9a9a9a] hover:text-white rounded-lg hover:bg-[#2b2b2b] transition-colors"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
 
-        <div className="flex items-center space-x-3 mb-6">
-          <div className="w-11 h-11 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
-            <Terminal className="w-6 h-6" />
+        <div className="flex items-center space-x-2.5 mb-5">
+          <div className="w-9 h-9 rounded-lg bg-[#2b2b2b] flex items-center justify-center text-[#ffc93c]">
+            <Database className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-tech text-xl font-bold uppercase tracking-wide">
-              DATA ARCHIVE &amp; TELEMETRY BACKUP
-            </h3>
-            <p className="text-xs text-slate-400">100% Encrypted client-side LocalStorage. Zero cloud telemetry.</p>
+            <h3 className="text-base font-bold">Data Backup &amp; Restore</h3>
+            <p className="text-xs text-[#9a9a9a]">Stored strictly in your local browser</p>
           </div>
         </div>
 
-        {/* 导出区域 */}
-        <div className="p-4 rounded-2xl bg-void-850 border border-slate-800 mb-5">
-          <h4 className="font-tech text-sm uppercase tracking-wider font-bold text-amber-300 mb-1">
-            01. EXPORT PROFILE SNAPSHOT
-          </h4>
-          <p className="text-xs text-slate-400 mb-3.5">
-            Save your match records and personal best milestones before clearing your mobile browser cache.
+        {/* 导出 */}
+        <div className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e] mb-4">
+          <h4 className="text-xs font-semibold text-white mb-1">Export Counts</h4>
+          <p className="text-xs text-[#9a9a9a] mb-3">
+            Save your records before clearing browser cookies or changing devices.
           </p>
-          <div className="flex space-x-3">
+          <div className="flex space-x-2">
             <button
               onClick={handleCopy}
-              className="flex-1 py-2.5 px-3 rounded-xl bg-void-800 hover:bg-void-700 border border-slate-700 font-tech text-xs tracking-wider uppercase font-bold flex items-center justify-center space-x-2 transition-all active:scale-95"
+              className="flex-1 py-2 px-3 rounded-lg bg-[#2b2b2b] hover:bg-[#343434] text-xs font-medium flex items-center justify-center space-x-1.5 transition-colors"
             >
-              {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-              <span>{copied ? "COPIED TO CLIPBOARD" : "COPY JSON"}</span>
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copied ? "Copied" : "Copy JSON"}</span>
             </button>
             <button
               onClick={handleDownload}
-              className="flex-1 py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-tech text-xs tracking-wider uppercase font-black flex items-center justify-center space-x-2 transition-all active:scale-95 shadow-md shadow-amber-500/20"
+              className="flex-1 py-2 px-3 rounded-lg bg-[#ffc93c] hover:bg-[#ffd766] text-[#121212] text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors"
             >
-              <Download className="w-4 h-4" />
-              <span>DOWNLOAD FILE</span>
+              <Download className="w-3.5 h-3.5" />
+              <span>Download File</span>
             </button>
           </div>
         </div>
 
-        {/* 导入区域 */}
-        <div className="p-4 rounded-2xl bg-void-850 border border-slate-800">
-          <h4 className="font-tech text-sm uppercase tracking-wider font-bold text-amber-300 mb-1">
-            02. RESTORE SNAPSHOT
-          </h4>
+        {/* 导入 */}
+        <div className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
+          <h4 className="text-xs font-semibold text-white mb-1">Restore Backup</h4>
           <textarea
             value={importText}
             onChange={(e) => setImportText(e.target.value)}
-            placeholder="Paste your exported TrackChest JSON string here..."
-            className="w-full h-24 bg-void-950 border border-slate-800 rounded-xl p-3 font-mono text-xs text-slate-300 placeholder-slate-600 focus:outline-none focus:border-amber-400 mb-3"
+            placeholder="Paste your trackchest JSON string here..."
+            className="w-full h-20 bg-[#161616] border border-[#2e2e2e] rounded-lg p-2.5 text-xs font-mono text-[#d4d4d4] placeholder-[#555] focus:outline-none focus:border-[#ffc93c] mb-2.5"
           />
           <div className="flex items-center justify-between">
             {importStatus === "success" && (
-              <span className="font-tech text-xs uppercase tracking-wider text-emerald-400 font-bold flex items-center">
-                <Check className="w-4 h-4 mr-1" /> RESTORED SUCCESSFULLY!
-              </span>
+              <span className="text-xs text-emerald-400 font-medium">Restored!</span>
             )}
             {importStatus === "error" && (
-              <span className="font-tech text-xs uppercase tracking-wider text-rose-400 font-bold">
-                INVALID JSON PAYLOAD!
-              </span>
+              <span className="text-xs text-rose-400 font-medium">Invalid JSON!</span>
             )}
             {importStatus === "idle" && <span />}
             <button
               onClick={handleImport}
               disabled={!importText.trim()}
-              className="py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 disabled:cursor-not-allowed font-tech text-xs uppercase tracking-wider font-bold flex items-center space-x-2 transition-all active:scale-95"
+              className="py-1.5 px-3 rounded-lg bg-[#2b2b2b] hover:bg-[#343434] disabled:opacity-40 text-xs font-semibold flex items-center space-x-1.5 transition-colors"
             >
-              <Upload className="w-4 h-4" />
-              <span>APPLY RESTORE</span>
+              <Upload className="w-3.5 h-3.5" />
+              <span>Restore</span>
             </button>
           </div>
         </div>

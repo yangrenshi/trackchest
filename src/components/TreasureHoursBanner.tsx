@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Flame, Sparkles, CheckCircle2, Clock } from "lucide-react";
+import { Flame, Clock } from "lucide-react";
 
 interface WaveState {
   status: "upcoming" | "live" | "ended";
@@ -10,25 +10,22 @@ interface WaveState {
   subtitle: string;
   badge: string;
   multiplierText: string;
-  colorTheme: "amber" | "yellow" | "gray";
 }
 
 export function TreasureHoursBanner() {
-  // 默认服务端预渲染状态（对应 2026-11-13 当前时间：Wave 1 未开启）
+  // 默认服务端渲染状态（对应 2026-11-13 当前时间：Wave 1 未开始）
   const [waveState, setWaveState] = useState<WaveState>({
     status: "upcoming",
     waveNumber: 1,
-    title: "Treasure Hours Wave 1: Saturday, Nov 14 — 1.5x token drops upcoming",
-    subtitle: "Starts Saturday globally • Drop rate boosted to 1 in 91,667 (~63,500 chests for 50% target)",
-    badge: "Upcoming • Sat Nov 14",
+    title: "Treasure Hours Wave 1",
+    subtitle: "Starts Saturday, Nov 14 • 1.5x drops (1 in 91,667)",
+    badge: "Saturday, Nov 14",
     multiplierText: "1.5x Boost",
-    colorTheme: "amber",
   });
 
   useEffect(() => {
     const calculateState = (): WaveState => {
       const now = new Date();
-      // 获取当前年、月、日（以 UTC 或用户本地日期均可，使用当前实际时间戳比较）
       // Wave 1: 2026-11-14 (UTC)
       const wave1Start = new Date("2026-11-14T00:00:00Z").getTime();
       const wave1End = new Date("2026-11-14T23:59:59Z").getTime();
@@ -48,11 +45,10 @@ export function TreasureHoursBanner() {
         return {
           status: "upcoming",
           waveNumber: 1,
-          title: "Treasure Hours Wave 1: Saturday, Nov 14 — 1.5x token drops upcoming",
-          subtitle: "Starts Saturday globally • Drop rate boosted to 1 in 91,667 (~63,500 chests for 50% target)",
-          badge: "Upcoming • Sat Nov 14",
+          title: "Treasure Hours Wave 1",
+          subtitle: "Starts Saturday, Nov 14 • 1.5x drops (1 in 91,667)",
+          badge: "Saturday, Nov 14",
           multiplierText: "1.5x Boost",
-          colorTheme: "amber",
         };
       }
 
@@ -61,11 +57,10 @@ export function TreasureHoursBanner() {
         return {
           status: "live",
           waveNumber: 1,
-          title: "Wave 1 is live now — 1.5x drop rate active globally!",
-          subtitle: "Active today only • 1 in 91,667 boosted odds live across all chests",
+          title: "Wave 1 is live now",
+          subtitle: "1.5x drop rate active globally today (1 in 91,667 odds)",
           badge: "LIVE NOW • 1.5x",
-          multiplierText: "1.5x Multiplier",
-          colorTheme: "yellow",
+          multiplierText: "1.5x Active",
         };
       }
 
@@ -74,11 +69,10 @@ export function TreasureHoursBanner() {
         return {
           status: "upcoming",
           waveNumber: 2,
-          title: "Wave 1 ended • Next: Treasure Hours Wave 2 on Saturday, Nov 21",
-          subtitle: "Wave 2 features 2.0x Double Odds (1 in 68,750) • Starts Saturday, Nov 21, 2026",
-          badge: "Next: Wave 2 (Nov 21)",
-          multiplierText: "2.0x Boost",
-          colorTheme: "amber",
+          title: "Wave 1 ended • Next: Wave 2",
+          subtitle: "Starts Saturday, Nov 21 • 2.0x double odds (1 in 68,750)",
+          badge: "Next: Nov 21",
+          multiplierText: "2.0x Double Odds",
         };
       }
 
@@ -87,11 +81,10 @@ export function TreasureHoursBanner() {
         return {
           status: "live",
           waveNumber: 2,
-          title: "Wave 2 is live now — 2.0x Double Odds active globally!",
-          subtitle: "Active today only • 1 in 68,750 double drop odds live across all chests",
+          title: "Wave 2 is live now",
+          subtitle: "2.0x double drop rate active globally today (1 in 68,750)",
           badge: "LIVE NOW • 2.0x",
-          multiplierText: "2.0x Double Odds",
-          colorTheme: "yellow",
+          multiplierText: "2.0x Active",
         };
       }
 
@@ -100,11 +93,10 @@ export function TreasureHoursBanner() {
         return {
           status: "upcoming",
           waveNumber: 3,
-          title: "Wave 2 ended • Final Wave: Treasure Hours Wave 3 on Saturday, Nov 28",
-          subtitle: "Last Treasure Hours weekend before Chapter 8 season switch • Starts Saturday, Nov 28, 2026",
-          badge: "Final Wave: Nov 28",
-          multiplierText: "2.0x Boost",
-          colorTheme: "amber",
+          title: "Wave 2 ended • Final Wave: Wave 3",
+          subtitle: "Starts Saturday, Nov 28 • 2.0x final boost (Last Treasure Hours)",
+          badge: "Final: Nov 28",
+          multiplierText: "2.0x Final Push",
         };
       }
 
@@ -113,11 +105,10 @@ export function TreasureHoursBanner() {
         return {
           status: "live",
           waveNumber: 3,
-          title: "Final Wave 3 is live now — 2.0x peak boost active globally!",
-          subtitle: "Last Treasure Hours of Chapter 7 • 1 in 68,750 odds active until midnight",
+          title: "Final Wave 3 is live now",
+          subtitle: "2.0x double drop odds active today (Last Treasure Hours of Chapter 7)",
           badge: "LIVE NOW • 2.0x",
-          multiplierText: "2.0x Final Push",
-          colorTheme: "yellow",
+          multiplierText: "2.0x Peak",
         };
       }
 
@@ -125,11 +116,10 @@ export function TreasureHoursBanner() {
       return {
         status: "ended",
         waveNumber: 3,
-        title: "Treasure Hours events concluded (Chapter 7 Treasure Hunters)",
+        title: "Treasure Hours ended",
         subtitle: "Standard 1 in 137,500 odds restored until Chapter 8 season switch",
-        badge: "Concluded",
+        badge: "Season Ended",
         multiplierText: "1 in 137,500",
-        colorTheme: "gray",
       };
     };
 
@@ -148,7 +138,7 @@ export function TreasureHoursBanner() {
             <div className="font-bold text-[#ffd510] flex items-center space-x-1.5">
               <span>{waveState.title}</span>
             </div>
-            <span className="text-[#bbb] text-[11px] block mt-0.5">{waveState.subtitle}</span>
+            <span className="text-[#d4d4d4] text-[11px] block mt-0.5">{waveState.subtitle}</span>
           </div>
         </div>
         <span className="text-[11px] font-mono text-[#121212] bg-[#ffd510] px-2.5 py-1 rounded-md font-bold shrink-0 hidden sm:inline-block">
@@ -175,14 +165,14 @@ export function TreasureHoursBanner() {
     );
   }
 
-  // upcoming 态 (包括默认状态)
+  // upcoming 态 (包括默认渲染)
   return (
     <div className="p-3.5 rounded-xl bg-[#ffc93c]/10 border border-[#ffc93c]/30 flex items-center justify-between text-xs text-white">
       <div className="flex items-center space-x-2.5">
         <Flame className="w-4 h-4 text-[#ffc93c] shrink-0" />
         <div>
-          <span className="font-bold text-[#ffc93c] block">{waveState.title}</span>
-          <span className="text-[#aaa] text-[11px] block mt-0.5">{waveState.subtitle}</span>
+          <strong className="text-[#ffc93c]">{waveState.title}: </strong>
+          <span className="text-[#d4d4d4]">{waveState.subtitle}</span>
         </div>
       </div>
       <span className="text-[11px] font-mono text-[#ffc93c] bg-[#ffc93c]/20 px-2 py-0.5 rounded font-bold shrink-0 hidden sm:inline-block">

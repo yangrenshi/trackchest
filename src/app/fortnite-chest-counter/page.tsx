@@ -72,10 +72,10 @@ export default function ChestCounterPage() {
       <figure className="my-8 space-y-2.5">
         <div className="rounded-2xl overflow-hidden border border-[#2e2e2e] bg-[#161616] shadow-xl">
           <Image
-            src="/images/fortnite-chest-counter-match-hud.svg"
+            src="/images/fortnite-chest-counter-match-hud.png"
             alt="Fortnite Chest Counter 4-column live match HUD telemetry display showing categorized counts for Standard, Rare, Sprite, and Boss Vault chests"
-            width={1200}
-            height={675}
+            width={1280}
+            height={860}
             priority
             className="w-full h-auto block"
           />

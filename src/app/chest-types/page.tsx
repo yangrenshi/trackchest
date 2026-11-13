@@ -7,7 +7,7 @@ import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight 
 
 export const metadata: Metadata = {
   title: "Fortnite Chest Types Encyclopedia — Chapter 7 Treasure Hunters Guide",
-  description: "Complete Fortnite Chapter 7 chest guide. Learn spawn locations, visual cues, and routing for Standard, Rare, Sprite, and Vault chests, plus Pirate Crates and Commercial Safes.",
+  description: "Chapter 7 chest guide: spawn locations, visual cues and routing for Standard, Rare, Sprite and Vault chests, plus Pirate Crates and Safes.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
   },
@@ -207,7 +207,7 @@ export default function ChestTypesPage() {
 
               {chest.id === "safe" && (
                 <div className="p-3 rounded-xl bg-[#242424] border border-[#2e2e2e] text-xs text-[#9a9a9a]">
-                  <strong className="text-white">4-Column Note:</strong> Excluded from the 4-column combat counter because Commercial Safes exclusively drop gold bars (100–150 Bars) rather than Battle Royale weapons or shields.
+                  <strong className="text-white">4-Column Note:</strong> Excluded from the 4-column counter — Commercial Safes exclusively grant gold bars (100–150 Bars) and ammunition rather than Battle Royale weapons or tactical loot.
                 </div>
               )}
             </article>

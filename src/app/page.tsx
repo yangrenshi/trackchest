@@ -75,17 +75,17 @@ export default function HomePage() {
 
       {/* 对局实机 HUD 战术看板截图展示 (标准静态 <img> 直读，满足 Google 媒体与图文索引 5/5) */}
       <section className="max-w-4xl mx-auto px-4 py-6">
-        <figure className="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 sm:p-4 shadow-2xl backdrop-blur-sm">
+        <figure className="rounded-2xl border border-[#2e2e2e] bg-[#161616] p-3 sm:p-4 shadow-2xl backdrop-blur-sm">
           <img
             src="/images/fortnite-chest-counter-match-hud.png"
-            alt="Fortnite Chest Counter in-game match HUD interface with real-time loot counters"
-            width={1200}
-            height={675}
-            className="w-full h-auto rounded-xl border border-slate-800/80 object-cover shadow-lg"
+            alt="Fortnite 4-column chest counter active match HUD logging a completed 20-chest squad rotation across Standard, Rare, Sprite, and Vault containers"
+            width={1280}
+            height={860}
+            className="w-full h-auto rounded-xl border border-[#2e2e2e] object-cover shadow-lg"
             loading="lazy"
           />
-          <figcaption className="mt-3 text-center text-xs sm:text-sm text-slate-400">
-            Real-time Battle Royale HUD integration: Track Standard, Rare, Sprite, and Vault chests during live Chapter 7 matches.
+          <figcaption className="mt-3 text-center text-xs sm:text-sm text-[#9a9a9a]">
+            <strong className="text-white">Live Match Telemetry:</strong> Specialized 4-column squad companion logging a completed 20-chest competitive set (Standard: 12, Rare: 5, Sprite: 2, Vault: 1) during Chapter 7 matches.
           </figcaption>
         </figure>
       </section>

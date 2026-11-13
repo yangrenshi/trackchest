@@ -7,7 +7,7 @@ import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight 
 
 export const metadata: Metadata = {
   title: "Fortnite Chest Types Encyclopedia — Chapter 7 Treasure Hunters Guide",
-  description: "Complete guide to all Fortnite Chapter 7 chest variants: Standard, Rare, Sprite, Pirate, Vault, and Safes. Learn spawn locations, identification, and routing strategy.",
+  description: "Complete Fortnite Chapter 7 chest guide. Learn spawn locations, visual cues, and routing strategy for Standard, Rare, Sprite, and Vault chests.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
   },
@@ -191,6 +191,13 @@ export default function ChestTypesPage() {
             </article>
           );
         })}
+      </div>
+
+      {/* 底部导流 */}
+      <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] text-xs text-[#9a9a9a] leading-relaxed">
+        <p>
+          Ready to log your containers during matches? Use our fast <Link href="/" className="text-[#ffc93c] underline font-medium">chest tracker Fortnite</Link> companion to count single-button opens, or launch the 4-column counter for squad POI breakdowns.
+        </p>
       </div>
 
       <div className="pt-6 border-t border-[#2e2e2e] flex flex-wrap items-center justify-between gap-3 text-xs">

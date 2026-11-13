@@ -21,7 +21,7 @@ export function SeoContentSection() {
         </h3>
         <p className="text-[#9a9a9a] leading-relaxed">
           In Fortnite Battle Royale, tournament players practice predetermined landing routes known as chest paths. 
-          Tracking chest volume per drop helps optimize loadouts before the first storm surge:
+          Using an offline-ready chest tracker Fortnite competitors keep open alongside ranked matches helps optimize loadouts before the first storm surge:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
           <div className="p-3.5 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e]">

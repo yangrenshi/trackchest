@@ -7,13 +7,13 @@ import { ArrowLeft, Users, CheckCircle2, Shield, HardDrive, Swords, Sparkles } f
 
 export const metadata: Metadata = {
   title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter (Chapter 7)",
-  description: "Dedicated 4-column Fortnite chest counter. Track Standard, Rare, Sprite, and Vault chests in parallel columns with instant tap buttons. Built for squad communication.",
+  description: "Dedicated 4-column chest tracker Fortnite squads use. Track Standard, Rare, Sprite, and Vault chests in parallel columns with instant tap buttons.",
   alternates: {
     canonical: `${siteConfig.url}/fortnite-chest-counter`,
   },
   openGraph: {
     title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
-    description: "Dedicated 4-column Fortnite chest counter. Track Standard, Rare, Sprite, and Vault chests in parallel columns.",
+    description: "Dedicated 4-column chest tracker Fortnite squads use to track Standard, Rare, Sprite, and Vault chests in parallel.",
     url: `${siteConfig.url}/fortnite-chest-counter`,
     siteName: siteConfig.name,
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
-    description: "Dedicated 4-column Fortnite chest counter for competitive players.",
+    description: "Dedicated 4-column chest tracker Fortnite squads use for competitive matches.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
 };
@@ -60,7 +60,7 @@ export default function ChestCounterPage() {
           Fortnite Chest Counter — 4-Column Categorized Tally
         </h1>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          An independent multi-column counter engineered for competitive duos, trios, and squads who assign dedicated POI loot paths. Track Standard, Rare Blue, Sprite Shrine, and Boss Vault containers in parallel columns without losing itemized breakdowns.
+          This 4-column view is the chest tracker Fortnite squads use when each player loots a designated container tier. Track Standard, Rare Blue, Sprite Shrine, and Boss Vault containers in parallel columns without losing itemized breakdowns.
         </p>
       </div>
 
@@ -159,7 +159,7 @@ export default function ChestCounterPage() {
           <span>Local Persistence &amp; Session Management</span>
         </div>
         <p className="leading-relaxed">
-          All 4 columns update your browser&apos;s LocalStorage on every single tap. You can refresh the page, close your browser between tournaments, or lock your phone screen without losing count. When starting a fresh competitive set, click &ldquo;Reset All&rdquo; to clear all four columns simultaneously.
+          All 4 columns update your browser&apos;s LocalStorage on every single tap. Designed as an offline-ready chest tracker Fortnite duos and trios can run without tab lags, you can refresh the page, close your browser between tournaments, or lock your phone screen without losing count. When starting a fresh competitive set, click &ldquo;Reset All&rdquo; to clear all four columns simultaneously.
         </p>
       </section>
 

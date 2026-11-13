@@ -130,7 +130,7 @@ export default function PirateTokenOddsPage() {
             <div>
               <span className="font-bold text-white flex items-center space-x-1.5">
                 <Flame className="w-3.5 h-3.5 text-[#ffc93c]" />
-                <span>Wave 1: November 14, 2026 (Tomorrow)</span>
+                <span>Wave 1: Friday, November 14, 2026</span>
               </span>
               <span className="text-[#888] text-[11px] block mt-0.5">
                 1.5x Multiplier &bull; Drop rate boosted to 1 in 91,667 &bull; 50% target drops to ~63,500 chests

@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // 使用固定的静态内容发布与修订日期，杜绝每次爬虫抓取动态刷新时间戳
-  const LAST_UPDATED = "2026-11-12T00:00:00.000Z";
+  const LAST_UPDATED = "2026-11-13T00:00:00.000Z";
 
   const routes = [
     // 1. 核心首页

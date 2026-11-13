@@ -1,6 +1,7 @@
 import React from "react";
 import { siteConfig } from "@/config/site";
 import { HeroSection } from "@/components/HeroSection";
+import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 import { CoreToolSlot } from "@/components/CoreToolSlot";
 import { HowToUseInstructions } from "@/components/HowToUseInstructions";
 import { FeaturesGrid } from "@/components/FeaturesGrid";
@@ -60,6 +61,11 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
+      {/* 实时活动横幅 (三态自适应轮替) */}
+      <div className="max-w-4xl mx-auto px-4 pt-4">
+        <TreasureHoursBanner />
+      </div>
 
       {/* 1. Hero 视觉区 */}
       <HeroSection />

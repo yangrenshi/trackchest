@@ -6,13 +6,13 @@ import { DETAILED_CHEST_TYPES } from "@/config/chestTypes";
 import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Types Encyclopedia — Chapter 7 Treasure Hunters Guide",
+  title: "Fortnite Chest Types & Spawns Guide",
   description: "Chapter 7 chest guide: spawn locations, visual cues and routing for Standard, Rare, Sprite and Vault chests, plus Pirate Crates and Safes.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
   },
   openGraph: {
-    title: "Fortnite Chest Types Encyclopedia — Chapter 7 Treasure Hunters Guide",
+    title: "Fortnite Chest Types & Spawns Guide",
     description: "Detailed tactical breakdown of all 6 container variants active in Fortnite Chapter 7.",
     url: `${siteConfig.url}/chest-types`,
     siteName: siteConfig.name,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Chest Types Encyclopedia — Chapter 7 Guide",
+    title: "Fortnite Chest Types & Spawns Guide",
     description: "Learn tactical spawn details across all Fortnite Chapter 7 chest rarities.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
@@ -102,7 +102,7 @@ export default function ChestTypesPage() {
       {/* 6 大详细宝箱章节 (总字数 750+ 词) */}
       <div className="space-y-6">
         {DETAILED_CHEST_TYPES.map((chest) => {
-          const destinationUrl = (chest.id === "regular" || chest.id === "safe")
+          const destinationUrl = (chest.id === "regular" || chest.id === "cash" || chest.id === "safe")
             ? "/#tracker-app" 
             : chest.id === "pirate" 
               ? "/pirate-token-odds" 
@@ -127,7 +127,7 @@ export default function ChestTypesPage() {
                   className="text-xs text-[#ffc93c] hover:underline font-medium flex items-center space-x-1"
                 >
                   <span>
-                    {(chest.id === "regular" || chest.id === "safe")
+                    {(chest.id === "regular" || chest.id === "cash" || chest.id === "safe")
                       ? "Track in Single Counter"
                       : chest.id === "pirate"
                         ? "Calculate Token Odds"
@@ -205,7 +205,7 @@ export default function ChestTypesPage() {
                 </div>
               )}
 
-              {chest.id === "safe" && (
+              {(chest.id === "cash" || chest.id === "safe") && (
                 <div className="p-3 rounded-xl bg-[#242424] border border-[#2e2e2e] text-xs text-[#9a9a9a]">
                   <strong className="text-white">4-Column Note:</strong> Safes only dispense gold and healing, so they are not counted in the 4-column battle counter.
                 </div>

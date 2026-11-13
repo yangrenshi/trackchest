@@ -7,13 +7,13 @@ import { CategorizedCounterView } from "@/components/CategorizedCounterView";
 import { ArrowLeft, Users, CheckCircle2, Shield, HardDrive, Swords, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter (Chapter 7)",
+  title: "Fortnite Chest Counter — 4-Column Squad Tally",
   description: "Dedicated 4-column chest tracker Fortnite squads use. Track Standard, Rare, Sprite, and Vault chests in parallel columns with instant tap buttons.",
   alternates: {
     canonical: `${siteConfig.url}/fortnite-chest-counter`,
   },
   openGraph: {
-    title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
+    title: "Fortnite Chest Counter — 4-Column Squad Tally",
     description: "Dedicated 4-column chest tracker Fortnite squads use to track Standard, Rare, Sprite, and Vault chests in parallel.",
     url: `${siteConfig.url}/fortnite-chest-counter`,
     siteName: siteConfig.name,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
+    title: "Fortnite Chest Counter — 4-Column Squad Tally",
     description: "Dedicated 4-column chest tracker Fortnite squads use for competitive matches.",
     images: [`${siteConfig.url}/opengraph-image`],
   },

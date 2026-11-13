@@ -7,13 +7,13 @@ import { ArrowLeft, CheckCircle2, Calendar, ShieldCheck, Flame } from "lucide-re
 import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 
 export const metadata: Metadata = {
-  title: "Pirate Token Odds Calculator — Official Fortnite Drop Rates (Chapter 7)",
+  title: "Fortnite Pirate Token Odds Calculator",
   description: "Epic's official Pirate Token odds: 1 in 137,500. See how many chests you need for 50%, 90% and 99% — plus Treasure Hours multipliers.",
   alternates: {
     canonical: `${siteConfig.url}/pirate-token-odds`,
   },
   openGraph: {
-    title: "Pirate Token Odds Calculator — Official Fortnite Drop Rates",
+    title: "Fortnite Pirate Token Odds Calculator",
     description: "Epic's official Pirate Token odds: 1 in 137,500. Calculate required chests and Treasure Hours odds.",
     url: `${siteConfig.url}/pirate-token-odds`,
     siteName: siteConfig.name,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pirate Token Odds Calculator — Official Fortnite Drop Rates",
+    title: "Fortnite Pirate Token Odds Calculator",
     description: "Official 1 in 137,500 token odds and Treasure Hours multiplier calculator.",
     images: [`${siteConfig.url}/opengraph-image`],
   },

@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { CategorizedCounterView } from "@/components/CategorizedCounterView";
 import { ArrowLeft, Users, CheckCircle2, Shield, HardDrive, Swords, Sparkles } from "lucide-react";
@@ -66,6 +67,23 @@ export default function ChestCounterPage() {
 
       {/* 专享四列独立大按键分栏计数台 */}
       <CategorizedCounterView />
+
+      {/* 4 列计数器实机比赛记分面板截图 */}
+      <figure className="my-8 space-y-2.5">
+        <div className="rounded-2xl overflow-hidden border border-[#2e2e2e] bg-[#161616] shadow-xl">
+          <Image
+            src="/images/fortnite-chest-counter-match-hud.svg"
+            alt="Fortnite Chest Counter 4-column live match HUD telemetry display showing categorized counts for Standard, Rare, Sprite, and Boss Vault chests"
+            width={1200}
+            height={675}
+            priority
+            className="w-full h-auto block"
+          />
+        </div>
+        <figcaption className="text-center text-xs text-[#888]">
+          <strong className="text-[#d4d4d4]">Real-time Match HUD Telemetry:</strong> An active 4-column squad session logged at Retail Row (Chapter 7 Treasure Hunters), totaling 20 containers with live Pirate Token probability calculation.
+        </figcaption>
+      </figure>
 
       {/* 战术分工四列实操场景 */}
       <section className="space-y-4 pt-4 border-t border-[#2e2e2e]">

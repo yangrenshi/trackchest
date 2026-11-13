@@ -7,7 +7,7 @@ import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight 
 
 export const metadata: Metadata = {
   title: "Fortnite Chest Types Encyclopedia — Chapter 7 Treasure Hunters Guide",
-  description: "Complete Fortnite Chapter 7 chest guide. Learn spawn locations, visual cues, and routing strategy for Standard, Rare, Sprite, and Vault chests.",
+  description: "Complete Fortnite Chapter 7 chest guide. Learn spawn locations, visual cues, and routing for Standard, Rare, Sprite, and Vault chests, plus Pirate Crates and Commercial Safes.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
   },
@@ -188,6 +188,28 @@ export default function ChestTypesPage() {
                   <span className="text-[#aaa]">{chest.typicalLoot}</span>
                 </div>
               </div>
+
+              {/* 4 列计数器排除原因与专项导流提示 */}
+              {chest.id === "pirate" && (
+                <div className="p-3 rounded-xl bg-[#ffc93c]/10 border border-[#ffc93c]/30 text-xs text-[#d4d4d4] flex flex-wrap items-center justify-between gap-2">
+                  <span>
+                    <strong className="text-[#ffc93c]">4-Column Note:</strong> This container is excluded from the 4-column battle counter because it operates under Epic&apos;s special lottery mechanics.
+                  </span>
+                  <Link
+                    href="/pirate-token-odds"
+                    className="text-xs font-semibold text-[#ffd510] underline flex items-center space-x-1"
+                  >
+                    <span>Track on Pirate Odds Page</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              )}
+
+              {chest.id === "safe" && (
+                <div className="p-3 rounded-xl bg-[#242424] border border-[#2e2e2e] text-xs text-[#9a9a9a]">
+                  <strong className="text-white">4-Column Note:</strong> Excluded from the 4-column combat counter because Commercial Safes exclusively drop gold bars (100–150 Bars) rather than Battle Royale weapons or shields.
+                </div>
+              )}
             </article>
           );
         })}

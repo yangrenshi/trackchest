@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.2] - 2026-11-13
+
+### Fixed & Enhanced (Treasure Hours Tri-state Banner, Official Data Alignment & Match HUD)
+- **Tri-State Treasure Hours Banner (`TreasureHoursBanner.tsx`)**:
+  - Implemented dynamic auto-switching client component based on real-time timestamps:
+    - *Upcoming State*: `Treasure Hours Wave 1: Saturday, Nov 14 — 1.5x token drops upcoming`.
+    - *Live State*: `Wave 1 is live now — 1.5x drop rate active globally!` with glowing beacon.
+    - *Next Wave/Ended State*: Auto-transitions to Wave 2 (Nov 21), Wave 3 (Nov 28), and season conclusion without manual code edits.
+  - Corrected Wave 3 suffix from `(Season Finale)` to `(Last Treasure Hours)` since Chapter 7 concludes Dec 4–5.
+- **Official Chest Spawn Chance Realignment**:
+  - `ComparisonTable.tsx`: Labelled Standard (`~70%–80% community est.`) and Rare (`~2%–5% community est.`) to prevent confusion with official numbers.
+  - Explicitly surfaced Epic's verified `1 in 137,500 (Official)` for Pirate Token containers with an interactive deep link to `/pirate-token-odds`.
+  - Realigned FAQ in `site.ts` with community estimation disclaimers.
+- **6-Types vs 4-Columns Discrepancy Resolution**:
+  - `/chest-types`: Added explicit contextual callouts on *Pirate Crates* (lottery mechanics routed to calculator) and *Commercial Safes* (drops gold bars, excluded from weapon combat tally).
+  - Expanded metadata description to include `plus Pirate Crates and Commercial Safes`.
+- **Media Asset & Verifiability Polish (5/5 Media Check)**:
+  - Created high-fidelity vector match HUD telemetry asset (`public/images/fortnite-chest-counter-match-hud.svg`).
+  - Embedded real-world 4-column squad session figure and figcaption in `/fortnite-chest-counter`.
+- **Community Cold Launch Asset**:
+  - Authored comprehensive `r/FortNiteBR` post draft (`06_Reddit_FortNiteBR发帖方案.md`) focusing on official mathematical proofs and zero-ad utility.
+
 ## [1.4.1] - 2026-11-13
 
 ### Fixed & Fine-tuned (SEO Snippet & Exact Keyword Density)

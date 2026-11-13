@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <!-- 背景渐变 -->
+    <radialGradient id="bgGlow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#1e1808" />
+      <stop offset="50%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0d0d0d" />
+    </radialGradient>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffc93c" />
+      <stop offset="100%" stop-color="#ffd510" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- 底色与微网格 -->
+  <rect width="1200" height="675" fill="url(#bgGlow)" />
+  <g opacity="0.04" stroke="#ffffff" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" />
+    </pattern>
+    <rect width="1200" height="675" fill="url(#grid)" />
+  </g>
+
+  <!-- 顶部状态栏 -->
+  <g transform="translate(60, 40)">
+    <rect width="1080" height="56" rx="14" fill="#1c1c1c" stroke="#2e2e2e" stroke-width="1" />
+    <circle cx="28" cy="28" r="5" fill="#10b981" />
+    <text x="44" y="33" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="1">
+      TRACKCHEST HUD • SQUAD MATCH TELEMETRY
+    </text>
+    <rect x="740" y="14" width="160" height="28" rx="6" fill="#262626" />
+    <text x="752" y="32" fill="#ffc93c" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="600">
+      POI: RETAIL ROW
+    </text>
+    <rect x="914" y="14" width="150" height="28" rx="6" fill="#2a1f0a" stroke="#ffc93c" stroke-opacity="0.3" stroke-width="1" />
+    <text x="926" y="32" fill="#ffc93c" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="700">
+      SESSION: LIVE (14:22)
+    </text>
+  </g>
+
+  <!-- 4 列计数卡片布局 (60, 120, 宽度 1080, 每列 252 宽, 间隔 24) -->
+  <!-- 第 1 列: Standard Chest -->
+  <g transform="translate(60, 120)" filter="url(#shadow)">
+    <rect width="252" height="380" rx="18" fill="#181818" stroke="#333333" stroke-width="1" />
+    <rect x="0" y="0" width="252" height="6" rx="3" fill="#eab308" />
+    <rect x="18" y="24" width="90" height="22" rx="6" fill="#eab308" fill-opacity="0.15" stroke="#eab308" stroke-opacity="0.3" />
+    <text x="28" y="39" fill="#eab308" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700">
+      COMMON TIER
+    </text>
+    <text x="18" y="78" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">
+      Standard Chest
+    </text>
+    <text x="18" y="98" fill="#888888" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">
+      Perimeter &amp; Attic loot
+    </text>
+
+    <!-- 计数值 -->
+    <rect x="18" y="125" width="216" height="120" rx="14" fill="#111111" stroke="#262626" />
+    <text x="126" y="210" text-anchor="middle" fill="#ffffff" font-family="'JetBrains Mono', Consolas, monospace" font-size="76" font-weight="900" letter-spacing="-2">
+      14
+    </text>
+
+    <!-- 虚拟轻触按键 -->
+    <rect x="18" y="265" width="216" height="48" rx="12" fill="#222222" stroke="#eab308" stroke-opacity="0.4" stroke-width="1" />
+    <text x="126" y="295" text-anchor="middle" fill="#eab308" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">
+      +1 TAP (SPACE)
+    </text>
+    <text x="126" y="345" text-anchor="middle" fill="#666666" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+      Assigned: Flanker Player
+    </text>
+  </g>
+
+  <!-- 第 2 列: Rare Blue Chest -->
+  <g transform="translate(336, 120)" filter="url(#shadow)">
+    <rect width="252" height="380" rx="18" fill="#181818" stroke="#1e3a5f" stroke-width="1" />
+    <rect x="0" y="0" width="252" height="6" rx="3" fill="#3b82f6" />
+    <rect x="18" y="24" width="76" height="22" rx="6" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-opacity="0.3" />
+    <text x="28" y="39" fill="#60a5fa" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700">
+      RARE TIER
+    </text>
+    <text x="18" y="78" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">
+      Rare Blue Chest
+    </text>
+    <text x="18" y="98" fill="#888888" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">
+      Guaranteed blue+ weapons
+    </text>
+
+    <!-- 计数值 -->
+    <rect x="18" y="125" width="216" height="120" rx="14" fill="#0d1829" stroke="#1d385c" />
+    <text x="126" y="210" text-anchor="middle" fill="#60a5fa" font-family="'JetBrains Mono', Consolas, monospace" font-size="76" font-weight="900" letter-spacing="-2">
+      03
+    </text>
+
+    <!-- 虚拟轻触按键 -->
+    <rect x="18" y="265" width="216" height="48" rx="12" fill="#15263f" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1" />
+    <text x="126" y="295" text-anchor="middle" fill="#60a5fa" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">
+      +1 TAP (KEY 2)
+    </text>
+    <text x="126" y="345" text-anchor="middle" fill="#666666" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+      Assigned: Squad IGL
+    </text>
+  </g>
+
+  <!-- 第 3 列: Sprite Chest -->
+  <g transform="translate(612, 120)" filter="url(#shadow)">
+    <rect width="252" height="380" rx="18" fill="#181818" stroke="#3b1d54" stroke-width="1" />
+    <rect x="0" y="0" width="252" height="6" rx="3" fill="#a855f7" />
+    <rect x="18" y="24" width="76" height="22" rx="6" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-opacity="0.3" />
+    <text x="28" y="39" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700">
+      EPIC TIER
+    </text>
+    <text x="18" y="78" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">
+      Sprite Shrines
+    </text>
+    <text x="18" y="98" fill="#888888" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">
+      Mobility &amp; Biome charms
+    </text>
+
+    <!-- 计数值 -->
+    <rect x="18" y="125" width="216" height="120" rx="14" fill="#1b102b" stroke="#3c1e5d" />
+    <text x="126" y="210" text-anchor="middle" fill="#c084fc" font-family="'JetBrains Mono', Consolas, monospace" font-size="76" font-weight="900" letter-spacing="-2">
+      02
+    </text>
+
+    <!-- 虚拟轻触按键 -->
+    <rect x="18" y="265" width="216" height="48" rx="12" fill="#26123e" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1" />
+    <text x="126" y="295" text-anchor="middle" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">
+      +1 TAP (KEY 3)
+    </text>
+    <text x="126" y="345" text-anchor="middle" fill="#666666" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+      Assigned: Scout / Fragger
+    </text>
+  </g>
+
+  <!-- 第 4 列: Boss Vault -->
+  <g transform="translate(888, 120)" filter="url(#shadow)">
+    <rect width="252" height="380" rx="18" fill="#181818" stroke="#4a3b10" stroke-width="1" />
+    <rect x="0" y="0" width="252" height="6" rx="3" fill="#f59e0b" />
+    <rect x="18" y="24" width="88" height="22" rx="6" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.3" />
+    <text x="28" y="39" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700">
+      MYTHIC TIER
+    </text>
+    <text x="18" y="78" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">
+      Boss Vaults
+    </text>
+    <text x="18" y="98" fill="#888888" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">
+      Bunkers &amp; Keycard rooms
+    </text>
+
+    <!-- 计数值 -->
+    <rect x="18" y="125" width="216" height="120" rx="14" fill="#261d07" stroke="#4d3b12" />
+    <text x="126" y="210" text-anchor="middle" fill="#fbbf24" font-family="'JetBrains Mono', Consolas, monospace" font-size="76" font-weight="900" letter-spacing="-2">
+      01
+    </text>
+
+    <!-- 虚拟轻触按键 -->
+    <rect x="18" y="265" width="216" height="48" rx="12" fill="#38280a" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1" />
+    <text x="126" y="295" text-anchor="middle" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">
+      +1 TAP (KEY 4)
+    </text>
+    <text x="126" y="345" text-anchor="middle" fill="#666666" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+      Assigned: Anchor Player
+    </text>
+  </g>
+
+  <!-- 底部汇总统计栏 -->
+  <g transform="translate(60, 530)">
+    <rect width="1080" height="95" rx="16" fill="#161616" stroke="#2e2e2e" stroke-width="1" />
+    <g transform="translate(32, 28)">
+      <text x="0" y="0" fill="#888888" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="1">
+        TOTAL CHESTS OPENED
+      </text>
+      <text x="0" y="36" fill="#ffffff" font-family="'JetBrains Mono', Consolas, monospace" font-size="28" font-weight="900">
+        20 <tspan fill="#666666" font-size="14" font-weight="500">containers</tspan>
+      </text>
+    </g>
+
+    <line x1="280" y1="20" x2="280" y2="75" stroke="#262626" stroke-width="1" />
+
+    <g transform="translate(320, 28)">
+      <text x="0" y="0" fill="#888888" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="1">
+        CUMULATIVE PIRATE TOKEN ODDS
+      </text>
+      <text x="0" y="36" fill="#ffc93c" font-family="'JetBrains Mono', Consolas, monospace" font-size="28" font-weight="900">
+        0.0145% <tspan fill="#888888" font-size="13" font-weight="500">(1 in 137,500 baseline)</tspan>
+      </text>
+    </g>
+
+    <line x1="720" y1="20" x2="720" y2="75" stroke="#262626" stroke-width="1" />
+
+    <g transform="translate(760, 34)">
+      <rect width="270" height="34" rx="8" fill="#1e1e1e" stroke="#333333" stroke-width="1" />
+      <text x="135" y="22" text-anchor="middle" fill="#aaaaaa" font-family="'JetBrains Mono', monospace" font-size="12">
+        AUTO-SAVED TO LOCALSTORAGE
+      </text>
+    </g>
+  </g>
+</svg>

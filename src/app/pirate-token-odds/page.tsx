@@ -4,6 +4,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { PirateTokenCalculator } from "@/components/PirateTokenCalculator";
 import { ArrowLeft, CheckCircle2, Calendar, ShieldCheck, Flame } from "lucide-react";
+import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 
 export const metadata: Metadata = {
   title: "Pirate Token Odds Calculator — Official Fortnite Drop Rates (Chapter 7)",
@@ -67,18 +68,8 @@ export default function PirateTokenOddsPage() {
         </Link>
       </div>
 
-      {/* 实时活动预告横幅 */}
-      <div className="p-3.5 rounded-xl bg-[#ffc93c]/10 border border-[#ffc93c]/30 flex items-center justify-between text-xs text-white">
-        <div className="flex items-center space-x-2">
-          <Flame className="w-4 h-4 text-[#ffc93c] shrink-0" />
-          <span>
-            <strong className="text-[#ffc93c]">Treasure Hours Wave 1</strong> starts <strong>Saturday, Nov 14, 2026</strong> &bull; 1.5x token drop boost active globally.
-          </span>
-        </div>
-        <span className="text-[11px] font-mono text-[#ffc93c] bg-[#ffc93c]/20 px-2 py-0.5 rounded font-bold shrink-0 hidden sm:inline-block">
-          1.5x Multiplier
-        </span>
-      </div>
+      {/* 实时活动预告横幅（根据当前日期三态自动切换） */}
+      <TreasureHoursBanner />
 
       <div className="space-y-2">
         <div className="flex flex-wrap items-center gap-2">
@@ -168,7 +159,7 @@ export default function PirateTokenOddsPage() {
 
           <div className="p-3 rounded-xl bg-[#242424] border border-[#2e2e2e] flex items-center justify-between">
             <div>
-              <span className="font-bold text-white">Wave 3: Saturday, November 28, 2026 (Season Finale)</span>
+              <span className="font-bold text-white">Wave 3: Saturday, November 28, 2026 (Last Treasure Hours)</span>
               <span className="text-[#888] text-[11px] block mt-0.5">
                 2.0x Double Odds &bull; Final weekend push before Chapter 8 season switch
               </span>

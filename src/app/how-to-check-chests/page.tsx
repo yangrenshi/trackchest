@@ -103,7 +103,7 @@ export default function HowToCheckChestsPage() {
       </div>
 
       {/* 步骤 1 */}
-      <section className="space-y-2">
+      <section id="step-1" className="space-y-2 scroll-mt-20">
         <h2 className="text-base font-bold text-white flex items-center space-x-2">
           <span className="w-6 h-6 rounded-md bg-[#2b2b2b] text-white text-xs flex items-center justify-center font-mono">1</span>
           <span>Checking the Seasonal Milestones Tab</span>
@@ -121,7 +121,7 @@ export default function HowToCheckChestsPage() {
       </section>
 
       {/* 步骤 2 */}
-      <section className="space-y-2">
+      <section id="step-2" className="space-y-2 scroll-mt-20">
         <h2 className="text-base font-bold text-white flex items-center space-x-2">
           <span className="w-6 h-6 rounded-md bg-[#2b2b2b] text-white text-xs flex items-center justify-center font-mono">2</span>
           <span>Inspecting Post-Match Accolades</span>
@@ -137,7 +137,7 @@ export default function HowToCheckChestsPage() {
       </section>
 
       {/* 步骤 3 */}
-      <section className="space-y-2">
+      <section id="step-3" className="space-y-2 scroll-mt-20">
         <h2 className="text-base font-bold text-white flex items-center space-x-2">
           <span className="w-6 h-6 rounded-md bg-[#2b2b2b] text-white text-xs flex items-center justify-center font-mono">3</span>
           <span>Live Counting with TrackChest</span>

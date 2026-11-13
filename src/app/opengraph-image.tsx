@@ -55,7 +55,7 @@ export default async function Image() {
             marginBottom: "28px",
           }}
         >
-          <span>FORTNITE CHAPTER 6 • FREE TOOL</span>
+          <span>FORTNITE CHAPTER 7 • TREASURE HUNTERS</span>
         </div>
 
         {/* 品牌主标题 */}

@@ -2,18 +2,18 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { CHEST_TYPES } from "@/config/chestTypes";
-import { ArrowLeft } from "lucide-react";
+import { DETAILED_CHEST_TYPES } from "@/config/chestTypes";
+import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot",
-  description: "Complete guide to all Fortnite chest types. Learn spawn rates, guaranteed loot tiers, and optimal drop spots for Standard, Rare, Sprite, and Vault chests.",
+  title: "Fortnite Chest Types Encyclopedia — Chapter 7 Treasure Hunters Guide",
+  description: "Complete guide to all Fortnite Chapter 7 chest variants: Standard, Rare, Sprite, Pirate, Vault, and Safes. Learn spawn locations, identification, and routing strategy.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
   },
   openGraph: {
-    title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot",
-    description: "Complete guide to all Fortnite chest types: Standard, Rare, Sprite, and Vault chests.",
+    title: "Fortnite Chest Types Encyclopedia — Chapter 7 Treasure Hunters Guide",
+    description: "Detailed tactical breakdown of all 6 container variants active in Fortnite Chapter 7.",
     url: `${siteConfig.url}/chest-types`,
     siteName: siteConfig.name,
     type: "article",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Chest Types Encyclopedia — Spawns, Rarities & Loot",
-    description: "Learn spawn rates and guaranteed drops across all Fortnite chest rarities.",
+    title: "Fortnite Chest Types Encyclopedia — Chapter 7 Guide",
+    description: "Learn tactical spawn details across all Fortnite Chapter 7 chest rarities.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
 };
@@ -38,30 +38,30 @@ export default function ChestTypesPage() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Fortnite Chest Types & Rarities Encyclopedia",
-    description: "Overview of all active chest variants and rarities in Fortnite Battle Royale.",
-    itemListElement: CHEST_TYPES.map((chest, index) => ({
+    name: "Fortnite Chest Types & Rarities Encyclopedia (Chapter 7)",
+    description: "Comprehensive guide to all active container variants in Fortnite Chapter 7 Treasure Hunters.",
+    itemListElement: DETAILED_CHEST_TYPES.map((chest, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: chest.name,
-      description: `${chest.rarity} tier chest: ${chest.typicalLoot}. ${chest.oddsNote}`,
+      description: `${chest.rarity} tier container: ${chest.whereItSpawns} ${chest.typicalLoot}`,
     })),
   };
 
-  const getRarityClass = (rarity: string) => {
+  const getRarityBadge = (rarity: string) => {
     switch (rarity) {
       case "Common":
-        return "rarity-common";
+        return "bg-slate-700/40 text-slate-300 border-slate-600/40";
       case "Rare":
-        return "rarity-rare";
+        return "bg-blue-500/20 text-blue-300 border-blue-500/40";
       case "Epic":
-        return "rarity-epic";
-      case "Special":
-        return "rarity-legendary";
+        return "bg-purple-500/20 text-purple-300 border-purple-500/40";
       case "Mythic":
-        return "rarity-mythic";
+        return "bg-amber-500/20 text-amber-300 border-amber-500/40";
+      case "Special":
+        return "bg-orange-500/20 text-orange-300 border-orange-500/40";
       default:
-        return "rarity-common";
+        return "bg-zinc-800 text-zinc-300 border-zinc-700";
     }
   };
 
@@ -83,63 +83,125 @@ export default function ChestTypesPage() {
       </div>
 
       <div className="space-y-2">
-        <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
-          Loot Crate Glossary
-        </span>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
+            Container Field Guide
+          </span>
+          <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
+            Chapter 7 — Treasure Hunters • Updated Nov 13, 2026
+          </span>
+        </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-          Fortnite Chest Types &amp; Rarities
+          Fortnite Chest Types &amp; Spawn Tiers Encyclopedia
         </h1>
-        <p className="text-xs text-[#9a9a9a]">
-          Comprehensive reference guide to all chest variants and spawn tiers in Fortnite Chapter 6.
+        <p className="text-xs text-[#9a9a9a] leading-relaxed">
+          A comprehensive tactical guide to every container variant currently active in Fortnite Battle Royale Chapter 7 (Treasure Hunters mini-season, running Nov 1 – Dec 4, 2026). Each entry outlines physical spawn locations, visual/audio identification cues, competitive rerouting utility, and common player misconceptions.
         </p>
       </div>
 
-      {/* 6 大宝箱卡片 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-        {CHEST_TYPES.map((chest) => {
-          const rarityClass = getRarityClass(chest.rarity);
-          const destinationUrl = chest.id === "regular" ? "/#tracker-app" : "/fortnite-chest-counter";
+      {/* 6 大详细宝箱章节 (总字数 750+ 词) */}
+      <div className="space-y-6">
+        {DETAILED_CHEST_TYPES.map((chest) => {
+          const destinationUrl = chest.id === "regular" 
+            ? "/#tracker-app" 
+            : chest.id === "pirate" 
+              ? "/pirate-token-odds" 
+              : "/fortnite-chest-counter";
 
           return (
-            <div
+            <article
               key={chest.id}
-              className={`p-4 rounded-xl flex flex-col justify-between space-y-3 ${rarityClass}`}
+              className="p-5 sm:p-6 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-4 hover:border-[#3e3e3e] transition-colors"
             >
-              <div>
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-[10px] font-semibold text-[#9a9a9a] uppercase tracking-wider">
-                    {chest.rarity}
+              {/* 标头 */}
+              <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#2e2e2e]">
+                <div>
+                  <span className={`text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded border inline-block mb-1.5 ${getRarityBadge(chest.rarity)}`}>
+                    {chest.rarity} Tier &bull; {chest.badge}
                   </span>
-                  <span className="text-[10px] font-mono text-[#888]">Spawn: {chest.oddsNote}</span>
+                  <h2 className="text-lg font-bold text-white">{chest.name}</h2>
                 </div>
-                <h2 className="text-base font-bold text-white">{chest.name}</h2>
-                <p className="text-xs text-[#9a9a9a] mt-1.5 leading-relaxed">
-                  <strong className="text-white">Drops:</strong> {chest.typicalLoot}
-                </p>
-              </div>
 
-              <div className="pt-2 border-t border-white/10 flex justify-end">
                 <Link
                   href={destinationUrl}
-                  className="text-xs text-[#ffc93c] hover:underline font-medium"
+                  className="text-xs text-[#ffc93c] hover:underline font-medium flex items-center space-x-1"
                 >
-                  {chest.id === "regular" ? "Track in Single Counter →" : "Track in 4-Column Counter →"}
+                  <span>
+                    {chest.id === "regular"
+                      ? "Track in Main Tool"
+                      : chest.id === "pirate"
+                        ? "Calculate Token Odds"
+                        : "Track in 4-Column View"}
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
-            </div>
+
+              {/* 战术四大维度 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+                <div className="space-y-1 p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
+                  <span className="font-semibold text-white flex items-center space-x-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-[#ffc93c] shrink-0" />
+                    <span>Where It Spawns</span>
+                  </span>
+                  <p className="text-[#9a9a9a] leading-relaxed">
+                    {chest.whereItSpawns}
+                  </p>
+                </div>
+
+                <div className="space-y-1 p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
+                  <span className="font-semibold text-white flex items-center space-x-1.5">
+                    <Eye className="w-3.5 h-3.5 text-[#49d6ff] shrink-0" />
+                    <span>How to Identify</span>
+                  </span>
+                  <p className="text-[#9a9a9a] leading-relaxed">
+                    {chest.howToIdentify}
+                  </p>
+                </div>
+
+                <div className="space-y-1 p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
+                  <span className="font-semibold text-white flex items-center space-x-1.5">
+                    <Compass className="w-3.5 h-3.5 text-[#10B981] shrink-0" />
+                    <span>Is It Worth Rerouting?</span>
+                  </span>
+                  <p className="text-[#9a9a9a] leading-relaxed">
+                    {chest.worthRerouting}
+                  </p>
+                </div>
+
+                <div className="space-y-1 p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
+                  <span className="font-semibold text-white flex items-center space-x-1.5">
+                    <AlertCircle className="w-3.5 h-3.5 text-[#f0a6ff] shrink-0" />
+                    <span>Common Misconceptions</span>
+                  </span>
+                  <p className="text-[#9a9a9a] leading-relaxed">
+                    {chest.commonMisconceptions}
+                  </p>
+                </div>
+              </div>
+
+              {/* 典型掉落条 */}
+              <div className="p-3 rounded-xl bg-[#181818] border border-[#282828] flex items-start space-x-2 text-xs">
+                <PackageCheck className="w-4 h-4 text-[#ffd510] shrink-0 mt-0.5" />
+                <div className="leading-relaxed">
+                  <strong className="text-white">Typical Loot Yield: </strong>
+                  <span className="text-[#aaa]">{chest.typicalLoot}</span>
+                </div>
+              </div>
+            </article>
           );
         })}
       </div>
 
       <div className="pt-6 border-t border-[#2e2e2e] flex flex-wrap items-center justify-between gap-3 text-xs">
         <Link href="/fortnite-chest-counter" className="text-[#9a9a9a] hover:text-white underline">
-          &larr; Fortnite Chest Counter
+          &larr; Fortnite Chest Counter (4-Column)
         </Link>
         <Link href="/" className="text-[#ffc93c] hover:underline font-medium">
-          Main Tracker
+          Main Single Counter
         </Link>
         <Link href="/pirate-token-odds" className="text-[#9a9a9a] hover:text-white underline">
-          Pirate Token Odds &rarr;
+          Pirate Token Odds (Official 1/137.5k) &rarr;
         </Link>
       </div>
     </div>

@@ -77,6 +77,36 @@ export function SeoContentSection() {
         </section>
       </div>
 
+      {/* 章节 2.8: 这工具不做什么 (What TrackChest Does NOT Do) */}
+      <section className="p-5 sm:p-6 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-3">
+        <h3 className="text-base font-bold text-white">
+          What This Fortnite Chest Tracker Does NOT Do (Account Safety Guarantee)
+        </h3>
+        <p className="text-xs text-[#9a9a9a] leading-relaxed">
+          Because competitive Fortnite players care deeply about tournament integrity and account security, here is our transparent zero-risk commitment:
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
+            <h4 className="font-semibold text-white mb-1">No Game Memory Injection</h4>
+            <p className="text-[11px] text-[#888]">
+              This fortnite chest tracker runs completely outside the game. It does not hook into Fortnite game files, read memory addresses, or trigger anti-cheat software (Easy Anti-Cheat / BattlEye).
+            </p>
+          </div>
+          <div className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
+            <h4 className="font-semibold text-white mb-1">No Epic Account Login</h4>
+            <p className="text-[11px] text-[#888]">
+              We never ask for your Epic Games username, email, or OAuth tokens. This fortnite chest tracker companion functions with zero credentials required.
+            </p>
+          </div>
+          <div className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
+            <h4 className="font-semibold text-white mb-1">100% Client-Side Storage</h4>
+            <p className="text-[11px] text-[#888]">
+              All your opened container statistics remain stored exclusively on your own device via private LocalStorage, giving you complete data privacy.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* 章节 3: 内链导航 */}
       <section className="space-y-3 pt-2">
         <h3 className="text-base font-bold text-white">

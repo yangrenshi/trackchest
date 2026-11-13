@@ -119,10 +119,10 @@ export const siteConfig: SiteConfig = {
       answer: "In Fortnite, Regular standard chests have a high spawn rate (typically 70-80% per POI) and drop common to rare weapons. Rare (blue glowing) chests have a roughly 2% to 5% spawn chance and guarantee at least a Rare (blue), Epic (purple), or Legendary (gold) weapon, plus high-tier shield potions.",
     },
     {
-      q: "How do Pirate Token chests and map fragments work?",
-      a: "During pirate-themed events and Chapter seasons, Pirate Token chests or Buried Treasure map chests require collecting map items or tokens. They offer higher drop odds for Mythic utility items and gold medallions.",
-      question: "How do Pirate Token chests and map fragments work?",
-      answer: "During pirate-themed events and Chapter seasons, Pirate Token chests or Buried Treasure map chests require collecting map items or tokens. They offer higher drop odds for Mythic utility items and gold medallions.",
+      q: "How do Pirate Token chests and the 1 in 137,500 odds work?",
+      a: "In Chapter 7 Treasure Hunters, Epic confirmed Pirate Shop Access Tokens drop from containers at a 1 in 137,500 rate (0.000007273%). TrackChest lets you track opened containers and calculate your statistical progress toward the 50% median threshold.",
+      question: "How do Pirate Token chests and the 1 in 137,500 odds work?",
+      answer: "In Chapter 7 Treasure Hunters, Epic confirmed Pirate Shop Access Tokens drop from containers at a 1 in 137,500 rate (0.000007273%). TrackChest lets you track opened containers and calculate your statistical progress toward the 50% median threshold.",
     },
     {
       q: "Will my chest counts be lost if I refresh or close the tab?",

@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { CategorizedCounterView } from "@/components/CategorizedCounterView";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Users, CheckCircle2, Shield, HardDrive, Swords, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter",
-  description: "Dedicated 4-column Fortnite chest counter. Track Standard, Rare, Sprite, and Vault chests in parallel columns with instant tap buttons.",
+  title: "Fortnite Chest Counter — 4-Column Categorized Loot Counter (Chapter 7)",
+  description: "Dedicated 4-column Fortnite chest counter. Track Standard, Rare, Sprite, and Vault chests in parallel columns with instant tap buttons. Built for squad communication.",
   alternates: {
     canonical: `${siteConfig.url}/fortnite-chest-counter`,
   },
@@ -48,41 +48,129 @@ export default function ChestCounterPage() {
       </div>
 
       <div className="space-y-2">
-        <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
-          4-Column Parallel Tally
-        </span>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
+            Competitive Squad Companion
+          </span>
+          <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
+            Chapter 7 — Treasure Hunters • Updated Nov 13, 2026
+          </span>
+        </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-          Fortnite Chest Counter
+          Fortnite Chest Counter — 4-Column Categorized Tally
         </h1>
-        <p className="text-xs text-[#9a9a9a]">
-          Independent multi-column counter designed for players tracking specific crate categories simultaneously.
+        <p className="text-xs text-[#9a9a9a] leading-relaxed">
+          An independent multi-column counter engineered for competitive duos, trios, and squads who assign dedicated POI loot paths. Track Standard, Rare Blue, Sprite Shrine, and Boss Vault containers in parallel columns without losing itemized breakdowns.
         </p>
       </div>
 
       {/* 专享四列独立大按键分栏计数台 */}
       <CategorizedCounterView />
 
-      {/* 专属科普知识 */}
-      <section className="p-6 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-3">
-        <h2 className="text-base font-bold text-white">
-          Why Use a Multi-Column Counter Over a Single Button?
-        </h2>
+      {/* 战术分工四列实操场景 */}
+      <section className="space-y-4 pt-4 border-t border-[#2e2e2e]">
+        <div className="flex items-center space-x-2">
+          <Users className="w-4 h-4 text-[#ffc93c]" />
+          <h2 className="text-base font-bold text-white">
+            Team Role Division Across the 4 Columns
+          </h2>
+        </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          While our homepage focuses on zero-distraction solo speed-tapping, competitive duo and squad teams often assign players specific POI sections (e.g. Player 1 loots standard attics, Player 2 cracks open the underground vault).
-        </p>
-        <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          With this 4-column categorized counter, your team maintains exact tallies across all four major container rarities without losing individual breakdowns.
+          In high-tier ranked lobbies and tournament scrims, opening containers as a chaotic free-for-all leads to lopsided ammunition reserves and wasted shield rotations. Competitive squads assign each player a specific container tier:
         </p>
 
-        <div className="pt-3 border-t border-[#2e2e2e] flex items-center justify-between text-xs">
-          <Link href="/" className="text-[#ffc93c] hover:underline">
-            &larr; Return to Single-Button Tracker
-          </Link>
-          <Link href="/chest-types" className="text-[#9a9a9a] hover:text-white underline">
-            View Chest Types Encyclopedia &rarr;
-          </Link>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+          {/* 第 1 列分工 */}
+          <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
+            <div className="flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#9a9a9a]" />
+              <h3 className="font-bold text-white">Column 1: Standard Chests (Secondary Fragger)</h3>
+            </div>
+            <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
+              Assigned to the entry fragger clearing outer perimeter buildings, residential attics, and rooftops. Their job is vacuuming baseline assault rifles, shotguns, and mini shields to establish early defensive perimeter angles.
+            </p>
+          </div>
+
+          {/* 第 2 列分工 */}
+          <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
+            <div className="flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#49d6ff]" />
+              <h3 className="font-bold text-white">Column 2: Rare Blue Chests (IGL Priority)</h3>
+            </div>
+            <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
+              Assigned to the In-Game Leader (IGL) hitting verified subterranean bunker nodes and weather control stations. Rare chests guarantee Blue-or-better combat weapons, ensuring the squad secures surge tag capability before Zone 2.
+            </p>
+          </div>
+
+          {/* 第 3 列分工 */}
+          <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
+            <div className="flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#f0a6ff]" />
+              <h3 className="font-bold text-white">Column 3: Sprite Shrines (Scout / Rotator)</h3>
+            </div>
+            <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
+              Assigned to the designated support or mobility scout who drops on peripheral elemental altars. Tracking these ensures your squad collects required kinetic movement items and utility shards before meeting up at the central POI.
+            </p>
+          </div>
+
+          {/* 第 4 列分工 */}
+          <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
+            <div className="flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#ffd510]" />
+              <h3 className="font-bold text-white">Column 4: Boss Vault Bunkers (Heavy Anchor)</h3>
+            </div>
+            <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
+              Assigned to the teammate neutralizing NPC bosses, picking up boss keycards, or cracking vault terminals. Records boss chest loot to confirm gold medallions and mythic artillery are secured.
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* 赛后语音核对 SOP */}
+      <section className="p-5 sm:p-6 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-3.5">
+        <h2 className="text-sm font-bold text-white uppercase tracking-wider flex items-center space-x-2">
+          <Swords className="w-4 h-4 text-[#ffc93c]" />
+          <span>Squad Pre-Rotation Reconciliation Checklist</span>
+        </h2>
+        <p className="text-xs text-[#9a9a9a] leading-relaxed">
+          Before your team initiates your first macro rotation out of your home POI, spend 5 seconds running this quick Discord audio check:
+        </p>
+
+        <ul className="space-y-2 text-xs text-[#9a9a9a]">
+          <li className="flex items-start space-x-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#ffc93c] shrink-0 mt-0.5" />
+            <span><strong className="text-white">Container Threshold:</strong> Confirm total team containers opened exceeds 12 chests. Anything less than 12 containers leaves at least one teammate with an incomplete shield stack.</span>
+          </li>
+          <li className="flex items-start space-x-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#ffc93c] shrink-0 mt-0.5" />
+            <span><strong className="text-white">Surge Firepower:</strong> If Rare Blue Chests equals 0, reallocate high-power assault rifle ammo to your primary long-range beam player before crossing open fields.</span>
+          </li>
+          <li className="flex items-start space-x-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#ffc93c] shrink-0 mt-0.5" />
+            <span><strong className="text-white">Pirate Token Rolls:</strong> If you looted 15+ containers this match, you contributed valuable rolls toward the 1 in 137,500 Pirate Shop Access Token seasonal jackpot!</span>
+          </li>
+        </ul>
+      </section>
+
+      {/* 存档与重置机制 */}
+      <section className="p-5 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2.5 text-xs text-[#9a9a9a]">
+        <div className="flex items-center space-x-2 text-white font-bold">
+          <HardDrive className="w-4 h-4 text-[#49d6ff]" />
+          <span>Local Persistence &amp; Session Management</span>
+        </div>
+        <p className="leading-relaxed">
+          All 4 columns update your browser&apos;s LocalStorage on every single tap. You can refresh the page, close your browser between tournaments, or lock your phone screen without losing count. When starting a fresh competitive set, click &ldquo;Reset All&rdquo; to clear all four columns simultaneously.
+        </p>
+      </section>
+
+      <div className="pt-4 border-t border-[#2e2e2e] flex flex-wrap items-center justify-between gap-3 text-xs">
+        <Link href="/" className="text-[#ffc93c] hover:underline font-medium">
+          &larr; Return to Single-Button Tracker
+        </Link>
+        <Link href="/pirate-token-odds" className="text-[#9a9a9a] hover:text-white underline">
+          Check Pirate Token Drop Odds &rarr;
+        </Link>
+      </div>
     </div>
   );
 }

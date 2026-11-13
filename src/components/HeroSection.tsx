@@ -6,13 +6,14 @@ export function HeroSection() {
     <section className="pt-10 pb-4 px-4 text-center">
       <div className="max-w-2xl mx-auto space-y-2">
         <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
-          Fortnite Chest Companion
+          Fortnite Chest Companion &bull; Chapter 7 Treasure Hunters (Updated Nov 13, 2026)
         </span>
 
-        {/* H1 核心词绝对主轴 (TDH 规范对齐) */}
+        {/* H1 核心词绝对主轴 (带明确破折号分隔) */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-          Fortnite Chest Tracker
-          <span className="block text-xl sm:text-2xl font-normal text-[#9a9a9a] mt-1">
+          <span>Fortnite Chest Tracker</span>
+          <span className="text-[#9a9a9a] mx-2 font-normal">&mdash;</span>
+          <span className="text-xl sm:text-2xl font-normal text-[#9a9a9a] block sm:inline mt-1 sm:mt-0">
             Track Every Chest You Open
           </span>
         </h1>

@@ -51,7 +51,7 @@ export function ComparisonTable() {
           Fortnite Chest Tracker: Chest Types &amp; Spawn Odds
         </h2>
         <p className="text-sm text-[#9a9a9a] mt-1">
-          Spawn frequencies, guaranteed loot tiers, and optimal POI locations across Chapter 6.
+          Spawn frequencies, guaranteed loot tiers, and optimal POI locations across Chapter 7 Treasure Hunters (Season live Nov 1 – Dec 4, 2026).
         </p>
       </div>
 

@@ -1,12 +1,47 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Flame, Clock, Sparkles } from "lucide-react";
+import { Flame, Clock } from "lucide-react";
 import Link from "next/link";
 
-interface WaveState {
+interface WaveConfig {
+  num: number;
+  dateStr: string;
+  startIso: string;
+  endIso: string;
+  multiplier: string;
+  odds: string;
+}
+
+const WAVES: WaveConfig[] = [
+  {
+    num: 1,
+    dateStr: "Saturday, Nov 14",
+    startIso: "2026-11-14T00:00:00Z",
+    endIso: "2026-11-14T23:59:59Z",
+    multiplier: "1.5x drops",
+    odds: "1 in 91,667",
+  },
+  {
+    num: 2,
+    dateStr: "Saturday, Nov 21",
+    startIso: "2026-11-21T00:00:00Z",
+    endIso: "2026-11-21T23:59:59Z",
+    multiplier: "2.0x drops",
+    odds: "1 in 68,750",
+  },
+  {
+    num: 3,
+    dateStr: "Saturday, Nov 28",
+    startIso: "2026-11-28T00:00:00Z",
+    endIso: "2026-11-28T23:59:59Z",
+    multiplier: "2.0x drops",
+    odds: "1 in 68,750",
+  },
+];
+
+interface BannerState {
   status: "upcoming" | "live" | "ended";
-  waveNumber: number;
   title: string;
   subtitle: string;
   badge: string;
@@ -14,10 +49,9 @@ interface WaveState {
 }
 
 export function TreasureHoursBanner() {
-  // 默认服务端预渲染状态（对应当前时间 2026-11-13：Wave 1 未开启）
-  const [waveState, setWaveState] = useState<WaveState>({
+  // 服务端默认预渲染状态 (对应当前 2026-11-13：Wave 1 未开启)
+  const [banner, setBanner] = useState<BannerState>({
     status: "upcoming",
-    waveNumber: 1,
     title: "Treasure Hours Wave 1",
     subtitle: "Starts Saturday, Nov 14 • 1.5x drops (1 in 91,667)",
     badge: "Saturday, Nov 14",
@@ -25,118 +59,84 @@ export function TreasureHoursBanner() {
   });
 
   useEffect(() => {
-    const calculateState = (): WaveState => {
+    const evaluateBanner = (): BannerState => {
       const now = new Date();
-      const year = now.getFullYear();
-      const month = now.getMonth(); // 10 代表 11 月 (0-indexed)
-      const date = now.getDate();
+      const nowTime = now.getTime();
+      const localYear = now.getFullYear();
+      const localMonth = now.getMonth(); // 10 代表 11 月
+      const localDate = now.getDate();
 
-      // UTC 日期 fallback
-      const utcYear = now.getUTCFullYear();
-      const utcMonth = now.getUTCMonth();
-      const utcDate = now.getUTCDate();
+      // 1. 优先检查当前是否有任一波次正处于进行中 (Live Now)
+      for (const wave of WAVES) {
+        const start = new Date(wave.startIso).getTime();
+        const end = new Date(wave.endIso).getTime();
+        const waveDate = new Date(wave.startIso).getUTCDate();
 
-      // 只要本地或 UTC 达到 2026年11月14日
-      const isWave1Today = (year === 2026 && month === 10 && date === 14) || (utcYear === 2026 && utcMonth === 10 && utcDate === 14);
-      // 达到 2026年11月21日
-      const isWave2Today = (year === 2026 && month === 10 && date === 21) || (utcYear === 2026 && utcMonth === 10 && utcDate === 21);
-      // 达到 2026年11月28日
-      const isWave3Today = (year === 2026 && month === 10 && date === 28) || (utcYear === 2026 && utcMonth === 10 && utcDate === 28);
-
-      const currentTime = now.getTime();
-      const wave1EndTimestamp = new Date("2026-11-15T08:00:00Z").getTime();
-      const wave2StartTimestamp = new Date("2026-11-21T00:00:00Z").getTime();
-      const wave2EndTimestamp = new Date("2026-11-22T08:00:00Z").getTime();
-      const wave3StartTimestamp = new Date("2026-11-28T00:00:00Z").getTime();
-      const wave3EndTimestamp = new Date("2026-11-29T08:00:00Z").getTime();
-
-      // 1. Wave 1 进行中
-      if (isWave1Today) {
-        return {
-          status: "live",
-          waveNumber: 1,
-          title: "Wave 1 is live — 1.5x active",
-          subtitle: "1.5x drop rate live globally today (1 in 91,667 odds)",
-          badge: "LIVE NOW • 1.5x",
-          multiplierText: "1.5x Active",
-        };
+        // 当落在 UTC 时间窗口，或本地日期已进入该波次当天
+        const isLive = (nowTime >= start && nowTime <= end) || (localYear === 2026 && localMonth === 10 && localDate === waveDate);
+        if (isLive) {
+          return {
+            status: "live",
+            title: `Wave ${wave.num} is live — ${wave.multiplier}`,
+            subtitle: `${wave.multiplier} active globally today (${wave.odds} odds)`,
+            badge: `LIVE NOW • ${wave.multiplier.toUpperCase()}`,
+            multiplierText: wave.multiplier,
+          };
+        }
       }
 
-      // 2. Wave 1 前
-      if (currentTime < new Date("2026-11-14T00:00:00").getTime()) {
+      // 2. 检查未开始或已结束状态
+      const wave1Start = new Date(WAVES[0].startIso).getTime();
+      if (nowTime < wave1Start && !(localYear === 2026 && localMonth === 10 && localDate >= 14)) {
         return {
           status: "upcoming",
-          waveNumber: 1,
           title: "Treasure Hours Wave 1",
           subtitle: "Starts Saturday, Nov 14 • 1.5x drops (1 in 91,667)",
           badge: "Saturday, Nov 14",
-          multiplierText: "1.5x Boost",
+          multiplierText: "1.5x Drops",
         };
       }
 
-      // 3. Wave 2 进行中
-      if (isWave2Today) {
-        return {
-          status: "live",
-          waveNumber: 2,
-          title: "Wave 2 is live — 2.0x Double Odds",
-          subtitle: "2.0x double drop rate active globally today (1 in 68,750)",
-          badge: "LIVE NOW • 2.0x",
-          multiplierText: "2.0x Active",
-        };
-      }
-
-      // 4. Wave 1 结束，Wave 2 前
-      if (currentTime >= wave1EndTimestamp && currentTime < wave2StartTimestamp) {
+      // 检查 Wave 1 结束 ~ Wave 2 前
+      const wave1End = new Date(WAVES[0].endIso).getTime();
+      const wave2Start = new Date(WAVES[1].startIso).getTime();
+      if (nowTime > wave1End && nowTime < wave2Start) {
         return {
           status: "ended",
-          waveNumber: 1,
           title: "Wave 1 ended • Next: Wave 2",
-          subtitle: "Starts Saturday, Nov 21 • 2.0x double odds (1 in 68,750)",
-          badge: "Next: Nov 21",
-          multiplierText: "Wave 1 Ended",
+          subtitle: `Starts Saturday, Nov 21 • 2.0x drops (1 in 68,750)`,
+          badge: "Wave 1 Ended",
+          multiplierText: "Next: Nov 21",
         };
       }
 
-      // 5. Wave 3 进行中
-      if (isWave3Today) {
-        return {
-          status: "live",
-          waveNumber: 3,
-          title: "Final Wave 3 is live — 2.0x peak",
-          subtitle: "Last Treasure Hours of Chapter 7 active today (1 in 68,750)",
-          badge: "LIVE NOW • 2.0x",
-          multiplierText: "2.0x Peak",
-        };
-      }
-
-      // 6. Wave 2 结束，Wave 3 前
-      if (currentTime >= wave2EndTimestamp && currentTime < wave3StartTimestamp) {
+      // 检查 Wave 2 结束 ~ Wave 3 前
+      const wave2End = new Date(WAVES[1].endIso).getTime();
+      const wave3Start = new Date(WAVES[2].startIso).getTime();
+      if (nowTime > wave2End && nowTime < wave3Start) {
         return {
           status: "ended",
-          waveNumber: 2,
           title: "Wave 2 ended • Final Wave: Wave 3",
-          subtitle: "Starts Saturday, Nov 28 • 2.0x final boost (Last Treasure Hours)",
-          badge: "Final: Nov 28",
-          multiplierText: "Wave 2 Ended",
+          subtitle: `Starts Saturday, Nov 28 • 2.0x drops (Last Treasure Hours)`,
+          badge: "Wave 2 Ended",
+          multiplierText: "Final: Nov 28",
         };
       }
 
-      // 7. 三波全部结束 (28号之后)
+      // 3. 所有波次均已结束
       return {
         status: "ended",
-        waveNumber: 3,
-        title: "Treasure Hours ended",
+        title: "Wave 3 ended • Treasure Hours Concluded",
         subtitle: "Standard 1 in 137,500 odds restored until Chapter 8 season switch",
         badge: "Season Ended",
-        multiplierText: "1 in 137,500",
+        multiplierText: "Concluded",
       };
     };
 
-    setWaveState(calculateState());
+    setBanner(evaluateBanner());
   }, []);
 
-  if (waveState.status === "live") {
+  if (banner.status === "live") {
     return (
       <Link
         href="/pirate-token-odds"
@@ -150,20 +150,20 @@ export function TreasureHoursBanner() {
             </span>
             <div>
               <div className="font-bold text-[#ffd510] flex items-center space-x-1.5">
-                <span>{waveState.title}</span>
+                <span>{banner.title}</span>
               </div>
-              <span className="text-[#d4d4d4] text-[11px] block mt-0.5">{waveState.subtitle}</span>
+              <span className="text-[#d4d4d4] text-[11px] block mt-0.5">{banner.subtitle}</span>
             </div>
           </div>
           <span className="text-[11px] font-mono text-[#121212] bg-[#ffd510] px-2.5 py-1 rounded-md font-bold shrink-0 hidden sm:inline-block">
-            {waveState.multiplierText}
+            {banner.multiplierText}
           </span>
         </div>
       </Link>
     );
   }
 
-  if (waveState.status === "ended") {
+  if (banner.status === "ended") {
     return (
       <Link
         href="/pirate-token-odds"
@@ -173,19 +173,19 @@ export function TreasureHoursBanner() {
           <div className="flex items-center space-x-2.5">
             <Clock className="w-4 h-4 text-[#888] shrink-0" />
             <div>
-              <span className="font-semibold text-white block">{waveState.title}</span>
-              <span className="text-[11px] text-[#777] block mt-0.5">{waveState.subtitle}</span>
+              <span className="font-semibold text-white block">{banner.title}</span>
+              <span className="text-[11px] text-[#777] block mt-0.5">{banner.subtitle}</span>
             </div>
           </div>
           <span className="text-[11px] font-mono text-[#888] bg-[#1a1a1a] px-2 py-0.5 rounded border border-[#333] font-medium shrink-0 hidden sm:inline-block">
-            {waveState.badge}
+            {banner.badge}
           </span>
         </div>
       </Link>
     );
   }
 
-  // upcoming 态 (包括默认渲染)
+  // upcoming 态 (未开启)
   return (
     <Link
       href="/pirate-token-odds"
@@ -195,12 +195,12 @@ export function TreasureHoursBanner() {
         <div className="flex items-center space-x-2.5">
           <Flame className="w-4 h-4 text-[#ffc93c] shrink-0" />
           <div>
-            <strong className="text-[#ffc93c]">{waveState.title}: </strong>
-            <span className="text-[#d4d4d4]">{waveState.subtitle}</span>
+            <strong className="text-[#ffc93c]">{banner.title}: </strong>
+            <span className="text-[#d4d4d4]">{banner.subtitle}</span>
           </div>
         </div>
         <span className="text-[11px] font-mono text-[#ffc93c] bg-[#ffc93c]/20 px-2 py-0.5 rounded font-bold shrink-0 hidden sm:inline-block">
-          {waveState.multiplierText}
+          {banner.multiplierText}
         </span>
       </div>
     </Link>

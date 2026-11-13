@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { CategorizedCounterView } from "@/components/CategorizedCounterView";
 import { ArrowLeft, Users, CheckCircle2, Shield, HardDrive, Swords, Sparkles } from "lucide-react";
@@ -68,15 +67,16 @@ export default function ChestCounterPage() {
       {/* 专享四列独立大按键分栏计数台 */}
       <CategorizedCounterView />
 
-      {/* 4 列计数器实机比赛记分面板截图 */}
+      {/* 4 列计数器实机比赛记分面板截图 (标准 img 标签，全网爬虫与 CDN 100% 直读) */}
       <figure className="my-8 space-y-2.5">
         <div className="rounded-2xl overflow-hidden border border-[#2e2e2e] bg-[#161616] shadow-xl">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/images/fortnite-chest-counter-match-hud.png"
             alt="Fortnite Chest Counter 4-column live match HUD telemetry display showing categorized counts for Standard, Rare, Sprite, and Boss Vault chests"
             width={1280}
             height={860}
-            priority
+            loading="eager"
             className="w-full h-auto block"
           />
         </div>

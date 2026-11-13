@@ -7,13 +7,13 @@ import { ArrowLeft, CheckCircle2, Calendar, ShieldCheck, Flame } from "lucide-re
 import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 
 export const metadata: Metadata = {
-  title: "Fortnite Pirate Token Odds Calculator",
+  title: "Fortnite Pirate Token Odds — Official Drop Rates",
   description: "Epic's official Pirate Token odds: 1 in 137,500. See how many chests you need for 50%, 90% and 99% — plus Treasure Hours multipliers.",
   alternates: {
     canonical: `${siteConfig.url}/pirate-token-odds`,
   },
   openGraph: {
-    title: "Fortnite Pirate Token Odds Calculator",
+    title: "Fortnite Pirate Token Odds — Official Drop Rates",
     description: "Epic's official Pirate Token odds: 1 in 137,500. Calculate required chests and Treasure Hours odds.",
     url: `${siteConfig.url}/pirate-token-odds`,
     siteName: siteConfig.name,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Pirate Token Odds Calculator",
+    title: "Fortnite Pirate Token Odds — Official Drop Rates",
     description: "Official 1 in 137,500 token odds and Treasure Hours multiplier calculator.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
@@ -186,7 +186,7 @@ export default function PirateTokenOddsPage() {
           </li>
           <li className="flex items-start space-x-2">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#ffc93c] shrink-0 mt-0.5" />
-            <span>Tap the corresponding button for Standard, Rare, or Sprite containers as you loot POIs.</span>
+            <span>Tap the button for Standard, Rare, Sprite, or Vault containers as you loot POIs.</span>
           </li>
           <li className="flex items-start space-x-2">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#ffc93c] shrink-0 mt-0.5" />

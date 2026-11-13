@@ -6,13 +6,13 @@ import { DETAILED_CHEST_TYPES } from "@/config/chestTypes";
 import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Types & Spawns Guide",
+  title: "Fortnite Chest Types — Chapter 7 Spawns & Loot",
   description: "Chapter 7 chest guide: spawn locations, visual cues and routing for Standard, Rare, Sprite and Vault chests, plus Pirate Crates and Safes.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
   },
   openGraph: {
-    title: "Fortnite Chest Types & Spawns Guide",
+    title: "Fortnite Chest Types — Chapter 7 Spawns & Loot",
     description: "Detailed tactical breakdown of all 6 container variants active in Fortnite Chapter 7.",
     url: `${siteConfig.url}/chest-types`,
     siteName: siteConfig.name,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Chest Types & Spawns Guide",
+    title: "Fortnite Chest Types — Chapter 7 Spawns & Loot",
     description: "Learn tactical spawn details across all Fortnite Chapter 7 chest rarities.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
@@ -122,7 +122,7 @@ export default function ChestTypesPage() {
                   <h2 className="text-lg font-bold text-white">{chest.name}</h2>
                 </div>
 
-                <Link
+                <a
                   href={destinationUrl}
                   className="text-xs text-[#ffc93c] hover:underline font-medium flex items-center space-x-1"
                 >
@@ -134,7 +134,7 @@ export default function ChestTypesPage() {
                         : "Track in 4-Column View"}
                   </span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                </a>
               </div>
 
               {/* 战术四大维度 */}

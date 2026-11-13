@@ -7,13 +7,13 @@ import { ArrowLeft, CheckCircle2, Calendar, ShieldCheck, Flame } from "lucide-re
 import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 
 export const metadata: Metadata = {
-  title: "Fortnite Pirate Token Odds — Official Drop Rates",
+  title: "Fortnite Pirate Token Odds — Drop Rates",
   description: "Epic's official Pirate Token odds: 1 in 137,500. See how many chests you need for 50%, 90% and 99% — plus Treasure Hours multipliers.",
   alternates: {
     canonical: `${siteConfig.url}/pirate-token-odds`,
   },
   openGraph: {
-    title: "Fortnite Pirate Token Odds — Official Drop Rates",
+    title: "Fortnite Pirate Token Odds — Drop Rates",
     description: "Epic's official Pirate Token odds: 1 in 137,500. Calculate required chests and Treasure Hours odds.",
     url: `${siteConfig.url}/pirate-token-odds`,
     siteName: siteConfig.name,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Pirate Token Odds — Official Drop Rates",
+    title: "Fortnite Pirate Token Odds — Drop Rates",
     description: "Official 1 in 137,500 token odds and Treasure Hours multiplier calculator.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
@@ -98,7 +98,7 @@ export default function PirateTokenOddsPage() {
           <span>The Math Behind the 1 in 137,500 Drop Rate</span>
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          In the Chapter 7 Treasure Hunters collaboration season, opening regular or rare chests grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. According to official Epic Games telemetry confirmed via Polygon on Nov 9, 2026:
+          In the Chapter 7 Treasure Hunters collaboration season, opening regular or rare chests grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. According to Epic&apos;s official drop rates, reported by Polygon on Nov 9, 2026:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">

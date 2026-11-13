@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.5] - 2026-11-13
+
+### Fixed & Tightened (Unified Date-Driven Banner, Multiplier Contradiction Fix, Citation Precision & SERP Title Compression)
+- **Unified Tri-State Date-Driven Banner (`treasureHours.ts` & `TreasureHoursBanner.tsx`)**:
+  - Extracted single-source-of-truth wave schedule and pure date-evaluation engine:
+    - Pre-Wave 1 (Now until Nov 14 00:00): `Wave 1: Starts Saturday, Nov 14 • 1.5x drops`
+    - Live Wave 1 (Nov 14 all day): `Wave 1 is live — 1.5x drops (1 in 91,667)`
+    - Post Wave 1 (Ended): `Wave 1 ended — next: Nov 21 (2x)`
+    - Shared identical calendar transitions across homepage and odds calculator with 10s auto-polling.
+- **Treasure Hours Multiplier Realignment (`PirateTokenCalculator.tsx`)**:
+  - Resolved contradiction: replaced inaccurate "container drop odds double" with exact phrasing `Container drop odds are boosted during Treasure Hours — 1.5x in Wave 1 and 2x in Waves 2 & 3`.
+- **Drop Rate Source Accuracy Alignment (`/pirate-token-odds`)**:
+  - Replaced imprecise "telemetry" with verified wording: `Source: Epic's official drop rates, reported by Polygon on Nov 9, 2026`.
+- **Subpage Title Compression (51–52 Characters Max, No SERP Truncation)**:
+  - Compressed all subpage titles so that combined with ` | TrackChest`, the rendered `<title>` stays strictly between 51–52 characters:
+    - `/fortnite-chest-counter`: `Chest Counter Fortnite — 4-Column Tool | TrackChest` (51 chars)
+    - `/pirate-token-odds`: `Fortnite Pirate Token Odds — Drop Rates | TrackChest` (52 chars)
+    - `/chest-types`: `Fortnite Chest Types — Chapter 7 Spawns | TrackChest` (52 chars)
+
 ## [1.4.4] - 2026-11-13
 
 ### Fixed & Fine-tuned (Zero-Jump Heading Outline, Exact Keyword Alignment, Dynamic Countdown Banner & Source Unification)

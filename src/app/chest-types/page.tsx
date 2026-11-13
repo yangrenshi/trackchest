@@ -6,13 +6,13 @@ import { DETAILED_CHEST_TYPES } from "@/config/chestTypes";
 import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Chest Types — Chapter 7 Spawns & Loot",
+  title: "Fortnite Chest Types — Chapter 7 Spawns",
   description: "Chapter 7 chest guide: spawn locations, visual cues and routing for Standard, Rare, Sprite and Vault chests, plus Pirate Crates and Safes.",
   alternates: {
     canonical: `${siteConfig.url}/chest-types`,
   },
   openGraph: {
-    title: "Fortnite Chest Types — Chapter 7 Spawns & Loot",
+    title: "Fortnite Chest Types — Chapter 7 Spawns",
     description: "Detailed tactical breakdown of all 6 container variants active in Fortnite Chapter 7.",
     url: `${siteConfig.url}/chest-types`,
     siteName: siteConfig.name,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Chest Types — Chapter 7 Spawns & Loot",
+    title: "Fortnite Chest Types — Chapter 7 Spawns",
     description: "Learn tactical spawn details across all Fortnite Chapter 7 chest rarities.",
     images: [`${siteConfig.url}/opengraph-image`],
   },

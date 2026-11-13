@@ -70,7 +70,7 @@ export function PirateTokenCalculator() {
         </div>
 
         <p className="text-[11px] text-[#777] leading-relaxed">
-          * Source: Official Epic Games drop rate telemetry confirmed via Polygon on Nov 9, 2026. Season active Nov 1 – Dec 4, 2026.
+          * Source: Epic&apos;s official drop rates, reported by Polygon on Nov 9, 2026. Season active Nov 1 – Dec 4, 2026.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export function PirateTokenCalculator() {
             <span>Treasure Hours Multiplier &amp; Milestone Targets</span>
           </h3>
           <p className="text-xs text-[#9a9a9a] mt-1">
-            During official Treasure Hours, container drop odds double. Select a multiplier to see required chests and grind hours:
+            Container drop odds are boosted during Treasure Hours — 1.5x in Wave 1 and 2x in Waves 2 &amp; 3. Select a multiplier to see required chests and grind hours:
           </p>
         </div>
 

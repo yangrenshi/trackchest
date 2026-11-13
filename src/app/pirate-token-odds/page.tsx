@@ -7,13 +7,13 @@ import { ArrowLeft, CheckCircle2, Calendar, ShieldCheck, Flame } from "lucide-re
 
 export const metadata: Metadata = {
   title: "Pirate Token Odds Calculator — Official Fortnite Drop Rates (Chapter 7)",
-  description: "Official Epic Games drop rates for Fortnite Pirate Shop Access tokens (1 in 137,500) and Golden skin (1 in 1,562,500). Calculate required chests and Treasure Hours odds.",
+  description: "Epic's official Pirate Token odds: 1 in 137,500. See how many chests you need for 50%, 90% and 99% — plus Treasure Hours multipliers.",
   alternates: {
     canonical: `${siteConfig.url}/pirate-token-odds`,
   },
   openGraph: {
     title: "Pirate Token Odds Calculator — Official Fortnite Drop Rates",
-    description: "Calculate required chests and grind hours for the 1 in 137,500 Pirate Token drop. Updated for Chapter 7 Treasure Hunters.",
+    description: "Epic's official Pirate Token odds: 1 in 137,500. Calculate required chests and Treasure Hours odds.",
     url: `${siteConfig.url}/pirate-token-odds`,
     siteName: siteConfig.name,
     type: "article",
@@ -65,6 +65,19 @@ export default function PirateTokenOddsPage() {
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to Main Tracker</span>
         </Link>
+      </div>
+
+      {/* 实时活动预告横幅 */}
+      <div className="p-3.5 rounded-xl bg-[#ffc93c]/10 border border-[#ffc93c]/30 flex items-center justify-between text-xs text-white">
+        <div className="flex items-center space-x-2">
+          <Flame className="w-4 h-4 text-[#ffc93c] shrink-0" />
+          <span>
+            <strong className="text-[#ffc93c]">Treasure Hours Wave 1</strong> starts <strong>Saturday, Nov 14, 2026</strong> &bull; 1.5x token drop boost active globally.
+          </span>
+        </div>
+        <span className="text-[11px] font-mono text-[#ffc93c] bg-[#ffc93c]/20 px-2 py-0.5 rounded font-bold shrink-0 hidden sm:inline-block">
+          1.5x Multiplier
+        </span>
       </div>
 
       <div className="space-y-2">
@@ -130,7 +143,7 @@ export default function PirateTokenOddsPage() {
             <div>
               <span className="font-bold text-white flex items-center space-x-1.5">
                 <Flame className="w-3.5 h-3.5 text-[#ffc93c]" />
-                <span>Wave 1: Friday, November 14, 2026</span>
+                <span>Wave 1: Saturday, November 14, 2026</span>
               </span>
               <span className="text-[#888] text-[11px] block mt-0.5">
                 1.5x Multiplier &bull; Drop rate boosted to 1 in 91,667 &bull; 50% target drops to ~63,500 chests
@@ -143,7 +156,7 @@ export default function PirateTokenOddsPage() {
 
           <div className="p-3 rounded-xl bg-[#242424] border border-[#2e2e2e] flex items-center justify-between">
             <div>
-              <span className="font-bold text-white">Wave 2: November 21, 2026</span>
+              <span className="font-bold text-white">Wave 2: Saturday, November 21, 2026</span>
               <span className="text-[#888] text-[11px] block mt-0.5">
                 2.0x Double Odds &bull; Drop rate boosted to 1 in 68,750 &bull; 50% target drops to ~47,700 chests
               </span>
@@ -155,9 +168,9 @@ export default function PirateTokenOddsPage() {
 
           <div className="p-3 rounded-xl bg-[#242424] border border-[#2e2e2e] flex items-center justify-between">
             <div>
-              <span className="font-bold text-white">Wave 3: November 28, 2026 (Season Finale)</span>
+              <span className="font-bold text-white">Wave 3: Saturday, November 28, 2026 (Season Finale)</span>
               <span className="text-[#888] text-[11px] block mt-0.5">
-                2.0x Double Odds &bull; Last chance weekend before Chapter 8 season switch
+                2.0x Double Odds &bull; Final weekend push before Chapter 8 season switch
               </span>
             </div>
             <span className="text-[11px] font-mono font-semibold text-[#ffd510] bg-[#ffd510]/10 px-2 py-1 rounded">

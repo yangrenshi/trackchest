@@ -111,7 +111,7 @@ export function PirateTokenCalculator() {
             }`}
           >
             <span className="text-xs font-semibold text-white block flex items-center space-x-1">
-              <span>Nov 14 Boost (1.5x)</span>
+              <span>Sat, Nov 14 Boost (1.5x)</span>
               <Sparkles className="w-3 h-3 text-[#ffc93c]" />
             </span>
             <span className="text-[11px] text-[#888] block mt-0.5">1 in 91,667 (Wave 1)</span>
@@ -127,7 +127,7 @@ export function PirateTokenCalculator() {
             }`}
           >
             <span className="text-xs font-semibold text-white block flex items-center space-x-1">
-              <span>Nov 21 &amp; 28 Peak (2.0x)</span>
+              <span>Sat, Nov 21 &amp; 28 (2.0x)</span>
               <Sparkles className="w-3 h-3 text-[#ffd510]" />
             </span>
             <span className="text-[11px] text-[#888] block mt-0.5">1 in 68,750 (Double Odds)</span>

@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.6] - 2026-11-13
+
+### Enhanced & Verified (Date-Bounded Banner Engine, Odds Word Expansion to 1480+ Words & Target Sequence Focus)
+- **Bounded Date Range State Machine (`treasureHours.ts`)**:
+  - Integrated explicit `endDate` field per wave and implemented `startDate <= today <= endDate` range gating.
+  - Verified and asserted automated URL testing parameters across real Chrome:
+    - `?date=2026-11-14` -> `Wave 1 is live — 1.5x drops (1 in 91,667)`
+    - `?date=2026-11-15` -> `Wave 1 ended — next: Nov 21 (2x)`
+    - `?date=2026-11-29` -> `Treasure Hours concluded — season ends Dec 4–5`
+- **`/pirate-token-odds` Content Expansion (From 750 to 1,488 Words)**:
+  - Added 4 high-demand tactical sections:
+    1. Eligible Containers Breakdown (Standard Wooden Chests, Rare Chests, Vaults vs Safes/Buried Crates).
+    2. Detailed Mathematical Multiplier Shifts (1 in 91,667 and 1 in 68,750 as dedicated analytical subsections).
+    3. Season Expiration and Permanent Locker Cosmetic Retention (Dec 4–5 cutoff).
+    4. 5 Aligned Tactical FAQs with Dedicated `FAQPage` JSON-LD Schema.
+- **Target Keyword Density Optimization (`pirate token odds`)**:
+  - Infused exact forward phrase `pirate token odds` across H2 headings and natural body copy (9 total occurrences), eliminating keyword score penalties.
+
 ## [1.4.5] - 2026-11-13
 
 ### Fixed & Tightened (Unified Date-Driven Banner, Multiplier Contradiction Fix, Citation Precision & SERP Title Compression)

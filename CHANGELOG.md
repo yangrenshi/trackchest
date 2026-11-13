@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-11-13
+
+### Changed & Major Season Alignment (Chapter 7 Treasure Hunters & Official Odds)
+- **Season Meta Realignment to Chapter 7**:
+  - Completely eradicated stale "Chapter 6" references across all source files, metadata, OpenGraph images, and schemas.
+  - Realigned full product meta to **Chapter 7 — Treasure Hunters (Nov 1 – Dec 4, 2026, Updated Nov 13, 2026)**.
+- **Official Epic Games Drop Rate Integration (`1 in 137,500`)**:
+  - Replaced arbitrary estimated percentages with confirmed Epic Games telemetry (published Nov 9, 2026 via Polygon):
+    - Pirate Shop Access Token: **1 in 137,500 (0.000007273%)**
+    - Golden Skin Variant: **1 in 1,562,500 (0.00000064%)**
+  - Built an interactive **"Chests-to-Token Odds Calculator"** calculating real median (50%), high probability (90%), and near-certainty (99%) container counts:
+    - 50% Median: ~95,300 chests (~2,380 grind hours @ 40 chests/hr)
+    - 90% Probability: ~316,600 chests (~7,915 hours)
+    - 99% Certainty: ~633,000 chests (~15,825 hours)
+  - Integrated official **Treasure Hours event multipliers**:
+    - Wave 1 (Nov 14, 2026): 1.5x Multiplier (1 in 91,667, ~63.5k chests for 50%)
+    - Wave 2 & 3 (Nov 21 & 28, 2026): 2.0x Double Odds (1 in 68,750, ~47.7k chests for 50%)
+  - User can enter their current chest tally to calculate their cumulative roll probability.
+- **Subpage Tactical & Word Count Expansion**:
+  - `/chest-types`: Expanded from 200 words to **916 words**; added 4 tactical analysis pillars per container (Where It Spawns, How to Identify, Worth Rerouting, Common Misconceptions) without speculative spawn rates.
+  - `/fortnite-chest-counter`: Expanded from 170 words to **551 words**; structured role assignments across the 4 columns (Fragger, IGL, Scout, Anchor) and a 3-point pre-rotation voice check.
+  - `/how-to-check-chests`: Added valid DOM anchors (`id="step-1"`, `id="step-2"`, `id="step-3"`) matching the `HowTo` structured schema.
+- **Homepage Optimization & Word Count**:
+  - H1 updated to clean spaced title: `Fortnite Chest Tracker — Track Every Chest You Open`.
+  - Added dedicated section *"What This Fortnite Chest Tracker Does NOT Do"* (No memory injection, no login required, 100% client-side LocalStorage), advancing homepage to **1,324 words**.
+
 ## [1.3.0] - 2026-11-12
 
 ### Fixed & Enhanced (Audit v3 & Social Sharing Polish)

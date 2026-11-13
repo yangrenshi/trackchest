@@ -44,7 +44,10 @@ export default function ChestTypesPage() {
       "@type": "ListItem",
       position: index + 1,
       name: chest.name,
-      description: `${chest.rarity} tier container: ${chest.whereItSpawns} ${chest.typicalLoot}`,
+      description:
+        chest.id === "pirate"
+          ? `${chest.rarity} tier container: ${chest.whereItSpawns} ${chest.typicalLoot} Guarantees high-tier loot but does not roll on the 1 in 137,500 token table.`
+          : `${chest.rarity} tier container: ${chest.whereItSpawns} ${chest.typicalLoot}`,
     })),
   };
 

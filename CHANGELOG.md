@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.8] - 2026-11-13
+
+### Fixed & Realigned (Pirate Crate Rule Harmonization, Vault Inclusion & Logarithmic Coincidence Context)
+- **Harmonized Pirate Crate Rules in `/chest-types` across 4 Locations**:
+  - “Is It Worth Rerouting?”: Clarified that tokens roll from standard, rare, sprite and vault containers at 1 in 137,500, while the Pirate Crate itself guarantees high-tier loot but does not roll on the token table.
+  - “Common Misconceptions”: Realigned to clarify that normal containers in pirate POIs roll for the token, while the crate itself is guaranteed ordnance.
+  - “Typical Loot Yield”: Removed `and chance at the 1 in 137,500 token`.
+  - ItemList JSON-LD: Synchronized Schema ListItem description to reflect the exact same conservative rule.
+- **Added Missing Vault & Sprite to Opening Pitch (`/pirate-token-odds`)**:
+  - Corrected opening paragraph to explicitly state: `opening standard, rare, sprite, or boss vault containers grants a tiny statistical probability`.
+- **Added Mathematical Context to 316,605 Threshold (`/pirate-token-odds`)**:
+  - Added explicit explanation for `~316,605 chests` to clarify it is coincidentally identical to the 1.0x 90% threshold due to logarithmic scaling ($4.605 \times 68,750 \approx 316,605$).
+
 ## [1.4.7] - 2026-11-13
 
 ### Fixed & Harmonized (Exact Precision Thresholds, Dual Solo/Squad Baselines & Community Est. Labels)

@@ -151,7 +151,7 @@ export default function PirateTokenOddsPage() {
           <span>The Math Behind the 1 in 137,500 Drop Rate</span>
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          In the Chapter 7 Treasure Hunters collaboration season, opening regular or rare chests grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. According to Epic&apos;s official drop rates, reported by Polygon on Nov 9, 2026:
+          In the Chapter 7 Treasure Hunters collaboration season, opening standard, rare, sprite, or boss vault containers grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. According to Epic&apos;s official drop rates, reported by Polygon on Nov 9, 2026:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -254,7 +254,7 @@ export default function PirateTokenOddsPage() {
               <span>Waves 2 &amp; 3 Peak: The 1 in 68,750 Double Odds (2.0x Multiplier)</span>
             </h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              For Wave 2 (Saturday, November 21) and the final Wave 3 (Saturday, November 28), Epic activates maximum 2.0x double odds, boosting the probability to <strong className="text-white">1 in 68,750</strong> (0.000014545%). At this double rate, reaching the 50% median target drops to exactly <strong className="text-[#ffd510]">47,655 chests</strong> (~1,191 hours @ 40 chests/hr), while the 90% high-probability boundary drops from 316,604 chests down to exactly <strong className="text-white">158,302 chests</strong> (~3,958 hours @ 40 chests/hr), and 99% near-certainty requires 316,604 chests. This represents the absolute highest statistical return on time invested during the entire Chapter 7 campaign.
+              For Wave 2 (Saturday, November 21) and the final Wave 3 (Saturday, November 28), Epic activates maximum 2.0x double odds, boosting the probability to <strong className="text-white">1 in 68,750</strong> (0.000014545%). At this double rate, reaching the 50% median target drops to exactly <strong className="text-[#ffd510]">47,655 chests</strong> (~1,191 hours @ 40 chests/hr), while the 90% high-probability boundary drops from 316,604 chests down to exactly <strong className="text-white">158,302 chests</strong> (~3,958 hours @ 40 chests/hr), and 99% near-certainty requires <strong className="text-white">~316,605 chests</strong> (coincidentally identical to the 1.0x 90% mark due to logarithmic scaling: 4.605 &times; 68,750 &asymp; 316,605). This represents the absolute highest statistical return on time invested during the entire Chapter 7 campaign.
             </p>
           </div>
         </div>

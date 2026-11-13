@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-11-13
+
+### Added (Infrastructure: Umami Analytics, Google Tag Manager & Brevo Automated Email Loop)
+- **Google Tag Manager / GA Integration**:
+  - Injected GTM script (`GTM-THLFJFWJ`) and `gtag()` dataLayer initialization via Next.js `Script` (`afterInteractive`) in `src/app/layout.tsx`.
+- **Umami Privacy-Friendly Analytics Integration**:
+  - Registered TrackChest (`trackchest.com`) into self-hosted Umami via `scripts/umami_cli.py`.
+  - Website ID: `cd632bda-55ff-4f19-a0b2-a4fc0360beb1`.
+  - Injected lightweight, cookie-free tracking slot in `src/app/layout.tsx` and `.env.local`.
+- **Brevo & Cloudflare Email Loop Integration**:
+  - Automated DNS injection via `email-automator` MCP: registered sub-domain `notify.trackchest.com`.
+  - Automatically injected DKIM1, DKIM2, Brevo Code, and DMARC TXT records into Cloudflare Zone (`07393215b38bfb056b3ec3b82c3c862c`).
+  - Registered verified sender address: `support@trackchest.com`.
+
 ## [1.4.9] - 2026-11-13
 
 ### Fixed (Schema Multiplier Phrasing & 4-Column Note Logic Re-alignment)

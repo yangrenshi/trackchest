@@ -77,7 +77,20 @@ export default function RootLayout({
           rel="stylesheet"
         />
 
-        {/* Google Analytics 4 */}
+        {/* Google Analytics & Tag Manager (GTM-THLFJFWJ) */}
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-THLFJFWJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </Script>
+
+        {/* Google Analytics 4 (环境变量备用) */}
         {hasValidGA && (
           <>
             <Script
@@ -95,6 +108,15 @@ export default function RootLayout({
               `}
             </Script>
           </>
+        )}
+
+        {/* Umami 自建流量统计（2KB 极轻量、免 Cookie、抗拦截） */}
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+          <Script
+            src={`${process.env.NEXT_PUBLIC_UMAMI_HOST_URL || "https://umami-pied-six.vercel.app"}/script.js`}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            strategy="afterInteractive"
+          />
         )}
       </head>
       <body className="antialiased bg-[#121212] text-white selection:bg-[#ffc93c] selection:text-black flex flex-col min-h-screen">

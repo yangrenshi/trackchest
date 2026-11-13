@@ -196,7 +196,7 @@ export default function ChestTypesPage() {
               {chest.id === "pirate" && (
                 <div className="p-3 rounded-xl bg-[#ffc93c]/10 border border-[#ffc93c]/30 text-xs text-[#d4d4d4] flex flex-wrap items-center justify-between gap-2">
                   <span>
-                    <strong className="text-[#ffc93c]">4-Column Note:</strong> This container is excluded from the 4-column battle counter because it operates under Epic&apos;s special lottery mechanics.
+                    <strong className="text-[#ffc93c]">4-Column Note:</strong> Tracked separately because it is not one of the four counter categories (Standard, Rare, Sprite, Vault) — its loot is guaranteed, not rolled.
                   </span>
                   <Link
                     href="/pirate-token-odds"

@@ -43,7 +43,7 @@ export default function PirateTokenOddsPage() {
     applicationCategory: "GameApplication",
     operatingSystem: "All",
     url: `${siteConfig.url}/pirate-token-odds`,
-    description: "Official Epic Games statistical odds simulator for Pirate Shop Access tokens (1 in 137,500) and Treasure Hours double-odds events.",
+    description: "Official Epic Games statistical odds simulator for Pirate Shop Access tokens (1 in 137,500). Treasure Hours multiplier events boost container drop odds by 1.5x in Wave 1 and 2x in Waves 2 & 3.",
     offers: {
       "@type": "Offer",
       price: "0",

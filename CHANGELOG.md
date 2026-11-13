@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.9] - 2026-11-13
+
+### Fixed (Schema Multiplier Phrasing & 4-Column Note Logic Re-alignment)
+- **Updated `SoftwareApplication` JSON-LD Schema Description (`/pirate-token-odds`)**:
+  - Replaced the generic multiplier phrase with user-specified exact wording:
+    `Official Epic Games statistical odds simulator for Pirate Shop Access tokens (1 in 137,500). Treasure Hours multiplier events boost container drop odds by 1.5x in Wave 1 and 2x in Waves 2 & 3.`
+- **Updated Pirate Crate 4-Column Note Justification (`/chest-types`)**:
+  - Realigned reason from previous lottery mechanics to non-rolled container categorization:
+    `<strong className="text-[#ffc93c]">4-Column Note:</strong> Tracked separately because it is not one of the four counter categories (Standard, Rare, Sprite, Vault) — its loot is guaranteed, not rolled.`
+
 ## [1.4.8] - 2026-11-13
 
 ### Fixed & Realigned (Pirate Crate Rule Harmonization, Vault Inclusion & Logarithmic Coincidence Context)

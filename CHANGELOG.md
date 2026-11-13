@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.3] - 2026-11-13
+
+### Enhanced & Structured (Counter Word Expansion, Heading Topology, Dedicated JSON-LD & Homepage Match HUD)
+- **`/fortnite-chest-counter` Content & Architecture Overhaul**:
+  - Expanded content body from 570 words to **1,250+ words**, reaching full SEO benchmark standard.
+  - Rebuilt heading hierarchy from scratch: added 5 new semantic `<h2>` sections (7 total), completely eliminating prior `<h1>` to `<h3>` skipping issues.
+  - Injected dedicated `WebApplication` and `FAQPage` JSON-LD structured schemas, maximizing structured data quality to 10/10.
+  - Naturally distributed high-intent 2-word, 4-word, and 5-word combinations (`fortnite chest counter`, `fortnite chest counter squad`, `chest tracker fortnite companion`).
+- **Homepage Image & Media Score Max-Out (5/5)**:
+  - Mounted high-resolution in-game match HUD interface screenshot (`/images/fortnite-chest-counter-match-hud.png`) in `page.tsx` using native semantic `<img>`, `<figure>`, and `<figcaption>`.
+  - Configured lazy loading and explicit width/height dimensions for CLS prevention and direct crawler readability.
+
 ## [1.4.2] - 2026-11-13
 
 ### Fixed & Enhanced (Treasure Hours Tri-state Banner, Official Data Alignment & Match HUD)

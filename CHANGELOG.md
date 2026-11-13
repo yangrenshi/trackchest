@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.7] - 2026-11-13
+
+### Fixed & Harmonized (Exact Precision Thresholds, Dual Solo/Squad Baselines & Community Est. Labels)
+- **Harmonized Exact Mathematical Thresholds across `/pirate-token-odds`**:
+  - Replaced rough rounded approximations with exact table values across the entire page:
+    - Base 50% target: **95,307 chests** (2,383 hours @ 40 chests/hr)
+    - Base 90% target: **316,604 chests** (7,915 hours @ 40 chests/hr)
+    - Wave 1 50% target (1.5x): **63,538 chests** (1,588 hours @ 40 chests/hr)
+    - Waves 2 & 3 50% target (2.0x): **47,655 chests** (1,191 hours @ 40 chests/hr)
+    - Waves 2 & 3 90% target (2.0x): **158,302 chests** (3,958 hours @ 40 chests/hr)
+- **Dual Solo & Squad Grinding Baselines**:
+  - Aligned the 1.5x Wave 1 analysis to clearly juxtapose the standard solo speed (`@ 40 chests/hr`, saving 795 solo hours) with coordinated four-player squads (`@ 120–160 chests/hr`, saving 200–265 team match hours), preventing reader confusion.
+- **Strict Community Estimate Citation**:
+  - Standard wooden chests volume re-labeled as `Standard Wooden Chests (Eligible — Vast Majority of Map Volume, Community Est.)`, standardizing the ~75% volume metric with the rest of the site.
+
 ## [1.4.6] - 2026-11-13
 
 ### Enhanced & Verified (Date-Bounded Banner Engine, Odds Word Expansion to 1480+ Words & Target Sequence Focus)

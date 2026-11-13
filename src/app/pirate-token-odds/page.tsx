@@ -158,7 +158,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
             <h3 className="font-semibold text-white">Why 137,500 Chests Does Not Equal 100%</h3>
             <p className="text-[#9a9a9a] text-[11px] leading-relaxed">
-              Because container opens follow a Bernoulli trial process, searching 137,500 chests only gives you an approximately <strong className="text-white">63.2%</strong> cumulative probability of receiving at least one token. You need roughly <strong>95,300 chests</strong> just to reach a 50/50 coinflip!
+              Because container opens follow a Bernoulli trial process, searching 137,500 chests only gives you an approximately <strong className="text-white">63.2%</strong> cumulative probability of receiving at least one token. You need exactly <strong className="text-white">95,307 chests</strong> (roughly 2,383 hours for a solo grinder at 40 chests/hr) just to reach the 50/50 median coinflip!
             </p>
           </div>
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
@@ -186,10 +186,10 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
             <h3 className="font-bold text-white flex items-center space-x-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]" />
-              <span>Standard Wooden Chests (Eligible — ~75% of Volume)</span>
+              <span>Standard Wooden Chests (Eligible — Vast Majority of Map Volume, Community Est.)</span>
             </h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Yes, standard wooden chests absolutely count! Because residential rooftops, attics, and warehouses contain hundreds of wooden chests per POI, standard chests represent the vast majority of all rolls you will make during a match. Opening 20 standard chests gives 20 independent rolls at 1 in 137,500.
+              Yes, standard wooden chests absolutely count! Because residential rooftops, attics, and warehouses are densely packed with wooden containers, standard chests represent the vast majority of all container spawns across the island (~75% of total spawns based on community estimates). Opening 20 standard chests grants 20 independent rolls against the baseline 1 in 137,500 rate.
             </p>
           </div>
 
@@ -244,7 +244,7 @@ export default function PirateTokenOddsPage() {
               <span>Wave 1 Boost: The 1 in 91,667 Milestone (1.5x Multiplier)</span>
             </h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              During Treasure Hours Wave 1 on Saturday, November 14, 2026, the baseline probability increases by 50% from 1/137,500 to exactly <strong className="text-white">1 in 91,667</strong> (0.000010909%). In practical gameplay terms, the 50% statistical confidence threshold drops from roughly 95,300 chests down to <strong className="text-[#ffc93c]">~63,500 chests</strong>. For an active squad opening 120 chests per hour across rapid hot-drops, this 1.5x boost cuts over 260 hours of collective team searching off the median grind.
+              During Treasure Hours Wave 1 on Saturday, November 14, 2026, the baseline probability increases by 50% from 1/137,500 to exactly <strong className="text-white">1 in 91,667</strong> (0.000010909%). In practical gameplay terms, the 50% statistical confidence threshold drops from 95,307 chests down to <strong className="text-[#ffc93c]">63,538 chests</strong>. Calculated against the standard solo baseline of 40 chests/hour, this 1.5x boost saves roughly 795 solo grinding hours (reducing required time from 2,383 down to 1,588 hours); for a coordinated four-player squad looting together at a combined rate of ~120 to 160 chests per hour, it cuts over 200 to 265 team match hours off the median grind.
             </p>
           </div>
 
@@ -254,7 +254,7 @@ export default function PirateTokenOddsPage() {
               <span>Waves 2 &amp; 3 Peak: The 1 in 68,750 Double Odds (2.0x Multiplier)</span>
             </h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              For Wave 2 (Saturday, November 21) and the final Wave 3 (Saturday, November 28), Epic activates maximum 2.0x double odds, boosting the probability to <strong className="text-white">1 in 68,750</strong> (0.000014545%). At this double rate, reaching the 50% median target requires approximately <strong className="text-[#ffd510]">~47,650 chests</strong>, while the 90% near-certainty boundary drops from 316,500 chests down to approximately 158,300 chests. This represents the absolute highest statistical return on time invested during the entire Chapter 7 campaign.
+              For Wave 2 (Saturday, November 21) and the final Wave 3 (Saturday, November 28), Epic activates maximum 2.0x double odds, boosting the probability to <strong className="text-white">1 in 68,750</strong> (0.000014545%). At this double rate, reaching the 50% median target drops to exactly <strong className="text-[#ffd510]">47,655 chests</strong> (~1,191 hours @ 40 chests/hr), while the 90% high-probability boundary drops from 316,604 chests down to exactly <strong className="text-white">158,302 chests</strong> (~3,958 hours @ 40 chests/hr), and 99% near-certainty requires 316,604 chests. This represents the absolute highest statistical return on time invested during the entire Chapter 7 campaign.
             </p>
           </div>
         </div>

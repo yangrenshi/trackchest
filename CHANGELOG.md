@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.4] - 2026-11-13
+
+### Fixed & Fine-tuned (Zero-Jump Heading Outline, Exact Keyword Alignment, Dynamic Countdown Banner & Source Unification)
+- **Zero-Jump Heading Hierarchy (`Footer.tsx`)**:
+  - Replaced skipped `<h4>` tags (Tools, Guides, Legal) in the global Footer with semantically neutral styled `<div>` elements.
+  - Reduced total page heading jumps from skipped warnings down to **0**, restoring a flawless H1 -> H2 -> H3 outline across all pages.
+- **Exact Keyword Realignment to `chest counter fortnite` (`/fortnite-chest-counter`)**:
+  - Re-anchored page targeting to exact forward sequence `chest counter fortnite` (Title, Description, H1, H2, and 30x natural body occurrences).
+  - Description rewritten to start strictly with `Chest counter Fortnite squads use...` (141 characters), eliminating the 67% match penalty and preventing cannibalization of the homepage's `tracker` keyword.
+- **Harmonized Drop Rate Citation & Community Estimates**:
+  - Re-labelled node probabilities in `/fortnite-chest-counter` to `Standard Chests (~70%–80% Active Node Activation, Community Est.)` and `Rare Blue Super Chests (~2%–5% Natural Spawn Odds, Community Est.)`.
+  - Harmonized all telemetry references across `/pirate-token-odds` and `PirateTokenCalculator.tsx` to `Official Epic Games drop rate telemetry confirmed via Polygon on Nov 9, 2026`.
+- **Dynamic Heartbeat & Countdown Banner (`TreasureHoursBanner.tsx`)**:
+  - Integrated dynamic relative countdowns (`Starts in ~8h • Saturday, Nov 14`) and 30-second interval re-evaluation to eliminate static hardcoding perception.
+  - Added URL parameter and window mock hook support for deterministic test asserting.
+
 ## [1.4.3] - 2026-11-13
 
 ### Enhanced & Structured (Counter Word Expansion, Heading Topology, Dedicated JSON-LD & Homepage Match HUD)

@@ -27,9 +27,9 @@ export function Footer() {
 
           {/* 核心工具 */}
           <div>
-            <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-2.5">
+            <div className="text-xs font-semibold text-white uppercase tracking-wider mb-2.5">
               Tools
-            </h4>
+            </div>
             <ul className="space-y-2">
               <li>
                 <Link href="/#tracker-app" className="hover:text-white transition-colors">
@@ -56,9 +56,9 @@ export function Footer() {
 
           {/* 攻略 */}
           <div>
-            <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-2.5">
+            <div className="text-xs font-semibold text-white uppercase tracking-wider mb-2.5">
               Guides
-            </h4>
+            </div>
             <ul className="space-y-2">
               <li>
                 <Link href="/how-to-check-chests" className="hover:text-white transition-colors">
@@ -80,9 +80,9 @@ export function Footer() {
 
           {/* 合规 */}
           <div>
-            <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-2.5">
+            <div className="text-xs font-semibold text-white uppercase tracking-wider mb-2.5">
               Legal
-            </h4>
+            </div>
             <ul className="space-y-2">
               <li>
                 <Link href="/privacy" className="hover:text-white transition-colors">

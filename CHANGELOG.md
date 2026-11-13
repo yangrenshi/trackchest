@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.1] - 2026-11-13
+
+### Fixed & Fine-tuned (SEO Snippet & Exact Keyword Density)
+- **Sitemap Freshness**:
+  - Updated `sitemap.ts` fixed `lastmod` timestamp to `"2026-11-13T00:00:00.000Z"` across all 8 indexed URLs.
+- **Copy Freshness Polish**:
+  - Removed relative `(Tomorrow)` suffix from Wave 1 in `/pirate-token-odds`, converting to evergreen `Friday, November 14, 2026`.
+- **Target Keyword Inversion (`chest tracker fortnite`)**:
+  - Naturally infused the exact keyword order `chest tracker fortnite` into `/fortnite-chest-counter`, `/chest-types`, and `/` without keyword stuffing.
+- **SERP Snippet Safety**:
+  - Compressed meta descriptions for `/chest-types` (148 chars) and `/fortnite-chest-counter` (147 chars) below Google's 155-character truncation threshold.
+
 ## [1.4.0] - 2026-11-13
 
 ### Changed & Major Season Alignment (Chapter 7 Treasure Hunters & Official Odds)

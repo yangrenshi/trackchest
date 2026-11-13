@@ -102,7 +102,7 @@ export default function ChestTypesPage() {
       {/* 6 大详细宝箱章节 (总字数 750+ 词) */}
       <div className="space-y-6">
         {DETAILED_CHEST_TYPES.map((chest) => {
-          const destinationUrl = chest.id === "regular" 
+          const destinationUrl = (chest.id === "regular" || chest.id === "safe")
             ? "/#tracker-app" 
             : chest.id === "pirate" 
               ? "/pirate-token-odds" 
@@ -127,8 +127,8 @@ export default function ChestTypesPage() {
                   className="text-xs text-[#ffc93c] hover:underline font-medium flex items-center space-x-1"
                 >
                   <span>
-                    {chest.id === "regular"
-                      ? "Track in Main Tool"
+                    {(chest.id === "regular" || chest.id === "safe")
+                      ? "Track in Single Counter"
                       : chest.id === "pirate"
                         ? "Calculate Token Odds"
                         : "Track in 4-Column View"}
@@ -207,7 +207,7 @@ export default function ChestTypesPage() {
 
               {chest.id === "safe" && (
                 <div className="p-3 rounded-xl bg-[#242424] border border-[#2e2e2e] text-xs text-[#9a9a9a]">
-                  <strong className="text-white">4-Column Note:</strong> Excluded from the 4-column counter — Commercial Safes exclusively grant gold bars (100–150 Bars) and ammunition rather than Battle Royale weapons or tactical loot.
+                  <strong className="text-white">4-Column Note:</strong> Safes only dispense gold and healing, so they are not counted in the 4-column battle counter.
                 </div>
               )}
             </article>

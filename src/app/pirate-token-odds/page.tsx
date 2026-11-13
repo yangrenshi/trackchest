@@ -111,7 +111,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
             <h3 className="font-semibold text-white">Ultra-Rare Golden Skin (1 in 1.56M)</h3>
             <p className="text-[#9a9a9a] text-[11px] leading-relaxed">
-              The season-exclusive Golden Skin variant drops at 1 per 1,562,500 chests. Across the entire global playerbase, only a few hundred accounts are projected to unlock this skin organically before Chapter 8 launches on December 4.
+              The season-exclusive Golden Skin variant drops at 1 per 1,562,500 chests. Epic has not disclosed how many accounts will unlock it organically before Chapter 8 launches on December 4, making it one of the rarest cosmetic drops in Fortnite history.
             </p>
           </div>
         </div>

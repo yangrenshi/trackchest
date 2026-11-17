@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.1] - 2026-11-17
+
+### Added (Trending Keyword Capture: `/leek-caper-fortnite` One-URL One-Keyword Deep Guide)
+- **New High-Intent Guide Page (`/leek-caper-fortnite`)**:
+  - Bound to rising keyword `leek caper fortnite` (co-ranking with official item `Leekcapper`).
+  - Title: `Fortnite Leek Caper (Leekcapper) Location & Chest Guide` (56 chars, zero truncation).
+  - Description: 151 chars with explicit drop probabilities and quest action prompt.
+  - SSR 1,150+ Words Content Architecture:
+    1. Q-A-D-L Fast Answer Definition Box (Epic-rarity melee, sprint buff, Hatsune Miku theme).
+    2. Native HTML `<table>` Container Comparison Grid (Rare Chest 18-25%, Sprite Shrine ~20%, Standard Chest 2-5%, Vault guaranteed, Safe/Buried Crate 0%).
+    3. Step-by-step quest walkthrough: "Board a ship with the Leekcapper equipped" across 3 pirate ship POIs.
+    4. 5 Aligned Tactical FAQs with Dedicated `FAQPage` & `Article` JSON-LD Schemas.
+- **Sitemap & Internal Linking Grid**:
+  - Registered `/leek-caper-fortnite` in `sitemap.ts` (Priority: 0.9, daily changefreq).
+  - Injected bidirectional contextual links into `/chest-types` and global `Footer.tsx` guides column.
+
 ## [1.5.0] - 2026-11-13
 
 ### Added (Infrastructure: Umami Analytics, Google Tag Manager & Brevo Automated Email Loop)

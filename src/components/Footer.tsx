@@ -61,6 +61,11 @@ export function Footer() {
             </div>
             <ul className="space-y-2">
               <li>
+                <Link href="/leek-caper-fortnite" className="hover:text-white transition-colors">
+                  Leek Caper Guide
+                </Link>
+              </li>
+              <li>
                 <Link href="/how-to-check-chests" className="hover:text-white transition-colors">
                   How to Check Chests
                 </Link>

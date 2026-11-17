@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // 使用固定的静态内容发布与修订日期，杜绝每次爬虫抓取动态刷新时间戳
-  const LAST_UPDATED = "2026-11-13T00:00:00.000Z";
+  // 自动读取构建时的 ISO 时间戳，确保每次版本发布与内容迭代能及时通知搜索引擎重抓
+  const buildDate = new Date().toISOString();
 
   const routes = [
     // 1. 核心首页
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((r) => ({
     url: `${siteConfig.url}${r.path}`,
-    lastModified: LAST_UPDATED,
+    lastModified: buildDate,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));

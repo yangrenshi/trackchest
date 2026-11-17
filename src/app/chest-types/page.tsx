@@ -91,7 +91,7 @@ export default function ChestTypesPage() {
             Container Field Guide
           </span>
           <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
-            Chapter 7 — Treasure Hunters • Updated Nov 13, 2026
+            Chapter 7 — Treasure Hunters • Updated Nov 17, 2026
           </span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">

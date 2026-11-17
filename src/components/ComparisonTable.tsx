@@ -36,7 +36,7 @@ export function ComparisonTable() {
       rarity: "Special",
       spawnRate: "1 in 137,500 (Official)",
       guaranteedLoot: "Shop unlock, Golden skin lottery (1 in 1.56M), Mythic loot",
-      bestLocations: "Any regular / rare container or buried map spot",
+      bestLocations: "Any standard, rare, sprite, or vault container — not Pirate Crates",
       badgeClass: "rarity-legendary",
       link: "/pirate-token-odds",
     },

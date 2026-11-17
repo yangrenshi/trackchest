@@ -122,7 +122,7 @@ export default function ChestCounterPage() {
             Competitive Squad Companion
           </span>
           <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
-            Chapter 7 — Treasure Hunters • Updated Nov 13, 2026
+            Chapter 7 — Treasure Hunters • Updated Nov 17, 2026
           </span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
@@ -174,7 +174,7 @@ export default function ChestCounterPage() {
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          While casual players can get by with a simple single-button clicker, competitive tournament trios and ranked squads understand that all containers in Fortnite Battle Royale are not created equal. Opening 15 standard wooden chests gives you plenty of common ammunition and bandages, but it guarantees zero storm surge tags and zero guaranteed high-tier assault rifles. Using a specialized <strong>chest counter fortnite 4-column squad tool</strong> transforms raw looting into actionable tactical telemetry.
+          While casual players can get by with a simple single-button clicker, competitive tournament trios and ranked squads understand that all containers in Fortnite Battle Royale are not created equal. Opening 15 standard wooden chests gives you plenty of common ammunition and bandages, but it guarantees zero high-tier rifles and zero guaranteed shields. Using a specialized <strong>chest counter fortnite 4-column squad tool</strong> transforms raw looting into actionable tactical telemetry.
         </p>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
           In Chapter 7 Treasure Hunters, the map is filled with differentiated loot tiers. By separating your counts into Standard, Rare Blue, Sprite Shrines, and Boss Vaults, your in-game leader (IGL) knows exactly when your team has crossed the statistical threshold required to initiate mid-game rotations without getting caught out-gunned across open fields.

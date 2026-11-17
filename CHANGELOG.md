@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.3] - 2026-11-17
+
+### Fixed & Harmonized (Comparison Table Crate Phrasing, Dynamic Sitemap Lastmod & Surge Copy Cleanup)
+- **Harmonized Comparison Table Pirate Token Spawn Source (`ComparisonTable.tsx`)**:
+  - Replaced legacy phrasing in best locations column with unified container rule:
+    `Any standard, rare, sprite, or vault container — not Pirate Crates`
+- **Updated Content Freshness Badges to Nov 17 & Dynamic Build-Time Sitemap**:
+  - Bumped badge copy across `HeroSection.tsx`, `fortnite-chest-counter/page.tsx`, `pirate-token-odds/page.tsx`, and `chest-types/page.tsx` from `Nov 13` to `Nov 17, 2026`.
+  - Converted static `LAST_UPDATED` in `sitemap.ts` to `new Date().toISOString()`, signaling fresh modifications on every deploy.
+- **Removed False Jargon Copy (`fortnite-chest-counter/page.tsx`)**:
+  - Corrected gameplay copy error: replaced `guarantees zero storm surge tags and zero guaranteed high-tier assault rifles` with `guarantees zero high-tier rifles and zero guaranteed shields`.
+
 ## [1.5.2] - 2026-11-17
 
 ### Fixed & Enhanced (Homepage Internal Links, Predetermined Mechanics H2 & Full-site Crate Rule Unification)

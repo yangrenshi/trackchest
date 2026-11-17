@@ -167,6 +167,19 @@ export function SeoContentSection() {
             </div>
             <ArrowRight className="w-4 h-4 text-[#666] group-hover:text-white shrink-0 ml-2" />
           </Link>
+
+          <Link
+            href="/leekcapper-fortnite"
+            className="p-3.5 rounded-xl bg-[#1d1d1d] hover:bg-[#242424] border border-[#2e2e2e] transition-colors flex items-center justify-between group sm:col-span-2"
+          >
+            <div>
+              <span className="font-semibold text-white group-hover:text-[#ffc93c] transition-colors block">
+                Leekcapper guide
+              </span>
+              <span className="text-[#888] text-[11px]">Spawn locations across chests and floor loot, weapon stats, and ship boarding quest walkthrough.</span>
+            </div>
+            <ArrowRight className="w-4 h-4 text-[#666] group-hover:text-white shrink-0 ml-2" />
+          </Link>
         </div>
       </section>
 

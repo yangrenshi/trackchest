@@ -229,8 +229,8 @@ export default function ChestTypesPage() {
         <Link href="/fortnite-chest-counter" className="text-[#9a9a9a] hover:text-white underline">
           &larr; Fortnite Chest Counter (4-Column)
         </Link>
-        <Link href="/leek-caper-fortnite" className="text-[#ffc93c] hover:underline font-medium">
-          Leek Caper (Leekcapper) Guide &rarr;
+        <Link href="/leekcapper-fortnite" className="text-[#ffc93c] hover:underline font-medium">
+          Leekcapper Guide &rarr;
         </Link>
         <Link href="/pirate-token-odds" className="text-[#9a9a9a] hover:text-white underline">
           Pirate Token Odds (Official 1/137.5k) &rarr;

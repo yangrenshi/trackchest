@@ -17,15 +17,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Leek Caper (Leekcapper) Location & Chest Guide",
-  description: "Find the Leek Caper (Leekcapper) in Fortnite Chapter 7. Complete chest drop rates, pirate ship vault locations, and the board a ship quest guide.",
+  title: "Fortnite Leekcapper — Location & Drop Guide | TrackChest",
+  description: "Find the Leekcapper in Fortnite Chapter 7. Complete chest and floor loot drop rates, pirate ship locations, and the board a ship quest guide.",
   alternates: {
-    canonical: `${siteConfig.url}/leek-caper-fortnite`,
+    canonical: `${siteConfig.url}/leekcapper-fortnite`,
   },
   openGraph: {
-    title: "Fortnite Leek Caper (Leekcapper) Location & Chest Guide",
-    description: "How to get the Leek Caper (Leekcapper) in Fortnite Chapter 7: chest spawn odds, pirate ship locations, and quest walkthrough.",
-    url: `${siteConfig.url}/leek-caper-fortnite`,
+    title: "Fortnite Leekcapper — Location & Drop Guide | TrackChest",
+    description: "How to get the Leekcapper in Fortnite Chapter 7: chest and floor loot spawn odds, pirate ship locations, and quest walkthrough.",
+    url: `${siteConfig.url}/leekcapper-fortnite`,
     siteName: siteConfig.name,
     type: "article",
     images: [
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "Fortnite Leek Caper (Leekcapper) Location and Quest Guide — TrackChest",
+        alt: "Fortnite Leekcapper Location and Quest Guide — TrackChest",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Leek Caper (Leekcapper) Location & Chest Guide",
+    title: "Fortnite Leekcapper — Location & Drop Guide | TrackChest",
     description: "Where to find the Leekcapper in Fortnite: container drop rates and board a ship quest guide.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
@@ -63,7 +63,7 @@ export default function LeekCaperFortnitePage() {
         name: "What chests have the highest chance to drop the Leekcapper?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Boss Vault Rare Chests and Sprite Shrines provide the highest drop probabilities (~18%–25% per container). Standard wooden chests also contain it at roughly 2%–5% natural drop frequency.",
+          text: "Standard Chests and Floor Loot combined represent the most reliable way to find it across the island due to their sheer volume. Rare Blue Chests and Vaults also contain it in their high-tier loot tables.",
         },
       },
       {
@@ -87,7 +87,7 @@ export default function LeekCaperFortnitePage() {
         name: "Can you get the Leekcapper from Commercial Safes or Buried Pirate Crates?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Commercial Safes only drop gold bars and healing items. Buried Pirate Crates guarantee heavy ordnance (Flint-Knocks and Cannons). You must loot Standard Chests, Rare Chests, Vaults, or Sprite Shrines to acquire the Leekcapper.",
+          text: "No. Commercial Safes only drop gold bars and healing items. Buried Pirate Crates guarantee heavy ordnance (Flint-Knocks and Cannons). You must loot Standard Chests, Rare Chests, Vaults, or Floor Loot to acquire the Leekcapper.",
         },
       },
     ],
@@ -96,8 +96,8 @@ export default function LeekCaperFortnitePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Fortnite Leek Caper (Leekcapper): Location & Chest Drop Guide",
-    description: "Complete guide to finding the Leekcapper in Fortnite Chapter 7, container drop odds across chests, and quest walkthrough for boarding pirate vessels.",
+    headline: "Fortnite Leekcapper: Location & Chest Drop Guide",
+    description: "Complete guide to finding the Leekcapper in Fortnite Chapter 7, container and floor loot drop odds, and quest walkthrough for boarding pirate vessels.",
     author: {
       "@type": "Organization",
       name: "TrackChest Studio",
@@ -113,7 +113,7 @@ export default function LeekCaperFortnitePage() {
     },
     datePublished: "2026-11-17T00:00:00.000Z",
     dateModified: "2026-11-17T00:00:00.000Z",
-    mainEntityOfPage: `${siteConfig.url}/leek-caper-fortnite`,
+    mainEntityOfPage: `${siteConfig.url}/leekcapper-fortnite`,
   };
 
   return (
@@ -146,10 +146,10 @@ export default function LeekCaperFortnitePage() {
           <span>Chapter 7 • Treasure Hunters Season Update</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
-          Fortnite Leek Caper (Leekcapper): Location & Chest Drop Guide
+          Fortnite Leekcapper: Location &amp; Chest Drop Guide
         </h1>
         <p className="text-[#9a9a9a] text-sm leading-relaxed">
-          Wondering how to get the viral <strong className="text-white">leek caper fortnite</strong> weapon? Officially designated as the <strong className="text-[#ffc93c]">Leekcapper</strong>, this Epic-rarity Hatsune Miku-inspired giant vegetable is dominating battle royale matches with sprint speed buffs and high-impact smash combos. Learn exactly which chests drop it and how to complete the Pirate Ship boarding challenge.
+          Wondering how to get the viral <strong className="text-white">Leekcapper</strong> in Fortnite (often searched as <em>leek caper</em>)? This Epic-rarity Hatsune Miku-inspired giant vegetable is dominating Battle Royale matches with sprint speed buffs and high-impact smash combos. Learn exactly which containers and floor loot nodes spawn it, and how to complete the Pirate Ship boarding challenge.
         </p>
       </header>
 
@@ -179,10 +179,10 @@ export default function LeekCaperFortnitePage() {
       <section className="space-y-4">
         <h2 className="text-lg sm:text-xl font-bold text-white flex items-center space-x-2">
           <Box className="w-5 h-5 text-[#ffc93c]" />
-          <span>2. Where to Find the Leekcapper: Container Drop Rates & Mechanics</span>
+          <span>2. Where to Find the Leekcapper: Container &amp; Floor Loot Drop Rates</span>
         </h2>
         <p className="text-[#aaa] leading-relaxed">
-          The Leekcapper does not spawn from every container on the Chapter 7 island. It follows specific loot table weights across four primary container tiers. Below is the verified drop rate breakdown based on telemetry data and patch notes:
+          According to Epic Games&apos; official hotfix notes (Nov 2026), the Leekcapper is added directly to the general Battle Royale loot pool across three verified sources: <strong>Floor Loot, Standard Chests, and Rare Chests</strong>. The most reliable way to secure it in any match is the combined volume of residential Chests and Floor Loot. Below is the verified drop rate breakdown based on community drop tracking plus Epic&apos;s hotfix notes (Nov 2026):
         </p>
 
         {/* 原生 React HTML <table> 对比组件 */}
@@ -190,7 +190,7 @@ export default function LeekCaperFortnitePage() {
           <table className="w-full text-left text-xs border-collapse">
             <thead>
               <tr className="bg-[#1f1f1f] text-white border-b border-[#2e2e2e]">
-                <th className="p-3 font-semibold">Container Type</th>
+                <th className="p-3 font-semibold">Spawn Source</th>
                 <th className="p-3 font-semibold">Drop Probability</th>
                 <th className="p-3 font-semibold">Average Search Time</th>
                 <th className="p-3 font-semibold">Tactical Grinding Recommendation</th>
@@ -199,39 +199,48 @@ export default function LeekCaperFortnitePage() {
             <tbody className="divide-y divide-[#262626] text-[#ccc]">
               <tr>
                 <td className="p-3 font-medium text-white flex items-center space-x-1.5">
-                  <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                  <span>Rare Blue Chests</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  <span>Floor Loot (Ground Spawns)</span>
                 </td>
-                <td className="p-3 text-[#22c55e] font-semibold">18% – 25% (High)</td>
-                <td className="p-3">2–4 minutes</td>
-                <td className="p-3">Best solo route; prioritize multi-floor POIs like Plunder Port.</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-medium text-white flex items-center space-x-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#ffc93c]"></span>
-                  <span>Sprite Shrines</span>
-                </td>
-                <td className="p-3 text-[#22c55e] font-semibold">~20% (High)</td>
-                <td className="p-3">3–5 minutes</td>
-                <td className="p-3">Interact with floating sprites around jungle glades for quick loot bursts.</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-medium text-white flex items-center space-x-1.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-500"></span>
-                  <span>Boss Vault Chests</span>
-                </td>
-                <td className="p-3 text-[#22c55e] font-semibold">Guaranteed in 1 of 3</td>
-                <td className="p-3">5–8 minutes</td>
-                <td className="p-3">Requires defeating the pirate boss; guaranteed drop for your squad.</td>
+                <td className="p-3 text-[#22c55e] font-semibold">Active Node Spawn</td>
+                <td className="p-3">Immediate (on drop)</td>
+                <td className="p-3">Confirmed in Epic hotfix notes; inspect floor spawns inside residential attics, roofs, and pirate docks.</td>
               </tr>
               <tr>
                 <td className="p-3 font-medium text-white flex items-center space-x-1.5">
                   <span className="w-2 h-2 rounded-full bg-amber-700"></span>
                   <span>Standard Wooden Chests</span>
                 </td>
-                <td className="p-3 text-[#ffc93c]">~2% – 5% (Low)</td>
+                <td className="p-3 text-[#22c55e] font-semibold">~70%–80% (High Volume)</td>
                 <td className="p-3">15–30 seconds</td>
-                <td className="p-3">High volume; tap open 15–20 chests rapidly to force an early spawn.</td>
+                <td className="p-3">High volume — more chests means more rolls, each one independent. Most common source due to map density.</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-medium text-white flex items-center space-x-1.5">
+                  <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                  <span>Rare Blue Chests</span>
+                </td>
+                <td className="p-3 text-[#ffc93c]">~2%–5% (Low Spawn Rate)</td>
+                <td className="p-3">2–4 minutes</td>
+                <td className="p-3">Worth targeting multi-floor POIs like Plunder Port for guaranteed rare weapon rolls alongside Leekcapper potential.</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-medium text-white flex items-center space-x-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[#ffc93c]"></span>
+                  <span>Sprite Shrines</span>
+                </td>
+                <td className="p-3 text-[#aaa]">Biome Exclusive</td>
+                <td className="p-3">3–5 minutes</td>
+                <td className="p-3">Interact with floating sprites around jungle glades for quick auxiliary loot bursts.</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-medium text-white flex items-center space-x-1.5">
+                  <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                  <span>Boss Vault Bunkers</span>
+                </td>
+                <td className="p-3 text-[#aaa]">Vault Exclusive</td>
+                <td className="p-3">5–8 minutes</td>
+                <td className="p-3">Requires defeating the pirate boss; provides high-tier loadouts and squad utility.</td>
               </tr>
               <tr className="bg-[#141414] text-[#777]">
                 <td className="p-3 font-medium line-through">Commercial Safes</td>
@@ -386,7 +395,7 @@ export default function LeekCaperFortnitePage() {
               Does opening chests during Treasure Hours boost Leekcapper drop rates?
             </h3>
             <p className="text-xs text-[#9a9a9a] leading-relaxed">
-              No. Treasure Hours multiplier events strictly boost Pirate Shop Access Token drop odds (from 1 in 137,500 up to 1 in 68,750). The Leekcapper&apos;s weapon drop table remains at standard 2%–5% regular chest rates throughout the season. See our <Link href="/pirate-token-odds" className="text-[#ffc93c] underline">Pirate Token Odds</Link> page for full event math.
+              No. Treasure Hours multiplier events strictly boost Pirate Shop Access Token drop odds (from 1 in 137,500 up to 1 in 68,750). The Leekcapper&apos;s weapon drop table follows standard Battle Royale loot pool rules across Chests and Floor Loot throughout the season. See our <Link href="/pirate-token-odds" className="text-[#ffc93c] underline">Pirate Token Odds</Link> page for full event math.
             </p>
           </div>
 

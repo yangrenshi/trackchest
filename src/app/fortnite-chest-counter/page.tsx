@@ -212,7 +212,7 @@ export default function ChestCounterPage() {
               <h3 className="font-bold text-white">Column 2: Rare Blue Chests (IGL Loot Priority)</h3>
             </div>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Assigned to the In-Game Leader (IGL) hitting verified subterranean bunker nodes and weather control stations. Rare chests guarantee Blue-or-better combat weapons, ensuring the squad secures surge tag capability before Zone 2.
+              Assigned to the In-Game Leader (IGL) hitting verified subterranean bunker nodes and weather control stations. Rare chests guarantee Blue-or-better combat weapons, ensuring the squad has blue-or-better weapons and big shields before Zone 2.
             </p>
           </div>
 

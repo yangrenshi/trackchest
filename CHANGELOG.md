@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.4] - 2026-11-18
+
+### Fixed & Optimized (Slug Migration to /leekcapper-fortnite, Floor Loot Integration & Internal Link Isolation Fix)
+- **Slug & Canonical Migration (`/leek-caper-fortnite` -> `/leekcapper-fortnite`)**:
+  - Migrated routing directory to exact official keyword: `/leekcapper-fortnite`.
+  - Added permanent 301 redirect in `next.config.mjs` (`/leek-caper-fortnite` -> `/leekcapper-fortnite`).
+  - Compressed Page Title to exact 56 characters: `Fortnite Leekcapper — Location & Drop Guide | TrackChest`.
+  - Prioritized official entity `Leekcapper` in H1: `Fortnite Leekcapper: Location & Chest Drop Guide`.
+- **Content Accuracy & Floor Loot Integration (`leekcapper-fortnite/page.tsx`)**:
+  - Added official hotfix-confirmed source **Floor Loot (Ground Spawns)** to loot comparison grid.
+  - Corrected volume distribution: Standard Chests aligned to `~70%–80% (High Volume)` and Rare Chests to `~2%–5% (Low Spawn Rate)`.
+  - Harmonized grinding advice: replaced rapid spawn forcing with independent Bernoulli rolls (`High volume — more chests means more rolls, each one independent`).
+  - Updated citation: `based on community drop tracking plus Epic's hotfix notes (Nov 2026)`.
+- **Eliminated Page Isolation via Homepage & Global Linking**:
+  - Injected dedicated guide card into homepage `Related Tools & Guides` grid with anchor text: `Leekcapper guide`.
+  - Re-anchored links in `chest-types/page.tsx` and global `Footer.tsx` to `/leekcapper-fortnite`.
+  - Re-ranked in `sitemap.ts`: lowered priority from 0.9 to 0.7, positioned cleanly behind the 4 primary core tool routes.
+- **Removed False Jargon Copy (`fortnite-chest-counter/page.tsx`)**:
+  - Corrected Column 2 description: replaced `ensuring the squad secures surge tag capability before Zone 2` with `ensuring the squad has blue-or-better weapons and big shields before Zone 2`.
+
 ## [1.5.3] - 2026-11-17
 
 ### Fixed & Harmonized (Comparison Table Crate Phrasing, Dynamic Sitemap Lastmod & Surge Copy Cleanup)

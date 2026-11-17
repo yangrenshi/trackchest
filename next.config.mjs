@@ -8,6 +8,15 @@ const nextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/leek-caper-fortnite',
+        destination: '/leekcapper-fortnite',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

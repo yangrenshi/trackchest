@@ -21,7 +21,7 @@ export function SeoContentSection() {
         </h3>
         <p className="text-[#9a9a9a] leading-relaxed">
           In Fortnite Battle Royale, tournament players practice predetermined landing routes known as chest paths. 
-          Using an offline-ready chest tracker Fortnite competitors keep open alongside ranked matches helps optimize loadouts before the first storm surge:
+          Using an offline-ready <Link href="/fortnite-chest-counter" className="text-[#ffc93c] underline font-medium">Fortnite chest counter</Link> competitors keep open alongside ranked matches helps optimize loadouts before the first storm surge:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
           <div className="p-3.5 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e]">
@@ -37,6 +37,9 @@ export function SeoContentSection() {
             <p className="text-xs text-[#9a9a9a]">Easily verify progress across 50, 100, and 250 seasonal container quests.</p>
           </div>
         </div>
+        <p className="text-xs text-[#9a9a9a] leading-relaxed pt-1">
+          Knowing where different <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">chest types</Link> spawn across Chapter 7 points of interest gives solo and squad players an immediate tactical advantage off the battle bus.
+        </p>
       </section>
 
       {/* 章节 2 */}
@@ -72,7 +75,7 @@ export function SeoContentSection() {
             <span>Season Resets &amp; Archiving Career Data</span>
           </h3>
           <p className="text-xs text-[#9a9a9a] leading-relaxed">
-            Whenever Epic Games rolls out a new Fortnite season, in-game milestone quests reset to zero, wiping your seasonal container tally. With TrackChest, your career logs stay safely preserved in browser LocalStorage. Use the built-in &ldquo;Backup&rdquo; button at the end of each season to export your historical JSON snapshot, allowing you to archive lifetime chest milestones across all Chapters.
+            Whenever Epic Games rolls out a new Fortnite season, in-game milestone quests reset to zero, wiping your seasonal container tally. With TrackChest, your career logs stay safely preserved in browser LocalStorage. Use the built-in &ldquo;Backup&rdquo; button at the end of each season to export your historical JSON snapshot, allowing you to archive lifetime chest milestones across all Chapters while verifying your cumulative progress against official <Link href="/pirate-token-odds" className="text-[#ffc93c] underline font-medium">Pirate Token odds</Link>.
           </p>
         </section>
       </div>

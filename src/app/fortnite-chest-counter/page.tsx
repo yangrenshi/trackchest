@@ -72,7 +72,7 @@ export default function ChestCounterPage() {
         name: "Why are Pirate Crates and Commercial Safes not included in these 4 columns?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Commercial Safes exclusively drop gold bars and healing rather than weapons, while Pirate Crates operate under Epic Games' 1 in 137,500 lottery odds. You can track Pirate Crates separately using our dedicated Pirate Token Odds Calculator.",
+          text: "Neither container is included in the four counter columns (Standard, Rare, Sprite, Vault). Commercial Safes strictly drop gold bars and healing items, while Pirate Crates guarantee high-tier ordnance and do not roll on the 1 in 137,500 token table.",
         },
       },
       {
@@ -348,7 +348,7 @@ export default function ChestCounterPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1">
             <h3 className="font-bold text-white">Why are Pirate Crates and Commercial Safes excluded from these 4 columns?</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Commercial Safes strictly drop gold bars and healing items rather than combat firearms, while Pirate Crates operate under Epic Games&apos; confirmed 1 in 137,500 lottery odds. You can calculate your statistical token odds separately on our dedicated Pirate Token Odds page.
+              Neither container is included in the four counter columns (Standard, Rare, Sprite, Vault). Commercial Safes strictly drop gold bars and healing items, while Pirate Crates guarantee high-tier ordnance and do not roll on the 1 in 137,500 token table.
             </p>
           </div>
 

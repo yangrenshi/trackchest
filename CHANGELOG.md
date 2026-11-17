@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.2] - 2026-11-17
+
+### Fixed & Enhanced (Homepage Internal Links, Predetermined Mechanics H2 & Full-site Crate Rule Unification)
+- **Homepage In-Content Internal Links (`SeoContentSection.tsx`)**:
+  - Inserted 3 natural in-content anchor links for indexation:
+    - `"Fortnite chest counter"` -> `/fortnite-chest-counter` (Section 1 intro)
+    - `"chest types"` -> `/chest-types` (Section 1 transition paragraph)
+    - `"Pirate Token odds"` -> `/pirate-token-odds` (Section 2.5 season reset paragraph)
+- **New Exposure-Capturing Section (`pirate-token-odds/page.tsx`)**:
+  - Added dedicated H2: `Are Fortnite Chests Predetermined?` (296 words).
+  - Clarified dynamic server-side RNG vs static generation, confirmed independent Bernoulli trials without pity timers, aligned with baseline `1 in 137,500` and `95,307` thresholds, and naturally integrated `"Pirate Token odds calculator"`.
+- **Full-Site Rule Harmonization (`fortnite-chest-counter/page.tsx`)**:
+  - Harmonized FAQPage JSON-LD and visible DOM answer to eliminate legacy lottery phrasing:
+    `Neither container is included in the four counter columns (Standard, Rare, Sprite, Vault). Commercial Safes strictly drop gold bars and healing items, while Pirate Crates guarantee high-tier ordnance and do not roll on the 1 in 137,500 token table.`
+
 ## [1.5.1] - 2026-11-17
 
 ### Added (Trending Keyword Capture: `/leek-caper-fortnite` One-URL One-Keyword Deep Guide)

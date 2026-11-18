@@ -3,9 +3,30 @@
 import React, { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export function FaqSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
+
+  const renderAnswer = (text: string) => {
+    const targetAnchor = "full odds breakdown";
+    if (text.includes(targetAnchor)) {
+      const parts = text.split(targetAnchor);
+      return (
+        <>
+          {parts[0]}
+          <Link
+            href="/pirate-token-odds"
+            className="text-[#ffd510] underline underline-offset-2 hover:text-[#ffe043] font-medium transition-colors"
+          >
+            {targetAnchor}
+          </Link>
+          {parts[1]}
+        </>
+      );
+    }
+    return text;
+  };
 
   return (
     <section id="faq" className="py-12 max-w-4xl mx-auto px-4 scroll-mt-16">
@@ -48,7 +69,7 @@ export function FaqSection() {
                   isOpen ? "block" : "hidden"
                 }`}
               >
-                <p>{answerText}</p>
+                <p>{renderAnswer(answerText)}</p>
               </div>
             </div>
           );

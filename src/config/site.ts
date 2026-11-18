@@ -119,6 +119,12 @@ export const siteConfig: SiteConfig = {
       answer: "In Fortnite, Regular standard chests have a high spawn rate (community estimates range around 70-80% active nodes per POI) and drop common to rare weapons. Rare (blue glowing) chests are significantly scarcer (community estimates put them around 2% to 5% spawn chance) and guarantee at least a Rare (blue), Epic (purple), or Legendary (gold) weapon, plus high-tier shield potions.",
     },
     {
+      q: "Are Fortnite chests predetermined?",
+      a: "No, Fortnite chests are not predetermined when the island generates; their contents are rolled on the server at the exact moment a player opens them. Because each chest is an independent random roll, there is no pity timer or bad-luck protection guaranteeing high-tier loot or tokens after opening a certain number of containers. For exact probabilities across all container types, check our full odds breakdown.",
+      question: "Are Fortnite chests predetermined?",
+      answer: "No, Fortnite chests are not predetermined when the island generates; their contents are rolled on the server at the exact moment a player opens them. Because each chest is an independent random roll, there is no pity timer or bad-luck protection guaranteeing high-tier loot or tokens after opening a certain number of containers. For exact probabilities across all container types, check our full odds breakdown.",
+    },
+    {
       q: "How do Pirate Token chests and the 1 in 137,500 odds work?",
       a: "In Chapter 7 Treasure Hunters, Epic confirmed Pirate Shop Access Tokens drop from containers at a 1 in 137,500 rate (0.000007273%). TrackChest lets you track opened containers and calculate your statistical progress toward the 50% median threshold.",
       question: "How do Pirate Token chests and the 1 in 137,500 odds work?",

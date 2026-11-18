@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.6] - 2026-11-18
+
+### Added (Homepage FAQ on Chest Predetermination & Odds Internal Link)
+- **Targeted FAQ Q&A Insertion (`site.ts`, `FaqSection.tsx`)**:
+  - Injected direct answer for high-intent ranking keywords (`are fortnite chests predetermined`, currently ranking #9.4 & #9.7):
+    - **Q**: `Are Fortnite chests predetermined?`
+    - **A**: `No, Fortnite chests are not predetermined when the island generates; their contents are rolled on the server at the exact moment a player opens them. Because each chest is an independent random roll, there is no pity timer or bad-luck protection guaranteeing high-tier loot or tokens after opening a certain number of containers. For exact probabilities across all container types, check our full odds breakdown.`
+  - Integrated natural in-text internal link: `full odds breakdown` directly anchors to `/pirate-token-odds`.
+  - Preserved existing layout and `FAQPage` JSON-LD schema with zero title mutations.
+
 ## [1.5.5] - 2026-11-18
 
 ### Fixed & Enhanced (Treasure Hours Weekend Span Coverage & Query Date Robustness)

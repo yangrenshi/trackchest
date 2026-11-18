@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.5] - 2026-11-18
+
+### Fixed & Enhanced (Treasure Hours Weekend Span Coverage & Query Date Robustness)
+- **Extended Wave Lifecycles to Cover Full Weekend (`treasureHours.ts`)**:
+  - Updated `TREASURE_WAVES` with explicit weekend end dates:
+    - Wave 1: `startDate: "2026-11-14"`, `endDate: "2026-11-15"` (1.5x)
+    - Wave 2: `startDate: "2026-11-21"`, `endDate: "2026-11-22"` (2.0x)
+    - Wave 3: `startDate: "2026-11-28"`, `endDate: "2026-11-29"` (2.0x)
+  - Enforced strict live condition: `startDate <= today <= endDate` ensures Sunday gameplay remains active as `live 2x` instead of prematurely reverting to `ended`.
+- **Timezone-Resilient Mock Query Parameter Handling (`TreasureHoursBanner.tsx`)**:
+  - Enriched `?date=YYYY-MM-DD` parser with `T12:00:00` midday normalization, eliminating UTC midnight day-boundary rollback across western timezones.
+
 ## [1.5.4] - 2026-11-18
 
 ### Fixed & Optimized (Slug Migration to /leekcapper-fortnite, Floor Loot Integration & Internal Link Isolation Fix)

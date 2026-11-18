@@ -17,9 +17,11 @@ export function TreasureHoursBanner() {
           const params = new URLSearchParams(window.location.search);
           const mock = params.get("date") || params.get("mock_date") || params.get("now");
           if (mock) {
-            current = new Date(mock);
+            // YYYY-MM-DD 补全 T12:00:00 防止各时区解析为 UTC 0 点时跨日偏差
+            current = /^\d{4}-\d{2}-\d{2}$/.test(mock) ? new Date(`${mock}T12:00:00`) : new Date(mock);
           } else if ((window as unknown as { __MOCK_TIME__?: string }).__MOCK_TIME__) {
-            current = new Date((window as unknown as { __MOCK_TIME__: string }).__MOCK_TIME__);
+            const rawMock = (window as unknown as { __MOCK_TIME__: string }).__MOCK_TIME__;
+            current = /^\d{4}-\d{2}-\d{2}$/.test(rawMock) ? new Date(`${rawMock}T12:00:00`) : new Date(rawMock);
           }
         }
       } catch {}

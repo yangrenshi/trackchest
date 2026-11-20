@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.7] - 2026-11-20
+
+### Added (Google AdSense Verification & ads.txt Integration)
+- **AdSense Code Segment Integration (`layout.tsx`)**:
+  - Injected official Google AdSense script into `<head>`: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3924907645674919` (`async`, `crossOrigin="anonymous"`).
+  - Added publisher meta tag: `<meta name="google-adsense-account" content="ca-pub-3924907645674919" />` via `metadata.other`.
+- **Publisher ads.txt File Deployment (`public/ads.txt`)**:
+  - Created standardized `ads.txt` containing official verification line: `google.com, pub-3924907645674919, DIRECT, f08c47fec0942fa0`.
+
 ## [1.5.6] - 2026-11-18
 
 ### Added (Homepage FAQ on Chest Predetermination & Odds Internal Link)

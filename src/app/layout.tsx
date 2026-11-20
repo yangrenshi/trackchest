@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
+  other: {
+    "google-adsense-account": "ca-pub-3924907645674919",
+  },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -75,6 +78,13 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
+        />
+
+        {/* Google AdSense (ca-pub-3924907645674919) */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3924907645674919"
+          crossOrigin="anonymous"
         />
 
         {/* Google Analytics & Tag Manager (GTM-THLFJFWJ) */}

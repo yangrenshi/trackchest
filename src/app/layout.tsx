@@ -128,6 +128,13 @@ export default function RootLayout({
             strategy="afterInteractive"
           />
         )}
+
+        {/* PVUV.ai 流量统计（内置 Bot 识别与清洗） */}
+        <Script
+          src="https://in.pvuv.ai/f.js"
+          data-site={process.env.NEXT_PUBLIC_PVUV_SITE_ID || "ptg9njdN"}
+          strategy="afterInteractive"
+        />
       </head>
       <body className="antialiased bg-[#121212] text-white selection:bg-[#ffc93c] selection:text-black flex flex-col min-h-screen">
         <AuthProvider>

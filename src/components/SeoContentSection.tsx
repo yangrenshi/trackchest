@@ -55,6 +55,9 @@ export function SeoContentSection() {
           <li><strong className="text-white">Match Accolades:</strong> Inspect end-of-game accolades like &ldquo;Chest Specialist&rdquo; (7+ chests in one game).</li>
           <li><strong className="text-white">Live Companion:</strong> Use <Link href="/" className="text-[#ffc93c] underline font-medium">TrackChest</Link> on mobile while playing to log each open with zero delay.</li>
         </ol>
+        <p className="text-xs text-[#9a9a9a] leading-relaxed pt-1">
+          For step-by-step lobby navigation and accolade badge thresholds, follow our detailed walkthrough on <Link href="/how-to-check-chests" className="text-[#ffc93c] underline font-medium">how to check chests in Fortnite</Link>.
+        </p>
       </section>
 
       {/* 章节 2.5: 组队协同与赛季保留 */}

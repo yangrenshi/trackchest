@@ -249,7 +249,7 @@ export default function ChestCounterPage() {
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          Understanding the mathematical drop distribution behind each column in our <strong>chest counter fortnite squad tool</strong> prevents costly macro rotation errors:
+          Understanding the mathematical drop distribution behind each column in our <strong>chest counter fortnite squad tool</strong> prevents costly macro rotation errors. For exact visual identification markers and sound cues across all active rarities, check our comprehensive <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>:
         </p>
 
         <div className="space-y-3 text-xs">
@@ -377,7 +377,7 @@ export default function ChestCounterPage() {
           </h2>
         </div>
         <p className="leading-relaxed">
-          All 4 columns update your browser&apos;s LocalStorage on every single tap. Designed as an offline-ready <strong>chest counter fortnite squad companion</strong> you can run without tab lags, you can refresh the page, close your browser between tournaments, or lock your phone screen without losing count. When starting a fresh competitive match set, click &ldquo;Reset All&rdquo; to clear all four columns simultaneously.
+          All 4 columns update your browser&apos;s LocalStorage on every single tap. Designed as an offline-ready <strong>chest counter fortnite squad companion</strong> you can run without tab lags, you can refresh the page, close your browser between tournaments, or lock your phone screen without losing count. When starting a fresh competitive match set, click &ldquo;Reset All&rdquo; to clear all four columns simultaneously. To cross-reference your session tally with the in-game Milestones tab, review our guide on <Link href="/how-to-check-chests" className="text-[#ffc93c] underline font-medium">how to check chests opened in Fortnite</Link>. If your squad is also targeting special pirate weapons, consult our <Link href="/leekcapper-fortnite" className="text-[#ffc93c] underline font-medium">Leekcapper drop rates and quest guide</Link>.
         </p>
       </section>
 
@@ -385,9 +385,20 @@ export default function ChestCounterPage() {
         <Link href="/" className="text-[#ffc93c] hover:underline font-medium">
           &larr; Return to Single-Button Tracker
         </Link>
-        <Link href="/pirate-token-odds" className="text-[#9a9a9a] hover:text-white underline">
-          Check Pirate Token Drop Odds &rarr;
-        </Link>
+        <div className="flex flex-wrap items-center gap-4 text-[#9a9a9a]">
+          <Link href="/chest-types" className="hover:text-white underline">
+            Chest Types
+          </Link>
+          <Link href="/how-to-check-chests" className="hover:text-white underline">
+            How to Check Chests
+          </Link>
+          <Link href="/leekcapper-fortnite" className="hover:text-white underline">
+            Leekcapper Guide
+          </Link>
+          <Link href="/pirate-token-odds" className="hover:text-white underline">
+            Pirate Token Odds &rarr;
+          </Link>
+        </div>
       </div>
     </div>
   );

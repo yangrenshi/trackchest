@@ -221,7 +221,7 @@ export default function ChestTypesPage() {
       {/* 底部导流 */}
       <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] text-xs text-[#9a9a9a] leading-relaxed">
         <p>
-          Ready to log your containers during matches? Use our fast <Link href="/" className="text-[#ffc93c] underline font-medium">chest tracker Fortnite</Link> companion to count single-button opens, or launch the 4-column counter for squad POI breakdowns.
+          Ready to log your containers during matches? Use our fast <Link href="/" className="text-[#ffc93c] underline font-medium">chest tracker Fortnite</Link> companion to count single-button opens, or launch the <Link href="/fortnite-chest-counter" className="text-[#ffc93c] underline font-medium">4-column squad counter</Link> for squad POI breakdowns. Wondering how many containers you have cracked across the current season? Read our tutorial on <Link href="/how-to-check-chests" className="text-[#ffc93c] underline font-medium">how to check chests opened in Fortnite</Link>.
         </p>
       </div>
 

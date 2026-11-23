@@ -151,7 +151,7 @@ export default function PirateTokenOddsPage() {
           <span>The Math Behind the 1 in 137,500 Drop Rate</span>
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          In the Chapter 7 Treasure Hunters collaboration season, opening standard, rare, sprite, or boss vault containers grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. According to Epic&apos;s official drop rates, reported by Polygon on Nov 9, 2026:
+          In the Chapter 7 Treasure Hunters collaboration season, opening standard, rare, sprite, or boss vault containers (detailed in our <Link href="/chest-types" className="text-[#ffc93c] underline">Fortnite chest types guide</Link>) grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. According to Epic&apos;s official drop rates, reported by Polygon on Nov 9, 2026:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -366,7 +366,7 @@ export default function PirateTokenOddsPage() {
           How to Track Your Progress Against Official Pirate Token Odds
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          Because Fortnite does not show your progress toward the 137,500 container milestone in real-time, competitive players use our companion tools while playing:
+          Because Fortnite does not show your progress toward the 137,500 container milestone in real-time (learn <Link href="/how-to-check-chests" className="text-[#ffc93c] underline">how to check chests opened in Fortnite</Link>), competitive players use our companion tools while playing:
         </p>
         <ul className="space-y-2 text-xs text-[#9a9a9a]">
           <li className="flex items-start space-x-2">
@@ -392,7 +392,10 @@ export default function PirateTokenOddsPage() {
           Main Tracker
         </Link>
         <Link href="/chest-types" className="text-[#9a9a9a] hover:text-white underline">
-          Chest Types Encyclopedia &rarr;
+          Chest Types
+        </Link>
+        <Link href="/leekcapper-fortnite" className="text-[#ffc93c] hover:underline font-medium">
+          Leekcapper Guide &rarr;
         </Link>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
@@ -50,9 +51,9 @@ export default function PrivacyPage() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-xl font-bold text-white">4. Contact Us</h2>
+          <h2 className="text-xl font-bold text-white">4. Contact &amp; Legal Terms</h2>
           <p>
-            If you have questions about our privacy practices, feel free to reach out to us at <strong>{siteConfig.contactEmail}</strong>.
+            If you have questions about our privacy practices, review our <Link href="/terms" className="text-[#ffc93c] underline">Terms of Service</Link> or feel free to reach out via our <Link href="/contact" className="text-[#ffc93c] underline">Contact page</Link> (or email {siteConfig.contactEmail}).
           </p>
         </section>
       </article>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
@@ -41,9 +42,9 @@ export default function TermsPage() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-xl font-bold text-white">3. Acceptable Use</h2>
+          <h2 className="text-xl font-bold text-white">3. Acceptable Use &amp; Privacy</h2>
           <p>
-            You agree not to attempt to scrape, attack, or compromise our web application servers. TrackChest is strictly for personal and non-commercial gaming companion use.
+            You agree not to attempt to scrape, attack, or compromise our web application servers. TrackChest is strictly for personal and non-commercial gaming companion use. Please review our <Link href="/privacy" className="text-[#ffc93c] underline">Privacy Policy</Link> and feel free to reach out via our <Link href="/contact" className="text-[#ffc93c] underline">Contact page</Link> for any compliance questions.
           </p>
         </section>
       </article>

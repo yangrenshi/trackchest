@@ -143,7 +143,7 @@ export default function HowToCheckChestsPage() {
           <span>Live Counting with TrackChest</span>
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          Because quest counters reset every season and combine ammo boxes with chests, players keep <Link href="/" className="text-[#ffc93c] underline">TrackChest</Link> open on a phone or second display. Tap to record each open, keeping your session, daily, and career records permanently in local storage.
+          Because quest counters reset every season and combine ammo boxes with chests, players keep <Link href="/" className="text-[#ffc93c] underline">TrackChest live companion</Link> open on a phone or second display. If you drop in squads or run designated POI routes, use the <Link href="/fortnite-chest-counter" className="text-[#ffc93c] underline">4-column squad chest counter</Link> to separate container rarities. For competitive players tracking rare loot, cross-reference our <Link href="/chest-types" className="text-[#ffc93c] underline">chest types encyclopedia</Link> and calculate your statistical progression with the <Link href="/pirate-token-odds" className="text-[#ffc93c] underline">Pirate Token odds calculator</Link>.
         </p>
       </section>
 

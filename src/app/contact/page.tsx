@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 import { Mail, MessageSquare } from "lucide-react";
@@ -20,7 +21,7 @@ export default function ContactPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
         <div className="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 text-center flex flex-col items-center">
           <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
             <Mail className="w-6 h-6" />
@@ -50,6 +51,17 @@ export default function ContactPage() {
             GitHub Repository
           </a>
         </div>
+      </div>
+
+      <div className="max-w-2xl mx-auto text-center border-t border-slate-800 pt-6 text-xs text-slate-400 space-x-4">
+        <span>Looking for legal guidelines?</span>
+        <Link href="/privacy" className="text-[#ffc93c] underline hover:text-white">
+          Privacy Policy
+        </Link>
+        <span>&bull;</span>
+        <Link href="/terms" className="text-[#ffc93c] underline hover:text-white">
+          Terms of Service
+        </Link>
       </div>
     </div>
   );

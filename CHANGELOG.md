@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.8] - 2026-11-23
+
+### Added (Site-Wide SEO Internal Linking Architecture - Step 1)
+- **Global Tool & Guide Directory Navigation (`SiteDirectoryNav.tsx`, `layout.tsx`)**:
+  - Built high-visibility dark/gold gaming-themed directory nav rendered above footer on all 18 pages.
+  - Links all 6 core tools and strategy guides with semantic badges and descriptions (`Live Chest Tracker`, `4-Column Squad Counter`, `Pirate Token Odds Calculator`, `Chest Types Encyclopedia`, `How to Check Opened Chests Guide`, `Leekcapper Quest & Drop Guide`), plus legal utilities.
+- **Natural Editorial In-Text Anchor Links**:
+  - `SeoContentSection.tsx` (Homepage): Injected descriptive in-text anchor pointing to `/how-to-check-chests`.
+  - `/fortnite-chest-counter`: Added natural editorial anchors to `/chest-types`, `/how-to-check-chests`, and `/leekcapper-fortnite`.
+  - `/leekcapper-fortnite`: Added editorial anchors to `/chest-types`, `/fortnite-chest-counter`, and `/how-to-check-chests`.
+  - `/how-to-check-chests`: Added in-text links to `/fortnite-chest-counter`, `/chest-types`, and `/pirate-token-odds`.
+  - `/chest-types`: Added in-text link to `/how-to-check-chests` and `/fortnite-chest-counter`.
+  - `/pirate-token-odds`: Added in-text links to `/chest-types`, `/how-to-check-chests`, and `/leekcapper-fortnite`.
+  - `/privacy`, `/terms`, `/contact`: Cross-linked with reciprocal legal and feedback in-text anchors.
+- **Verification**:
+  - Eliminated all orphan pages; all 9 target URLs now have $\ge 4$ independent static internal inbound links across the codebase.
+
 ## [1.5.7] - 2026-11-20
 
 ### Added (Google AdSense Verification & ads.txt Integration)

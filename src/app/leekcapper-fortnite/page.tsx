@@ -259,7 +259,7 @@ export default function LeekCaperFortnitePage() {
         </div>
 
         <div className="p-3 rounded-lg bg-[#242424] border border-[#2e2e2e] text-xs text-[#9a9a9a]">
-          <strong className="text-white">Pro Tip for Squads:</strong> When landing at contested POIs, track opened containers using our <Link href="/" className="text-[#ffc93c] underline font-medium">Fortnite Chest Counter</Link> to ensure your team loots at least 15 eligible chests before rotating out.
+          <strong className="text-white">Pro Tip for Squads:</strong> When landing at contested POIs, track opened containers using our <Link href="/" className="text-[#ffc93c] underline font-medium">Fortnite Chest Counter</Link> or the <Link href="/fortnite-chest-counter" className="text-[#ffc93c] underline font-medium">4-column squad counter</Link>. For visual identification cues across every loot container tier, check our <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>.
         </div>
       </section>
 
@@ -316,6 +316,10 @@ export default function LeekCaperFortnitePage() {
             <li><strong className="text-white">Friendship Villa Yacht:</strong> Located off the southeastern shore; holds multiple rare chest spawns in the captain cabin.</li>
             <li><strong className="text-white">Busy Bay Smuggler Sloop:</strong> Smaller vessel moored near the lighthouse; lowest enemy traffic for peaceful questing.</li>
           </ul>
+        </div>
+
+        <div className="p-3 rounded-lg bg-[#242424] border border-[#2e2e2e] text-xs text-[#9a9a9a]">
+          <strong className="text-white">Milestone Tracking Tip:</strong> After claiming your 25,000 XP reward, verify your seasonal container milestones and accolades using our tutorial on <Link href="/how-to-check-chests" className="text-[#ffc93c] underline font-medium">how to check opened chests in Fortnite</Link>.
         </div>
       </section>
 

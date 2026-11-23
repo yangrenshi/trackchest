@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { AuthProvider } from "@/context/AuthContext";
 import { Header } from "@/components/Header";
+import { SiteDirectoryNav } from "@/components/SiteDirectoryNav";
 import { Footer } from "@/components/Footer";
 import Script from "next/script";
 import "./globals.css";
@@ -140,6 +141,7 @@ export default function RootLayout({
         <AuthProvider>
           <Header />
           <main className="flex-1">{children}</main>
+          <SiteDirectoryNav />
           <Footer />
         </AuthProvider>
       </body>

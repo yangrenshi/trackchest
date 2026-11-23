@@ -1,12 +1,13 @@
 import React from "react";
 import { siteConfig } from "@/config/site";
+import { SEASON_CONFIG } from "@/config/season";
 
 export function HeroSection() {
   return (
     <section className="pt-10 pb-4 px-4 text-center">
       <div className="max-w-2xl mx-auto space-y-2">
         <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
-          Fortnite Chest Companion &bull; Chapter 7 Treasure Hunters (Updated Nov 17, 2026)
+          Fortnite Chest Companion &bull; {SEASON_CONFIG.name} (Updated {SEASON_CONFIG.lastUpdated})
         </span>
 
         {/* H1 核心词绝对主轴 (带明确破折号分隔) */}

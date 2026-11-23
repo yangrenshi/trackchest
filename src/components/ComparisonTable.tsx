@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
+import { SEASON_CONFIG } from "@/config/season";
 
 export function ComparisonTable() {
   const namedLocations = [
@@ -91,7 +92,7 @@ export function ComparisonTable() {
           Fortnite Chest Tracker: Chest Types &amp; Spawn Odds
         </h2>
         <p className="text-sm text-[#9a9a9a] mt-1">
-          Spawn frequencies, guaranteed loot tiers, and optimal POI locations across Chapter 7 Treasure Hunters (Season live Nov 1 – Dec 4, 2026).
+          Spawn frequencies, guaranteed loot tiers, and optimal POI locations across {SEASON_CONFIG.name} (Season live {SEASON_CONFIG.shortDateRange}).
         </p>
       </div>
 
@@ -154,10 +155,10 @@ export function ComparisonTable() {
         <div>
           <h3 className="text-base sm:text-lg font-bold text-white flex items-center space-x-2">
             <MapPin className="w-4 h-4 text-[#ffc93c]" />
-            <span>Chapter 7 Named POI Chest Routes &amp; Spawn Spots</span>
+            <span>{SEASON_CONFIG.chapter} Named POI Chest Routes &amp; Spawn Spots</span>
           </h3>
           <p className="text-xs text-[#9a9a9a] mt-1 leading-relaxed">
-            Targeting high-density container drops accelerates your match economy. Compare these commonly reported POI chest clusters across Chapter 7 Treasure Hunters, or review the comprehensive visual guides in our <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>:
+            Targeting high-density container drops accelerates your match economy. Compare these commonly reported POI chest clusters across {SEASON_CONFIG.name}, or review the comprehensive visual guides in our <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>:
           </p>
         </div>
 

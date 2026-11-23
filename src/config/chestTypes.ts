@@ -1,3 +1,5 @@
+import { SEASON_CONFIG } from "./season";
+
 export interface DetailedChestType {
   id: string;
   name: string;
@@ -21,12 +23,12 @@ export const DETAILED_CHEST_TYPES: DetailedChestType[] = [
     badge: "Base Spawn",
     rarity: "Common",
     color: "#EAB308",
-    whereItSpawns: "Found in almost every building attic, basement, roof nook, and landmark across the Chapter 7 island. Hundreds of potential spawn points are mapped across named island locations and landmark houses.",
+    whereItSpawns: "Found in almost every building attic, basement, roof nook, and landmark across the Battle Royale island. Hundreds of potential spawn points are mapped across named island locations and landmark houses.",
     howToIdentify: "Traditional brass-bound wooden crate emitting a warm yellow glow and an audible hum within 15 meters.",
     worthRerouting: "No. Standard chests should be looted strictly along your natural drop line. Deviating more than 10 meters off your rotation route for a standard chest slows down your POI clear speed.",
     commonMisconceptions: "Many players assume chest spawn points are 100% guaranteed; in Battle Royale, spawn node activation fluctuates dynamically each match according to island storm phase and POI density.",
     typicalLoot: "1 Weapon (Common to Rare), matching ammunition, 1 consumable heal (Small Shield Potions or Bandages), and building materials.",
-    officialContext: "Standard container pool in Chapter 7 Treasure Hunters.",
+    officialContext: `Standard container pool in ${SEASON_CONFIG.name}.`,
   },
   {
     id: "rare",
@@ -40,7 +42,7 @@ export const DETAILED_CHEST_TYPES: DetailedChestType[] = [
     worthRerouting: "Yes. Guaranteed to yield Rare (Blue), Epic (Purple), or Legendary (Gold) weaponry alongside full shield consumables. Gaining an Epic AR or Shotgun off-spawn wins early contests.",
     commonMisconceptions: "Believing Rare Chests require special keys. They open with the same interaction speed as standard chests without consuming any resources.",
     typicalLoot: "Guaranteed Blue or higher tier weapon, Big Shield Potion or Chug Splashes, maximum ammunition bundle, and bonus gold bars.",
-    officialContext: "High-tier container node upgrade in Chapter 7.",
+    officialContext: `High-tier container node upgrade in ${SEASON_CONFIG.chapter}.`,
   },
   {
     id: "sprite",
@@ -49,12 +51,12 @@ export const DETAILED_CHEST_TYPES: DetailedChestType[] = [
     badge: "Elemental Magic",
     rarity: "Epic",
     color: "#10B981",
-    whereItSpawns: "Enchanted grottos, mythical tree groves, and elemental shrine altars spread across distinct environmental biomes of Chapter 7.",
+    whereItSpawns: `Enchanted grottos, mythical tree groves, and elemental shrine altars spread across distinct environmental biomes of ${SEASON_CONFIG.chapter}.`,
     howToIdentify: "Wrapped in ancient vine flora with green emerald embers floating upward from the lid. Hum has a wind-chime frequency.",
     worthRerouting: "Situational. Excellent for players who leverage elemental mobility or specialized utility shards to disengage during early storm contractions.",
     commonMisconceptions: "Thinking Sprite Shrines only give utility. They also drop competitive high-rarity combat gear alongside elemental powers.",
     typicalLoot: "Elemental movement powerups, enhanced combat utility items, Rare/Epic weapons, and healing consumables.",
-    officialContext: "Biome-exclusive container variant in Chapter 7.",
+    officialContext: `Biome-exclusive container variant in ${SEASON_CONFIG.chapter}.`,
   },
   {
     id: "pirate",
@@ -63,12 +65,12 @@ export const DETAILED_CHEST_TYPES: DetailedChestType[] = [
     badge: "Guaranteed Loot",
     rarity: "Special",
     color: "#F97316",
-    whereItSpawns: "Coastal docks, pirate encampments, and marked 'X' spots when following a legendary Buried Treasure map item in Chapter 7 Treasure Hunters.",
+    whereItSpawns: `Coastal docks, pirate encampments, and marked 'X' spots when following a legendary Buried Treasure map item in ${SEASON_CONFIG.name}.`,
     howToIdentify: "Weathered oak barrel crate with skull emblems and iron straps. Emits deep golden maritime sparkles.",
-    worthRerouting: "Pirate Shop Access Tokens roll from standard, rare, sprite and vault containers at 1 in 137,500 — the Pirate Crate itself guarantees high-tier loot but does not roll on the token table.",
+    worthRerouting: "Pirate Shop Access Tokens roll from standard, rare, sprite and vault containers community-tracked at 1 in 137,500 — the Pirate Crate itself guarantees high-tier loot but does not roll on the token table.",
     commonMisconceptions: "Thinking Pirate Crates roll for the token — normal containers in pirate POIs do, the crate itself is guaranteed loot.",
     typicalLoot: "Heavy pirate ordnance (Flint-Knock, Cannons), double Legendary weapon rolls, and full shield kegs.",
-    officialContext: "Core seasonal feature of Chapter 7 Treasure Hunters (Nov 1 – Dec 4, 2026).",
+    officialContext: `Core seasonal feature of ${SEASON_CONFIG.name} (${SEASON_CONFIG.shortDateRange}).`,
   },
   {
     id: "faction",
@@ -82,7 +84,7 @@ export const DETAILED_CHEST_TYPES: DetailedChestType[] = [
     worthRerouting: "Primary squad objective. Opening a boss vault equips an entire trio or squad with top-tier tournament weapons, medallions, and workbench weapon mods.",
     commonMisconceptions: "Trying to pickaxe through vault doors. Vault exterior walls are completely indestructible until the security threshold is satisfied.",
     typicalLoot: "2 to 4 Epic/Legendary weapon cases, Boss Mythic weapons, multiple Big Shield Pots, and 300+ gold bars.",
-    officialContext: "End-tier POI objective in competitive Chapter 7.",
+    officialContext: `End-tier POI objective in competitive ${SEASON_CONFIG.chapter}.`,
   },
   {
     id: "cash",
@@ -96,7 +98,7 @@ export const DETAILED_CHEST_TYPES: DetailedChestType[] = [
     worthRerouting: "Great for Early-Game economy building. Safes take approximately 8 seconds to crack open, so ensure the immediate building is secured first.",
     commonMisconceptions: "Assuming safes drop weapons. Safes strictly dispense large sums of Gold Bars (100–300 bars) and healing items, not combat firearms.",
     typicalLoot: "100 to 300 Gold Bars, medkits or small shield potions, and occasional utility items for vending machine purchases.",
-    officialContext: "Economic container pool in Chapter 7.",
+    officialContext: `Economic container pool in ${SEASON_CONFIG.chapter}.`,
   },
 ];
 
@@ -113,4 +115,3 @@ export const CHEST_TYPES = DETAILED_CHEST_TYPES.map((c) => ({
   typicalLoot: c.typicalLoot,
   oddsNote: c.whereItSpawns,
 }));
-

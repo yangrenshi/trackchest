@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { SEASON_CONFIG } from "@/config/season";
 import { 
   ArrowLeft, 
   Sparkles, 
@@ -143,7 +144,7 @@ export default function LeekCaperFortnitePage() {
       <header className="space-y-4">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#ffc93c]/10 border border-[#ffc93c]/30 text-[#ffc93c] text-xs font-semibold uppercase tracking-wider">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Chapter 7 • Treasure Hunters Season Update</span>
+          <span>{SEASON_CONFIG.chapter} • {SEASON_CONFIG.theme} Season Update</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
           Fortnite Leekcapper: Location &amp; Chest Drop Guide

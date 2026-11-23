@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Box, Layers, Calculator, BookOpen, Compass, Crosshair } from "lucide-react";
+import { SEASON_CONFIG } from "@/config/season";
 
 export function SiteDirectoryNav() {
   const pathname = usePathname();
@@ -66,11 +67,11 @@ export function SiteDirectoryNav() {
               <span>TrackChest Tools &amp; Strategy Directory</span>
             </h2>
             <p className="text-xs text-[#8c8c8c] mt-0.5">
-              Explore all companion calculators, categorized squad trackers, and Chapter 7 container guides.
+              Explore all companion calculators, categorized squad trackers, and {SEASON_CONFIG.chapter} container guides.
             </p>
           </div>
           <div className="text-[11px] font-mono text-[#ffc93c] bg-[#ffc93c]/10 border border-[#ffc93c]/20 px-2.5 py-1 rounded-md shrink-0 w-fit">
-            Chapter 7 Treasure Hunters
+            {SEASON_CONFIG.name}
           </div>
         </div>
 

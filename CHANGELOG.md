@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.5] - 2026-11-23
+
+### Fixed & Enhanced (Percentage Conversion, Qualifier Normalization & Centralized Season Config)
+- **Drop Rate Percentage Conversion Fix**:
+  - Corrected baseline 1 in 137,500 drop rate percentage conversion from `0.000007273%` to `0.0007273%` across Homepage FAQ (`site.ts`), Odds Calculator (`PirateTokenCalculator.tsx`), and Odds Breakdown (`pirate-token-odds/page.tsx`).
+  - Corrected Wave 1 (1.5x, 1 in 91,667) percentage from `0.000010909%` to `0.0010909%`.
+  - Corrected Wave 2 & 3 (2.0x, 1 in 68,750) percentage from `0.000014545%` to `0.0014545%`.
+- **Qualifier Addition (`/chest-types`)**:
+  - Normalized Pirate Crate & Buried Treasure description to `"community-tracked at 1 in 137,500"`, unifying terminology with the homepage and odds simulator.
+- **Centralized Season & Expiration Date Configuration (`season.ts`)**:
+  - Extracted all hardcoded season dates, chapter themes, Wave 1/2/3 dates and multipliers, and maintenance transition timestamps into single-source-of-truth configuration `src/config/season.ts`.
+  - Refactored `treasureHours.ts`, `HeroSection.tsx`, `ComparisonTable.tsx`, `SiteDirectoryNav.tsx`, `/chest-types`, `/fortnite-chest-counter`, `/leekcapper-fortnite`, and `/pirate-token-odds` to dynamically bind to `SEASON_CONFIG`.
+  - Ensured evergreen tactical guide content remains decoupled from seasonal text, allowing seamless future season cutovers on December 4.
+
 ## [1.6.4] - 2026-11-23
 
 ### Fixed & Enhanced (Copy De-Quantification, Cardinal Direction Removal & Anchor Audit)

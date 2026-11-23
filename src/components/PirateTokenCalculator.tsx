@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Calculator, Zap, Clock, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
+import { SEASON_CONFIG } from "@/config/season";
 
 export function PirateTokenCalculator() {
   const [multiplier, setMultiplier] = useState<1 | 1.5 | 2>(1);
@@ -39,7 +40,7 @@ export function PirateTokenCalculator() {
             </h2>
           </div>
           <span className="text-[11px] font-mono text-[#ffc93c] bg-[#ffc93c]/10 border border-[#ffc93c]/20 px-2 py-0.5 rounded">
-            Chapter 7 — Treasure Hunters
+            {SEASON_CONFIG.chapter} — {SEASON_CONFIG.theme}
           </span>
         </div>
 
@@ -52,7 +53,7 @@ export function PirateTokenCalculator() {
               1 in 137,500
             </div>
             <p className="text-[11px] text-[#888]">
-              Exact rate: <strong className="text-white">0.000007273%</strong> per container searched.
+              Exact rate: <strong className="text-white">0.0007273%</strong> per container searched.
             </p>
           </div>
 
@@ -70,7 +71,7 @@ export function PirateTokenCalculator() {
         </div>
 
         <p className="text-[11px] text-[#777] leading-relaxed">
-          * Source: Community-tracked drop data (updated Nov 17, 2026). Season active Nov 1 – Dec 4, 2026.
+          * Source: Community-tracked drop data (updated {SEASON_CONFIG.lastUpdated}). Season active {SEASON_CONFIG.shortDateRange}.
         </p>
       </div>
 
@@ -82,7 +83,7 @@ export function PirateTokenCalculator() {
             <span>Treasure Hours Multiplier &amp; Milestone Targets</span>
           </h3>
           <p className="text-xs text-[#9a9a9a] mt-1">
-            Container drop odds are boosted during Treasure Hours — 1.5x in Wave 1 and 2x in Waves 2 &amp; 3. Select a multiplier to see required chests and grind hours:
+            Container drop odds are boosted during Treasure Hours — {SEASON_CONFIG.waves[0].multiplier}x in Wave 1 and {SEASON_CONFIG.waves[1].multiplier}x in Waves 2 &amp; 3. Select a multiplier to see required chests and grind hours:
           </p>
         </div>
 
@@ -111,10 +112,10 @@ export function PirateTokenCalculator() {
             }`}
           >
             <span className="text-xs font-semibold text-white block flex items-center space-x-1">
-              <span>Sat, Nov 14 Boost (1.5x)</span>
+              <span>{SEASON_CONFIG.waves[0].dateStr.replace("Saturday", "Sat")} Boost ({SEASON_CONFIG.waves[0].multiplier}x)</span>
               <Sparkles className="w-3 h-3 text-[#ffc93c]" />
             </span>
-            <span className="text-[11px] text-[#888] block mt-0.5">1 in 91,667 (Wave 1)</span>
+            <span className="text-[11px] text-[#888] block mt-0.5">{SEASON_CONFIG.waves[0].oddsText} (Wave 1)</span>
           </button>
 
           <button
@@ -127,10 +128,10 @@ export function PirateTokenCalculator() {
             }`}
           >
             <span className="text-xs font-semibold text-white block flex items-center space-x-1">
-              <span>Sat, Nov 21 &amp; 28 (2.0x)</span>
+              <span>{SEASON_CONFIG.waves[1].dateStr.replace("Saturday", "Sat")} &amp; 28 ({SEASON_CONFIG.waves[1].multiplier}x)</span>
               <Sparkles className="w-3 h-3 text-[#ffd510]" />
             </span>
-            <span className="text-[11px] text-[#888] block mt-0.5">1 in 68,750 (Double Odds)</span>
+            <span className="text-[11px] text-[#888] block mt-0.5">{SEASON_CONFIG.waves[1].oddsText} (Double Odds)</span>
           </button>
         </div>
 

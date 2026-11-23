@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { SEASON_CONFIG } from "@/config/season";
 import { CategorizedCounterView } from "@/components/CategorizedCounterView";
 import { 
   ArrowLeft, Users, CheckCircle2, Shield, HardDrive, Swords, Sparkles, 
@@ -122,7 +123,7 @@ export default function ChestCounterPage() {
             Competitive Squad Companion
           </span>
           <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
-            Chapter 7 — Treasure Hunters • Updated Nov 17, 2026
+            {SEASON_CONFIG.chapter} — {SEASON_CONFIG.theme} • Updated {SEASON_CONFIG.lastUpdated}
           </span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
@@ -161,7 +162,7 @@ export default function ChestCounterPage() {
           />
         </div>
         <figcaption className="text-center text-xs text-[#888]">
-          <strong className="text-[#d4d4d4]">Example Squad Session:</strong> UI preview showing an example 20-chest breakdown (12 Standard, 5 Rare, 2 Sprite, 1 Vault) in Chapter 7.
+          <strong className="text-[#d4d4d4]">Example Squad Session:</strong> UI preview showing an example 20-chest breakdown (12 Standard, 5 Rare, 2 Sprite, 1 Vault) in {SEASON_CONFIG.chapter}.
         </figcaption>
       </figure>
 
@@ -177,7 +178,7 @@ export default function ChestCounterPage() {
           While casual players can get by with a simple single-button clicker, competitive tournament trios and ranked squads understand that all containers in Fortnite Battle Royale are not created equal. Opening 15 standard wooden chests gives you plenty of common ammunition and bandages, but it guarantees zero high-tier rifles and zero guaranteed shields. Using this 4-column squad counter transforms raw looting into actionable tactical telemetry.
         </p>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          In Chapter 7 Treasure Hunters, the map is filled with differentiated loot tiers. By separating your counts into Standard, Rare Blue, Sprite Shrines, and Boss Vaults, your in-game leader (IGL) knows exactly when your team has crossed the statistical threshold required to initiate mid-game rotations without getting caught out-gunned across open fields.
+          In {SEASON_CONFIG.name}, the map is filled with differentiated loot tiers. By separating your counts into Standard, Rare Blue, Sprite Shrines, and Boss Vaults, your in-game leader (IGL) knows exactly when your team has crossed the statistical threshold required to initiate mid-game rotations without getting caught out-gunned across open fields.
         </p>
       </section>
 

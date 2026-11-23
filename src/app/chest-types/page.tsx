@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { SEASON_CONFIG } from "@/config/season";
 import { DETAILED_CHEST_TYPES } from "@/config/chestTypes";
 import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight } from "lucide-react";
 
@@ -38,8 +39,8 @@ export default function ChestTypesPage() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Fortnite Chest Types & Rarities Encyclopedia (Chapter 7)",
-    description: "Comprehensive guide to all active container variants in Fortnite Chapter 7 Treasure Hunters.",
+    name: `Fortnite Chest Types & Rarities Encyclopedia (${SEASON_CONFIG.chapter})`,
+    description: `Comprehensive guide to all active container variants in Fortnite ${SEASON_CONFIG.name}.`,
     itemListElement: DETAILED_CHEST_TYPES.map((chest, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -91,14 +92,14 @@ export default function ChestTypesPage() {
             Container Field Guide
           </span>
           <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
-            Chapter 7 — Treasure Hunters • Updated Nov 17, 2026
+            {SEASON_CONFIG.chapter} — {SEASON_CONFIG.theme} • Updated {SEASON_CONFIG.lastUpdated}
           </span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
           Fortnite Chest Types &amp; Spawn Tiers Encyclopedia
         </h1>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          A comprehensive tactical guide to every container variant currently active in Fortnite Battle Royale Chapter 7 (Treasure Hunters mini-season, running Nov 1 – Dec 4, 2026). Each entry outlines physical spawn locations, visual/audio identification cues, competitive rerouting utility, and common player misconceptions. Drop locations rotate dynamically across seasons—<Link href="/#poi-chest-routes" className="text-[#ffc93c] underline font-medium">see named drop spots by POI</Link> on our main tracker for active cluster routes.
+          A comprehensive tactical guide to every container variant currently active in Fortnite Battle Royale {SEASON_CONFIG.chapter} ({SEASON_CONFIG.theme} mini-season, running {SEASON_CONFIG.shortDateRange}). Each entry outlines physical spawn locations, visual/audio identification cues, competitive rerouting utility, and common player misconceptions. Drop locations rotate dynamically across seasons—<Link href="/#poi-chest-routes" className="text-[#ffc93c] underline font-medium">see named drop spots by POI</Link> on our main tracker for active cluster routes.
         </p>
       </div>
 

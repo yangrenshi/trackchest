@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { SEASON_CONFIG } from "@/config/season";
+import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 import { CategorizedCounterView } from "@/components/CategorizedCounterView";
 import { 
   ArrowLeft, Users, CheckCircle2, Shield, HardDrive, Swords, Sparkles, 
@@ -117,13 +118,16 @@ export default function ChestCounterPage() {
         </Link>
       </div>
 
+      {/* 实时活动预告横幅 */}
+      <TreasureHoursBanner />
+
       <div className="space-y-2">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
             Competitive Squad Companion
           </span>
           <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
-            {SEASON_CONFIG.chapter} — {SEASON_CONFIG.theme} • Updated {SEASON_CONFIG.lastUpdated}
+            {SEASON_CONFIG.chapter} — {SEASON_CONFIG.theme} ({SEASON_CONFIG.shortDateRange}) • Updated {SEASON_CONFIG.lastUpdated}
           </span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">

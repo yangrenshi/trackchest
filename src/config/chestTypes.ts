@@ -67,7 +67,7 @@ export const DETAILED_CHEST_TYPES: DetailedChestType[] = [
     color: "#F97316",
     whereItSpawns: `Coastal docks, pirate encampments, and marked 'X' spots when following a legendary Buried Treasure map item in ${SEASON_CONFIG.name}.`,
     howToIdentify: "Weathered oak barrel crate with skull emblems and iron straps. Emits deep golden maritime sparkles.",
-    worthRerouting: "Pirate Shop Access Tokens roll from standard, rare, sprite and vault containers community-tracked at 1 in 137,500 — the Pirate Crate itself guarantees high-tier loot but does not roll on the token table.",
+    worthRerouting: "Pirate Shop Access Tokens roll from standard, rare, sprite and vault containers at a community-tracked rate of 1 in 137,500 — the Pirate Crate itself guarantees high-tier loot but does not roll on the token table.",
     commonMisconceptions: "Thinking Pirate Crates roll for the token — normal containers in pirate POIs do, the crate itself is guaranteed loot.",
     typicalLoot: "Heavy pirate ordnance (Flint-Knock, Cannons), double Legendary weapon rolls, and full shield kegs.",
     officialContext: `Core seasonal feature of ${SEASON_CONFIG.name} (${SEASON_CONFIG.shortDateRange}).`,

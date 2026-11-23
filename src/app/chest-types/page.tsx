@@ -4,6 +4,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { SEASON_CONFIG } from "@/config/season";
 import { DETAILED_CHEST_TYPES } from "@/config/chestTypes";
+import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -85,6 +86,9 @@ export default function ChestTypesPage() {
           <span>Back to Main Tracker</span>
         </Link>
       </div>
+
+      {/* 实时活动预告横幅 */}
+      <TreasureHoursBanner />
 
       <div className="space-y-2">
         <div className="flex flex-wrap items-center gap-2">

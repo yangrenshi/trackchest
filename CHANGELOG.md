@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.7] - 2026-11-23
+
+### Fixed & Enhanced (Syntax Disambiguation, Universal Banner Coverage & Dynamic Config Evidence)
+- **Container Drop Rate Phrasing Disambiguation (`chestTypes.ts`)**:
+  - Refined Pirate Crate description from `"... containers community-tracked at 1 in 137,500 — ..."` to `"... containers at a community-tracked rate of 1 in 137,500 — ..."`.
+  - Harmonized syntax and qualifiers across Homepage table, `/chest-types`, and `/pirate-token-odds`.
+- **Universal Top Banner & Season Header Coverage**:
+  - Added `<TreasureHoursBanner />` and `SEASON_CONFIG.lastUpdated` to `/leekcapper-fortnite`, `/chest-types`, and `/fortnite-chest-counter`, achieving 100% banner and update timestamp alignment across all 5 core indexable routes.
+- **Single Source of Truth Proof of Propagation**:
+  - Temporarily altered `endDate` from `Dec 4` to `Dec 11` in `src/config/season.ts` and produced a static build.
+  - Successfully verified dynamic text substitution in generated HTML across all 5 pages (`index.html`, `pirate-token-odds.html`, `chest-types.html`, `fortnite-chest-counter.html`, `leekcapper-fortnite.html`) with zero manual edits outside the config.
+  - Reverted back to `Dec 4` and completed clean production verification build (18/18 static pages).
+
 ## [1.6.6] - 2026-11-23
 
 ### Fixed & Enhanced (Unified Single Source of Truth for Season & Event Dates)

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { SEASON_CONFIG } from "@/config/season";
+import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 import { 
   ArrowLeft, 
   Sparkles, 
@@ -140,11 +141,18 @@ export default function LeekCaperFortnitePage() {
         </Link>
       </div>
 
+      {/* 实时活动预告横幅 */}
+      <TreasureHoursBanner />
+
       {/* 头部区域 (单 H1 黄金原则) */}
       <header className="space-y-4">
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#ffc93c]/10 border border-[#ffc93c]/30 text-[#ffc93c] text-xs font-semibold uppercase tracking-wider">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>{SEASON_CONFIG.chapter} • {SEASON_CONFIG.theme} Season Update</span>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
+            {SEASON_CONFIG.chapter} • {SEASON_CONFIG.theme} Season Update ({SEASON_CONFIG.shortDateRange})
+          </span>
+          <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
+            Updated {SEASON_CONFIG.lastUpdated}
+          </span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
           Fortnite Leekcapper: Location &amp; Chest Drop Guide

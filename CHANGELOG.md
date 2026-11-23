@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2026-11-23
+
+### Fixed & Cleaned (Data Rigor, Self-Link Removal & Telemetry Realism)
+- **Drop Table Rigor (`/leekcapper-fortnite`)**:
+  - Removed unverifiable claims ("the verified drop rate breakdown", "Epic's official hotfix notes").
+  - Labeled `~70%–80%` and `~2%–5%` as `player-community estimate, not official Epic data` across the table.
+- **Self-Link Removal (`/pirate-token-odds`, `TreasureHoursBanner.tsx`)**:
+  - Removed self-referential link on `/pirate-token-odds`; rendered as non-clickable status banner while preserving cross-page link from homepage.
+- **Telemetry Realism Cleaned (`/`, `/fortnite-chest-counter`)**:
+  - Replaced "Live Match Telemetry" with explicitly labeled "Example Squad Session" UI preview to prevent misleading users into thinking it tracks live game client memory.
+  - Removed unverified "reported by Polygon on Nov 9, 2026" citation from `/pirate-token-odds` and calculator footnote.
+- **Heading Optimization (`/fortnite-chest-counter`)**:
+  - Streamlined H2 from "Why Competitive Squads Rely on a 4-Column Chest Counter Fortnite Tool" to "Why Competitive Squads Rely on a 4-Column Chest Counter".
+
 ## [1.5.9] - 2026-11-23
 
 ### Fixed & Enhanced (Title Cleanup, Keyword De-Stufing, Community Data Disclosure & Nav Self-Link Guard)

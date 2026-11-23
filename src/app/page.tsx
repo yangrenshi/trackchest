@@ -78,14 +78,14 @@ export default function HomePage() {
         <figure className="rounded-2xl border border-[#2e2e2e] bg-[#161616] p-3 sm:p-4 shadow-2xl backdrop-blur-sm">
           <img
             src="/images/fortnite-chest-counter-match-hud.png"
-            alt="Fortnite 4-column chest counter active match HUD logging a completed 20-chest squad rotation across Standard, Rare, Sprite, and Vault containers"
+            alt="Fortnite 4-column chest counter UI preview showing an example 20-chest squad breakdown across Standard, Rare, Sprite, and Vault containers"
             width={1280}
             height={860}
             className="w-full h-auto rounded-xl border border-[#2e2e2e] object-cover shadow-lg"
             loading="lazy"
           />
           <figcaption className="mt-3 text-center text-xs sm:text-sm text-[#9a9a9a]">
-            <strong className="text-white">Live Match Telemetry:</strong> Specialized 4-column squad companion logging a completed 20-chest competitive set (Standard: 12, Rare: 5, Sprite: 2, Vault: 1) during Chapter 7 matches.
+            <strong className="text-white">Example Squad Session:</strong> UI preview showing an example 20-chest tally breakdown (Standard: 12, Rare: 5, Sprite: 2, Vault: 1) in Chapter 7.
           </figcaption>
         </figure>
       </section>

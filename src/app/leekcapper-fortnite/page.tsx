@@ -182,7 +182,7 @@ export default function LeekCaperFortnitePage() {
           <span>2. Where to Find the Leekcapper: Container &amp; Floor Loot Drop Rates</span>
         </h2>
         <p className="text-[#aaa] leading-relaxed">
-          According to Epic Games&apos; official hotfix notes (Nov 2026), the Leekcapper is added directly to the general Battle Royale loot pool across three verified sources: <strong>Floor Loot, Standard Chests, and Rare Chests</strong>. The most reliable way to secure it in any match is the combined volume of residential Chests and Floor Loot. Below is the verified drop rate breakdown based on community drop tracking plus Epic&apos;s hotfix notes (Nov 2026):
+          In the Chapter 7 general Battle Royale loot pool, the Leekcapper drops across three main sources: <strong>Floor Loot, Standard Chests, and Rare Chests</strong>. The most reliable way to secure it in any match is the combined volume of residential Chests and Floor Loot. Below is an overview based on player-community observations:
         </p>
 
         {/* 原生 React HTML <table> 对比组件 */}
@@ -204,14 +204,14 @@ export default function LeekCaperFortnitePage() {
                 </td>
                 <td className="p-3 text-[#22c55e] font-semibold">Active Node Spawn</td>
                 <td className="p-3">Immediate (on drop)</td>
-                <td className="p-3">Confirmed in Epic hotfix notes; inspect floor spawns inside residential attics, roofs, and pirate docks.</td>
+                <td className="p-3">Inspect floor spawns inside residential attics, roofs, and pirate docks.</td>
               </tr>
               <tr>
                 <td className="p-3 font-medium text-white flex items-center space-x-1.5">
                   <span className="w-2 h-2 rounded-full bg-amber-700"></span>
                   <span>Standard Wooden Chests</span>
                 </td>
-                <td className="p-3 text-[#22c55e] font-semibold">~70%–80% (High Volume)</td>
+                <td className="p-3 text-[#22c55e] font-semibold">~70%–80% (High Volume, player-community estimate, not official Epic data)</td>
                 <td className="p-3">15–30 seconds</td>
                 <td className="p-3">High volume — more chests means more rolls, each one independent. Most common source due to map density.</td>
               </tr>
@@ -220,7 +220,7 @@ export default function LeekCaperFortnitePage() {
                   <span className="w-2 h-2 rounded-full bg-blue-500"></span>
                   <span>Rare Blue Chests</span>
                 </td>
-                <td className="p-3 text-[#ffc93c]">~2%–5% (Low Spawn Rate)</td>
+                <td className="p-3 text-[#ffc93c]">~2%–5% (Low Spawn Rate, player-community estimate, not official Epic data)</td>
                 <td className="p-3">2–4 minutes</td>
                 <td className="p-3">Worth targeting multi-floor POIs like Plunder Port for guaranteed rare weapon rolls alongside Leekcapper potential.</td>
               </tr>

@@ -153,7 +153,7 @@ export default function ChestCounterPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/fortnite-chest-counter-match-hud.png"
-            alt="Fortnite Chest Counter 4-column live match HUD telemetry display showing categorized counts for Standard, Rare, Sprite, and Boss Vault chests"
+            alt="Fortnite Chest Counter 4-column UI display example showing counts for Standard, Rare, Sprite, and Boss Vault chests"
             width={1280}
             height={860}
             loading="eager"
@@ -161,7 +161,7 @@ export default function ChestCounterPage() {
           />
         </div>
         <figcaption className="text-center text-xs text-[#888]">
-          <strong className="text-[#d4d4d4]">Real-time Match HUD Telemetry:</strong> An active 4-column squad session logged at Retail Row (Chapter 7 Treasure Hunters), totaling 20 containers with live Pirate Token probability calculation.
+          <strong className="text-[#d4d4d4]">Example Squad Session:</strong> UI preview showing an example 20-chest breakdown (12 Standard, 5 Rare, 2 Sprite, 1 Vault) in Chapter 7.
         </figcaption>
       </figure>
 
@@ -170,7 +170,7 @@ export default function ChestCounterPage() {
         <div className="flex items-center space-x-2">
           <Target className="w-4 h-4 text-[#49d6ff]" />
           <h2 className="text-base font-bold text-white">
-            Why Competitive Squads Rely on a 4-Column Chest Counter Fortnite Tool
+            Why Competitive Squads Rely on a 4-Column Chest Counter
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">

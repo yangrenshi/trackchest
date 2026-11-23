@@ -70,7 +70,7 @@ export function PirateTokenCalculator() {
         </div>
 
         <p className="text-[11px] text-[#777] leading-relaxed">
-          * Source: Epic&apos;s official drop rates, reported by Polygon on Nov 9, 2026. Season active Nov 1 – Dec 4, 2026.
+          * Source: Epic&apos;s official drop rates, published Nov 9, 2026. Season active Nov 1 – Dec 4, 2026.
         </p>
       </div>
 

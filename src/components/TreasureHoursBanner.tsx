@@ -3,9 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { Flame, Clock, Radio } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { getTreasureBannerState, TreasureBannerState } from "@/config/treasureHours";
 
 export function TreasureHoursBanner() {
+  const pathname = usePathname();
+  const isOddsPage = pathname === "/pirate-token-odds";
+
   // 服务端及初次挂载均基于同一份统一日期逻辑自动计算
   const [banner, setBanner] = useState<TreasureBannerState>(() => getTreasureBannerState(new Date()));
 
@@ -34,14 +38,11 @@ export function TreasureHoursBanner() {
     return () => clearInterval(timer);
   }, []);
 
-  if (banner.status === "live") {
-    return (
-      <Link
-        href="/pirate-token-odds"
-        className="block p-3.5 rounded-xl bg-[#ffd510]/15 border border-[#ffd510]/50 text-xs text-white shadow-lg shadow-[#ffd510]/10 transition-all hover:border-[#ffd510]"
-      >
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2.5">
+  const bannerContent = (
+    <div className="flex items-center justify-between">
+      <div className="flex items-center space-x-2.5">
+        {banner.status === "live" ? (
+          <>
             <span className="relative flex h-2.5 w-2.5 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffd510] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#ffd510]"></span>
@@ -52,53 +53,51 @@ export function TreasureHoursBanner() {
                 <span>{banner.mainText}</span>
               </div>
             </div>
-          </div>
-          <span className="text-[11px] font-mono text-[#121212] bg-[#ffd510] px-2.5 py-1 rounded-md font-bold shrink-0 hidden sm:inline-block">
-            {banner.badgeText}
-          </span>
-        </div>
-      </Link>
-    );
-  }
-
-  if (banner.status === "ended") {
-    return (
-      <Link
-        href="/pirate-token-odds"
-        className="block p-3.5 rounded-xl bg-[#242424] border border-[#333] text-xs text-[#9a9a9a] hover:border-[#444] transition-colors"
-      >
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2.5">
+          </>
+        ) : banner.status === "ended" ? (
+          <>
             <Clock className="w-4 h-4 text-[#888] shrink-0" />
             <div>
               <span className="font-semibold text-white block">{banner.mainText}</span>
             </div>
-          </div>
-          <span className="text-[11px] font-mono text-[#888] bg-[#1a1a1a] px-2 py-0.5 rounded border border-[#333] font-medium shrink-0 hidden sm:inline-block">
-            {banner.badgeText}
-          </span>
-        </div>
-      </Link>
-    );
+          </>
+        ) : (
+          <>
+            <Flame className="w-4 h-4 text-[#ffc93c] shrink-0" />
+            <div>
+              <strong className="text-white">{banner.mainText}</strong>
+            </div>
+          </>
+        )}
+      </div>
+      <span
+        className={`text-[11px] font-mono px-2.5 py-1 rounded-md font-bold shrink-0 hidden sm:inline-block ${
+          banner.status === "live"
+            ? "text-[#121212] bg-[#ffd510]"
+            : banner.status === "ended"
+            ? "text-[#888] bg-[#1a1a1a] border border-[#333]"
+            : "text-[#ffc93c] bg-[#ffc93c]/20"
+        }`}
+      >
+        {banner.badgeText}
+      </span>
+    </div>
+  );
+
+  const styleClasses =
+    banner.status === "live"
+      ? "block p-3.5 rounded-xl bg-[#ffd510]/15 border border-[#ffd510]/50 text-xs text-white shadow-lg shadow-[#ffd510]/10 transition-all hover:border-[#ffd510]"
+      : banner.status === "ended"
+      ? "block p-3.5 rounded-xl bg-[#242424] border border-[#333] text-xs text-[#9a9a9a] hover:border-[#444] transition-colors"
+      : "block p-3.5 rounded-xl bg-[#ffc93c]/10 border border-[#ffc93c]/30 text-xs text-white hover:border-[#ffc93c]/50 transition-colors";
+
+  if (isOddsPage) {
+    return <div className={`${styleClasses} hover:border-inherit cursor-default`}>{bannerContent}</div>;
   }
 
-  // 1. upcoming 态 (现在到 14 日 00:00)
   return (
-    <Link
-      href="/pirate-token-odds"
-      className="block p-3.5 rounded-xl bg-[#ffc93c]/10 border border-[#ffc93c]/30 text-xs text-white hover:border-[#ffc93c]/50 transition-colors"
-    >
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2.5">
-          <Flame className="w-4 h-4 text-[#ffc93c] shrink-0" />
-          <div>
-            <strong className="text-white">{banner.mainText}</strong>
-          </div>
-        </div>
-        <span className="text-[11px] font-mono text-[#ffc93c] bg-[#ffc93c]/20 px-2 py-0.5 rounded font-bold shrink-0 hidden sm:inline-block">
-          {banner.badgeText}
-        </span>
-      </div>
+    <Link href="/pirate-token-odds" className={styleClasses}>
+      {bannerContent}
     </Link>
   );
 }

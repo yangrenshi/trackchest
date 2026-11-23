@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.6] - 2026-11-23
+
+### Fixed & Enhanced (Unified Single Source of Truth for Season & Event Dates)
+- **Zero-Hardcoding Event & Season Dates Engine**:
+  - Eliminated all residual hardcoded date and wave strings ("Nov 28", "December 4", "Nov 17, 2026", "Wave 2 ended — next: Nov 28 (2x)", "Wave 2 Ended", "Sat, Nov 14 Boost", "Sat, Nov 21 & 28 (2x)") across Homepage, `/pirate-token-odds`, `/chest-types`, `/fortnite-chest-counter`, and `/leekcapper-fortnite`.
+  - Refactored `PirateTokenCalculator.tsx`, `treasureHours.ts`, `ComparisonTable.tsx`, and `/pirate-token-odds` to dynamically bind to `SEASON_CONFIG` properties (`wave1ButtonLabel`, `waves2And3ButtonLabel`, `endDateShort`, `endMaintenanceDate`, `seasonLiveText`).
+  - Passed verification test: modifying configuration properties inside `src/config/season.ts` instantly propagates changes across all pages upon build, leaving zero hardcoded season or event dates in site copy.
+
 ## [1.6.5] - 2026-11-23
 
 ### Fixed & Enhanced (Percentage Conversion, Qualifier Normalization & Centralized Season Config)

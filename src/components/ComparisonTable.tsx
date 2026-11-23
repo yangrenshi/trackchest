@@ -92,7 +92,7 @@ export function ComparisonTable() {
           Fortnite Chest Tracker: Chest Types &amp; Spawn Odds
         </h2>
         <p className="text-sm text-[#9a9a9a] mt-1">
-          Spawn frequencies, guaranteed loot tiers, and optimal POI locations across {SEASON_CONFIG.name} (Season live {SEASON_CONFIG.shortDateRange}).
+          Spawn frequencies, guaranteed loot tiers, and optimal POI locations across {SEASON_CONFIG.name} ({SEASON_CONFIG.seasonLiveText}).
         </p>
       </div>
 

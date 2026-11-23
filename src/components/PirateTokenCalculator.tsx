@@ -112,7 +112,7 @@ export function PirateTokenCalculator() {
             }`}
           >
             <span className="text-xs font-semibold text-white block flex items-center space-x-1">
-              <span>{SEASON_CONFIG.waves[0].dateStr.replace("Saturday", "Sat")} Boost ({SEASON_CONFIG.waves[0].multiplier}x)</span>
+              <span>{SEASON_CONFIG.wave1ButtonLabel}</span>
               <Sparkles className="w-3 h-3 text-[#ffc93c]" />
             </span>
             <span className="text-[11px] text-[#888] block mt-0.5">{SEASON_CONFIG.waves[0].oddsText} (Wave 1)</span>
@@ -128,7 +128,7 @@ export function PirateTokenCalculator() {
             }`}
           >
             <span className="text-xs font-semibold text-white block flex items-center space-x-1">
-              <span>{SEASON_CONFIG.waves[1].dateStr.replace("Saturday", "Sat")} &amp; 28 ({SEASON_CONFIG.waves[1].multiplier}x)</span>
+              <span>{SEASON_CONFIG.waves2And3ButtonLabel}</span>
               <Sparkles className="w-3 h-3 text-[#ffd510]" />
             </span>
             <span className="text-[11px] text-[#888] block mt-0.5">{SEASON_CONFIG.waves[1].oddsText} (Double Odds)</span>

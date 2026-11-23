@@ -95,7 +95,7 @@ export default function PirateTokenOddsPage() {
       },
       {
         "@type": "Question",
-        name: `What happens to unspent Pirate Tokens when ${SEASON_CONFIG.chapter} ends on December 4?`,
+        name: `What happens to unspent Pirate Tokens when ${SEASON_CONFIG.chapter} ends on ${SEASON_CONFIG.endDateShort}?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: `All unspent Pirate Tokens expire immediately when servers shut down for ${SEASON_CONFIG.nextChapter} maintenance on ${SEASON_CONFIG.endMaintenanceDate}. Tokens do not convert to V-Bucks or carry forward into the next season, though redeemed cosmetics remain permanent.`,
@@ -170,7 +170,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
             <h3 className="font-semibold text-white">Ultra-Rare Golden Skin (1 in 1.56M)</h3>
             <p className="text-[#9a9a9a] text-[11px] leading-relaxed">
-              The season-exclusive Golden Skin variant drops at roughly 1 per 1,562,500 chests based on community drop tables. It remains unconfirmed how many accounts will unlock it organically before {SEASON_CONFIG.nextChapter} launches on December 4, making it one of the rarest cosmetic drops in Fortnite history.
+              The season-exclusive Golden Skin variant drops at roughly 1 per 1,562,500 chests based on community drop tables. It remains unconfirmed how many accounts will unlock it organically before {SEASON_CONFIG.nextChapter} launches on {SEASON_CONFIG.endDateShort}, making it one of the rarest cosmetic drops in Fortnite history.
             </p>
           </div>
         </div>
@@ -295,7 +295,7 @@ export default function PirateTokenOddsPage() {
         <div className="flex items-center space-x-2">
           <Coins className="w-4 h-4 text-[#ffc93c]" />
           <h2 className="text-base font-bold text-white">
-            What Happens to Pirate Tokens When {SEASON_CONFIG.chapter} Concludes on December 4
+            What Happens to Pirate Tokens When {SEASON_CONFIG.chapter} Concludes on {SEASON_CONFIG.endDateShort}
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
@@ -351,7 +351,7 @@ export default function PirateTokenOddsPage() {
           </div>
 
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1">
-            <h3 className="font-bold text-white">Does purchasing the Chapter 7 Battle Pass boost your drop probability?</h3>
+            <h3 className="font-bold text-white">Does purchasing the {SEASON_CONFIG.chapter} Battle Pass boost your drop probability?</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
               No. The baseline 1 in 137,500 drop rate is identical across all accounts. The only official way to increase your drop odds is logging in during the scheduled weekend Treasure Hours events.
             </p>

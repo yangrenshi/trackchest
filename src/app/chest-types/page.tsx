@@ -98,7 +98,7 @@ export default function ChestTypesPage() {
           Fortnite Chest Types &amp; Spawn Tiers Encyclopedia
         </h1>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          A comprehensive tactical guide to every container variant currently active in Fortnite Battle Royale Chapter 7 (Treasure Hunters mini-season, running Nov 1 – Dec 4, 2026). Each entry outlines physical spawn locations, visual/audio identification cues, competitive rerouting utility, and common player misconceptions.
+          A comprehensive tactical guide to every container variant currently active in Fortnite Battle Royale Chapter 7 (Treasure Hunters mini-season, running Nov 1 – Dec 4, 2026). Each entry outlines physical spawn locations, visual/audio identification cues, competitive rerouting utility, and common player misconceptions. Drop locations rotate dynamically across seasons—<Link href="/#poi-chest-routes" className="text-[#ffc93c] underline font-medium">see named drop spots by POI</Link> on our main tracker for active cluster routes.
         </p>
       </div>
 

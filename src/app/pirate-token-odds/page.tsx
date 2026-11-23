@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Fortnite Pirate Token Odds — Drop Rates",
-    description: "Community-verified 1 in 137,500 token odds and Treasure Hours multiplier calculator.",
+    description: "Community-tracked 1 in 137,500 token odds and Treasure Hours multiplier calculator.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
 };
@@ -127,7 +127,7 @@ export default function PirateTokenOddsPage() {
       <div className="space-y-2">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
-            Community-Verified Odds • Chapter 7 Treasure Hunters
+            Community-Tracked Odds • Chapter 7 Treasure Hunters
           </span>
           <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
             Updated Nov 17, 2026

@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.2] - 2026-11-23
+
+### Fixed & Enhanced (Community-Tracked Wording, Active POI Audit & Reciprocal Internal Linking)
+- **Eliminated "Verified" Drop Wording (`/pirate-token-odds`, `/fortnite-chest-counter`)**:
+  - Replaced "Community-Verified Odds" and "community-verified" with "Community-Tracked Odds" / "community-tracked" across metadata and headings.
+  - Removed "verified" in bunker description in `/fortnite-chest-counter`.
+- **Active POI Verification & Rotation Disclaimer (`ComparisonTable.tsx`)**:
+  - Audited Chapter 7 named locations and pruned outdated Chapter 5 POIs, locking strictly to 6 confirmed active map locations (Retail Row, Pleasant Park, Sweaty Sands, Lazy Lake, Salty Springs, Dirty Docks).
+  - Appended explicit seasonal expiration disclaimer: "Rotates each season — check before you drop" to every entry.
+  - Added dedicated anchor `#poi-chest-routes` for direct navigation.
+- **Reciprocal Internal Link Entry (`/chest-types`)**:
+  - Injected contextual reciprocal anchor "see named drop spots by POI" at the top of `/chest-types` linking directly to `/#poi-chest-routes`.
+
 ## [1.6.1] - 2026-11-23
 
 ### Fixed & Enhanced (Claim De-Officialization, Named POI Clusters & Final SEO De-Stuffing)

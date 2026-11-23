@@ -278,7 +278,7 @@ export default function PirateTokenOddsPage() {
               <span>Waves 2 &amp; 3 Peak: The 1 in 68,750 Double Odds (2.0x Multiplier)</span>
             </h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              For Wave 2 (Saturday, November 21) and the final Wave 3 (Saturday, November 28), Epic activates maximum 2.0x double odds, boosting the probability to <strong className="text-white">1 in 68,750</strong> (0.000014545%). At this double rate, reaching the 50% median target drops to exactly <strong className="text-[#ffd510]">47,655 chests</strong> (~1,191 hours @ 40 chests/hr), while the 90% high-probability boundary drops from 316,604 chests down to exactly <strong className="text-white">158,302 chests</strong> (~3,958 hours @ 40 chests/hr), and 99% near-certainty requires <strong className="text-white">~316,605 chests</strong> (coincidentally identical to the 1.0x 90% mark due to logarithmic scaling: 4.605 &times; 68,750 &asymp; 316,605). This represents the absolute highest statistical return on time invested during the entire Chapter 7 campaign.
+              For Wave 2 (Saturday, November 21) and the final Wave 3 (Saturday, November 28), Treasure Hours runs a maximum 2.0x double-odds window, boosting the probability to <strong className="text-white">1 in 68,750</strong> (0.000014545%). At this double rate, reaching the 50% median target drops to exactly <strong className="text-[#ffd510]">47,655 chests</strong> (~1,191 hours @ 40 chests/hr), while the 90% high-probability boundary drops from 316,604 chests down to exactly <strong className="text-white">158,302 chests</strong> (~3,958 hours @ 40 chests/hr), and 99% near-certainty requires <strong className="text-white">~316,605 chests</strong> (coincidentally identical to the 1.0x 90% mark due to logarithmic scaling: 4.605 &times; 68,750 &asymp; 316,605). This represents the absolute highest statistical return on time invested during the entire Chapter 7 campaign.
             </p>
           </div>
         </div>
@@ -354,7 +354,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1">
             <h3 className="font-bold text-white">What is the fastest looting route to maximize Pirate Token odds?</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Land at high-density suburban POIs (like Retail Row or Pleasant Park) where building clusters offer 20 to 30 wooden chests in close proximity. Use our companion counter to record your tally as you loot before rotating along coastline nodes.
+              Land at high-density suburban POIs (like Retail Row or Pleasant Park) where dense building clusters put many wooden chests within a short rotation. Use our companion counter to record your tally as you loot before rotating along coastline nodes.
             </p>
           </div>
         </div>

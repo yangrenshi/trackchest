@@ -7,32 +7,32 @@ export function ComparisonTable() {
     {
       name: "Retail Row",
       tier: "Residential Basin",
-      description: "Dense housing sector on the eastern flatlands; two-story homes feature dense wooden chest clusters hidden inside roof attics and store basements, directly north of the central water tower. Rotates each season — check before you drop.",
+      description: "Dense housing sector; two-story homes feature roof-attic and store-basement chest clusters surrounding the commercial district. Rotates each season — check before you drop.",
     },
     {
       name: "Pleasant Park",
       tier: "Suburban Grid",
-      description: "Iconic northern residential valley; standard wooden chests line multiple detached basements and second-floor bedrooms surrounding the central soccer pavilion. Rotates each season — check before you drop.",
+      description: "Classic suburban residential grid; standard wooden chests line multiple detached basements and second-floor bedrooms surrounding the park pavilion. Rotates each season — check before you drop.",
     },
     {
       name: "Sweaty Sands",
       tier: "Coastal Resort",
-      description: "High-rise beachfront retreat on the western shore; multi-floor hotel suites, pier boardwalks, and waterfront trailers contain numerous chest nodes. Rotates each season — check before you drop.",
+      description: "High-rise beachfront resort; multi-floor hotel suites, pier boardwalks, and coastal trailers contain numerous chest nodes. Rotates each season — check before you drop.",
     },
     {
       name: "Lazy Lake",
       tier: "Suburban Hub",
-      description: "Dense southern lakeside town; multi-tier modern townhouses, underground parking garages, and spa balconies house high-density chest clusters. Rotates each season — check before you drop.",
+      description: "Dense lakeside town; multi-tier modern townhouses, underground parking garages, and spa balconies house high-density chest clusters. Rotates each season — check before you drop.",
     },
     {
       name: "Salty Springs",
-      tier: "Central Valley",
-      description: "High-traffic central residential neighborhood; concentrated off-spawn chests cluster inside multiple house attics and hidden basements. Rotates each season — check before you drop.",
+      tier: "Residential Valley",
+      description: "High-traffic residential neighborhood; concentrated off-spawn chests cluster inside multiple house attics and hidden basements. Rotates each season — check before you drop.",
     },
     {
       name: "Dirty Docks",
       tier: "Industrial Port",
-      description: "Sprawling eastern industrial shipping harbor; elevated crane cabins, multi-story warehouse rafters, and container stacks shelter multiple chests. Rotates each season — check before you drop.",
+      description: "Sprawling industrial shipping harbor; elevated crane cabins, multi-story warehouse rafters, and container stacks shelter multiple chests. Rotates each season — check before you drop.",
     },
   ];
 

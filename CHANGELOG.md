@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.4] - 2026-11-23
+
+### Fixed & Enhanced (Copy De-Quantification, Cardinal Direction Removal & Anchor Audit)
+- **Copy De-Quantification & Phrasing Refinement (`/pirate-token-odds`)**:
+  - Replaced unverified count range `"where building clusters offer 20 to 30 wooden chests in close proximity"` with qualitative phrasing `"where dense building clusters put many wooden chests within a short rotation"` in fastest routing FAQ.
+  - Normalized event activation phrasing from `"Epic activates maximum 2.0x double odds"` to `"Treasure Hours runs a maximum 2.0x double-odds window"`.
+- **Directional Assertion Removal (`ComparisonTable.tsx`, `chestTypes.ts`)**:
+  - Pruned explicit cardinal directions (`eastern flatlands`, `directly north of the water tower`, `western shore`, `northern residential valley`, `southern lakeside town`, `eastern industrial harbor`) across Retail Row, Pleasant Park, Sweaty Sands, Lazy Lake, Salty Springs, and Dirty Docks, replacing them with terrain/setting descriptors.
+  - Replaced `"located primarily in the southern and western biomes"` with `"spread across distinct environmental biomes"` in `/chest-types` Sprite Shrine configuration.
+- **Anchor Target Verification (`/#poi-chest-routes`)**:
+  - Verified static HTML inclusion of `id="poi-chest-routes"` in production SSR response and confirmed scroll positioning with `scroll-mt-20` (80px margin) clear of the 56px sticky header.
+
 ## [1.6.3] - 2026-11-23
 
 ### Fixed & Enhanced (Drop Rate De-Officialization & Qualitative POI Refinement)

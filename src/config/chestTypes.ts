@@ -49,7 +49,7 @@ export const DETAILED_CHEST_TYPES: DetailedChestType[] = [
     badge: "Elemental Magic",
     rarity: "Epic",
     color: "#10B981",
-    whereItSpawns: "Enchanted grottos, mythical tree groves, and elemental shrine altars located primarily in the southern and western biomes of Chapter 7.",
+    whereItSpawns: "Enchanted grottos, mythical tree groves, and elemental shrine altars spread across distinct environmental biomes of Chapter 7.",
     howToIdentify: "Wrapped in ancient vine flora with green emerald embers floating upward from the lid. Hum has a wind-chime frequency.",
     worthRerouting: "Situational. Excellent for players who leverage elemental mobility or specialized utility shards to disengage during early storm contractions.",
     commonMisconceptions: "Thinking Sprite Shrines only give utility. They also drop competitive high-rarity combat gear alongside elemental powers.",

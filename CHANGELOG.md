@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.8] - 2026-11-23
+
+### Fixed & Enhanced (Unified Map POI Taxonomy, Directional Term Removal & Config Alignment)
+- **Unified Map Location Taxonomy**:
+  - Eliminated all fabricated POI names (`Plunder Port`, `Busy Bay`, `Friendship Villa`) across `/leekcapper-fortnite` (FAQ schema, pro-tips, quest steps, and vessel roster).
+  - Replaced fabricated references with generic tactical descriptions (`anchored pirate galleon or vessel along the coast`, `coastal docks or galleon anchorages`, `Coastal Pirate Galleon`, `Offshore Loot Yacht`, `Secluded Smuggler Sloop`).
+  - Standardized on the 6 classic Named POIs (Retail Row, Pleasant Park, Sweaty Sands, Lazy Lake, Salty Springs, Dirty Docks) with rotation notices as the sole named geography on the site.
+- **Directional Term & Unverified Landmark Removal (`/leekcapper-fortnite`)**:
+  - Purged cardinal directions (`northern dock ziplines` -> `dock ziplines`, `Located off the southeastern shore` -> `Located off the coastline`).
+  - Removed unverified landmark `lighthouse` (`moored near the lighthouse` -> `Smaller coastal vessel`).
+  - Scanned and confirmed 0 occurrences of `northern`, `southern`, `eastern`, `western`, `central` across the page.
+- **Single Source of Truth Date Verification & Updated Timestamp Advance**:
+  - Validated dynamic propagation across all 5 core routes with temporary `Dec 11` test build and verified presence of `Nov 28` Wave event in generated HTML.
+  - Advanced centralized `lastUpdated` timestamp in `season.ts` from `Nov 17, 2026` to actual modification date `Nov 23, 2026`, automatically reflecting on Homepage, `/pirate-token-odds`, `/chest-types`, `/fortnite-chest-counter`, and `/leekcapper-fortnite`.
+
 ## [1.6.7] - 2026-11-23
 
 ### Fixed & Enhanced (Syntax Disambiguation, Universal Banner Coverage & Dynamic Config Evidence)

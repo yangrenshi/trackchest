@@ -73,7 +73,7 @@ export default function LeekCaperFortnitePage() {
         name: "How do you complete the 'Board a ship with the Leekcapper equipped' quest?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Find or loot a Leekcapper, keep it in your active inventory hotbar, and travel to an anchored pirate galleon (such as Plunder Port, Friendship Villa, or Busy Bay). Walk onto the wooden deck or climb the boarding ropes until the challenge completion banner pops up.",
+          text: "Find or loot a Leekcapper, keep it in your active inventory hotbar, and travel to an anchored pirate galleon or vessel along the coast. Walk onto the wooden deck or climb the boarding ropes until the challenge completion banner pops up.",
         },
       },
       {
@@ -114,7 +114,7 @@ export default function LeekCaperFortnitePage() {
       },
     },
     datePublished: "2026-11-17T00:00:00.000Z",
-    dateModified: "2026-11-17T00:00:00.000Z",
+    dateModified: "2026-11-23T00:00:00.000Z",
     mainEntityOfPage: `${siteConfig.url}/leekcapper-fortnite`,
   };
 
@@ -231,7 +231,7 @@ export default function LeekCaperFortnitePage() {
                 </td>
                 <td className="p-3 text-[#ffc93c]">~2%–5% (Low Spawn Rate, player-community estimate, not official Epic data)</td>
                 <td className="p-3">2–4 minutes</td>
-                <td className="p-3">Worth targeting multi-floor POIs like Plunder Port for guaranteed rare weapon rolls alongside Leekcapper potential.</td>
+                <td className="p-3">Worth targeting dense multi-floor POIs and coastal docks for guaranteed rare weapon rolls alongside Leekcapper potential.</td>
               </tr>
               <tr>
                 <td className="p-3 font-medium text-white flex items-center space-x-1.5">
@@ -289,7 +289,7 @@ export default function LeekCaperFortnitePage() {
             </div>
             <h3 className="font-semibold text-white text-sm">Secure the Weapon</h3>
             <p className="text-xs text-[#9a9a9a] leading-relaxed">
-              Drop at <strong>Plunder Port</strong> or <strong>Busy Bay</strong>. Search Rare Chests inside pirate quarters or loot standard chests on docks until the Epic purple icon appears.
+              Drop at <strong>coastal docks or galleon anchorages</strong>. Search Rare Chests inside pirate quarters or loot standard chests on docks until the Epic purple icon appears.
             </p>
           </div>
 
@@ -321,9 +321,9 @@ export default function LeekCaperFortnitePage() {
             <span>Eligible Ship Locations Across Chapter 7</span>
           </h3>
           <ul className="text-xs text-[#aaa] space-y-1 list-disc list-inside">
-            <li><strong className="text-white">Plunder Port Galleon:</strong> Anchored at the main bay; easiest access via northern dock ziplines.</li>
-            <li><strong className="text-white">Friendship Villa Yacht:</strong> Located off the southeastern shore; holds multiple rare chest spawns in the captain cabin.</li>
-            <li><strong className="text-white">Busy Bay Smuggler Sloop:</strong> Smaller vessel moored near the lighthouse; lowest enemy traffic for peaceful questing.</li>
+            <li><strong className="text-white">Coastal Pirate Galleon:</strong> Anchored in open coastal waters; easiest access via dock ziplines.</li>
+            <li><strong className="text-white">Offshore Loot Yacht:</strong> Located off the coastline; holds multiple rare chest spawns in the captain cabin.</li>
+            <li><strong className="text-white">Secluded Smuggler Sloop:</strong> Smaller coastal vessel; lowest enemy traffic for peaceful questing.</li>
           </ul>
         </div>
 

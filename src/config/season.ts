@@ -42,7 +42,7 @@ export const SEASON_CONFIG: SeasonConfig = {
   endDate: "December 4, 2026",
   endMaintenanceDate: "December 4–5, 2026",
   nextChapter: "Chapter 8",
-  lastUpdated: "Nov 17, 2026",
+  lastUpdated: "Nov 23, 2026",
   wave1ButtonLabel: "Sat, Nov 14 Boost (1.5x)",
   waves2And3ButtonLabel: "Sat, Nov 21 & 28 (2.0x)",
   waves: [

@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-11-23
+
+### Fixed & Enhanced (Vault Mechanic Realignment & Verified Vessel Names)
+- **Vault Opening Mechanism Correction (Cross-Site Factual Realignment)**:
+  - Corrected inaccurate mechanics regarding NPC boss drops, boss keycards, terminal hacking, and countdown opening timers across `/chest-types`, `/leekcapper-fortnite`, and Homepage comparison table.
+  - Aligned strictly with verified season gameplay (Polygon, Yahoo Tech, thebiglead, playerauctions):
+    - 9 total subterranean vaults active across the island.
+    - Single-use "Vault Key" drops randomly from Standard and Rare chests.
+    - Possessing a key highlights the nearest unopened vault within storm circles with a lock icon.
+    - Vault interior yields multiple Rare Blue Chests and a guaranteed Sprite Chest.
+  - Renamed `/chest-types` badge from `Keycard Secured` to `Vault Key Access`, keeping "Vault Exclusive" classification and loot yield descriptors intact.
+- **Verified Vessel Locations Restored (`/leekcapper-fortnite`)**:
+  - Restored verified vessel names with citations from game guides (Prima Games, Beebom, leekcapper.com):
+    1. `Plunder Port Galleons` (docked harbor vessels accessible via ziplines)
+    2. `Friendship Villa Duck Yacht` (distinctive yacht floating near the resort waterfront)
+    3. `Busy Bay Moored Sloop` (anchored coastal vessel in quiet bay waters)
+  - Enforced zero directional adjectives (no northern, southern, eastern, western, or central).
+
 ## [1.6.9] - 2026-11-23
 
 ### Fixed & Enhanced (Chapter 7 Treasure Hunters Active Map POIs Replacement)

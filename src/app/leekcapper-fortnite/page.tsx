@@ -245,11 +245,11 @@ export default function LeekCaperFortnitePage() {
               <tr>
                 <td className="p-3 font-medium text-white flex items-center space-x-1.5">
                   <span className="w-2 h-2 rounded-full bg-purple-500"></span>
-                  <span>Boss Vault Bunkers</span>
+                  <span>Island Vault Bunkers</span>
                 </td>
                 <td className="p-3 text-[#aaa]">Vault Exclusive</td>
                 <td className="p-3">5–8 minutes</td>
-                <td className="p-3">Requires defeating the pirate boss; provides high-tier loadouts and squad utility.</td>
+                <td className="p-3">Requires a Vault Key found in chests; grants access to multiple Rare Chests and a guaranteed Sprite Chest at the lock-marked vault.</td>
               </tr>
               <tr className="bg-[#141414] text-[#777]">
                 <td className="p-3 font-medium line-through">Commercial Safes</td>
@@ -321,9 +321,9 @@ export default function LeekCaperFortnitePage() {
             <span>Eligible Ship Locations Across Chapter 7</span>
           </h3>
           <ul className="text-xs text-[#aaa] space-y-1 list-disc list-inside">
-            <li><strong className="text-white">Coastal Pirate Galleon:</strong> Anchored in open coastal waters; easiest access via dock ziplines.</li>
-            <li><strong className="text-white">Offshore Loot Yacht:</strong> Located off the coastline; holds multiple rare chest spawns in the captain cabin.</li>
-            <li><strong className="text-white">Secluded Smuggler Sloop:</strong> Smaller coastal vessel; lowest enemy traffic for peaceful questing.</li>
+            <li><strong className="text-white">Plunder Port Galleons:</strong> Multiple pirate vessels anchored along the main port harbor; easiest access via dock ziplines and boarding ropes.</li>
+            <li><strong className="text-white">Friendship Villa Duck Yacht:</strong> Distinctive yacht floating near the resort waterfront; holds multiple rare chest spawns across the deck and cabin.</li>
+            <li><strong className="text-white">Busy Bay Moored Sloop:</strong> Coastal vessel anchored inside the bay waters; lowest enemy traffic for peaceful questing.</li>
           </ul>
         </div>
 

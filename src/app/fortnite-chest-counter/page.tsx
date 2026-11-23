@@ -236,10 +236,10 @@ export default function ChestCounterPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
             <div className="flex items-center space-x-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#ffd510]" />
-              <h3 className="font-bold text-white">Column 4: Boss Vault Bunkers (Heavy Anchor Assignment)</h3>
+              <h3 className="font-bold text-white">Column 4: Island Vault Bunkers (Heavy Anchor Assignment)</h3>
             </div>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Assigned to the teammate neutralizing NPC bosses, picking up boss keycards, or cracking vault terminals. Records boss chest loot to confirm gold medallions and mythic artillery are secured.
+              Assigned to the teammate carrying the Vault Key looted from standard or rare chests to open the nearest lock-marked bunker. Records vault chest loot to confirm multiple Rare Blue Chests and Sprite loot are secured.
             </p>
           </div>
         </div>
@@ -280,9 +280,9 @@ export default function ChestCounterPage() {
           </div>
 
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
-            <h3 className="font-bold text-white">Boss Vault Bunkers (100% Guaranteed Behind Keycard Airlocks)</h3>
+            <h3 className="font-bold text-white">Island Vault Bunkers (Unlocked via Vault Keys Found in Chests)</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Secured behind blast doors requiring defeated boss medallions or timed late-game opening cycles, Vault Bunkers house multiple Mythic weapon cases, mod workbenches, and hundreds of gold bars. Logging a Vault clear in column 4 signals that your team has reached peak endgame readiness.
+              Secured behind blast doors opened with single-use Vault Keys looted from standard or rare chests, the 9 island vaults house clusters of Rare Blue Chests and a guaranteed Sprite Chest. Logging a Vault clear in column 4 signals that your team has reached peak endgame readiness.
             </p>
           </div>
         </div>

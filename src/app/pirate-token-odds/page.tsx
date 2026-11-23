@@ -212,10 +212,10 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
             <h3 className="font-bold text-white flex items-center space-x-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#ffd510]" />
-              <span>Boss Vault Containers (Eligible)</span>
+              <span>Island Vault Containers (Eligible)</span>
             </h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Large weapon chests located inside keycard-locked Boss Vault Bunkers are fully eligible. Clearing out a high-tier vault grants multiple high-value rolls alongside medallion loot and mod bench access.
+              Rare chests located inside Vault Key-opened Island Vaults are fully eligible. Accessing any of the 9 island vaults grants multiple high-value rolls alongside a guaranteed Sprite Chest.
             </p>
           </div>
 

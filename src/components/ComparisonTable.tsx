@@ -6,34 +6,34 @@ import { SEASON_CONFIG } from "@/config/season";
 export function ComparisonTable() {
   const namedLocations = [
     {
-      name: "Retail Row",
-      tier: "Residential Basin",
-      description: "Dense housing sector; two-story homes feature roof-attic and store-basement chest clusters surrounding the commercial district. Rotates each season — check before you drop.",
+      name: "Plunder Port",
+      tier: "Pirate Harbor",
+      description: "Sprawling pirate shipping harbor; dock warehouses, crane platforms, and coastal galleon decks shelter multiple wooden chests. Rotates each season — check before you drop.",
     },
     {
-      name: "Pleasant Park",
-      tier: "Suburban Grid",
-      description: "Classic suburban residential grid; standard wooden chests line multiple detached basements and second-floor bedrooms surrounding the park pavilion. Rotates each season — check before you drop.",
+      name: "Busy Bay",
+      tier: "Coastal Settlement",
+      description: "Dense bayfront settlement; multi-tier seaside buildings, boardwalk shacks, and moored vessels contain rapid chest rotations. Rotates each season — check before you drop.",
     },
     {
-      name: "Sweaty Sands",
-      tier: "Coastal Resort",
-      description: "High-rise beachfront resort; multi-floor hotel suites, pier boardwalks, and coastal trailers contain numerous chest nodes. Rotates each season — check before you drop.",
+      name: "The Chest",
+      tier: "Landmark Cache",
+      description: "High-value seasonal landmark; concentrated off-spawn containers and rare loot nodes cluster around the monument structure. Rotates each season — check before you drop.",
     },
     {
-      name: "Lazy Lake",
-      tier: "Suburban Hub",
-      description: "Dense lakeside town; multi-tier modern townhouses, underground parking garages, and spa balconies house high-density chest clusters. Rotates each season — check before you drop.",
+      name: "Fortune's Fort (Lil' Uzi's Stronghold)",
+      tier: "Fortified Stronghold",
+      description: "Massive stone fortress; elevated battlements, dungeon corridors, and interior armory nooks house dense chest clusters. Rotates each season — check before you drop.",
     },
     {
-      name: "Salty Springs",
-      tier: "Residential Valley",
-      description: "High-traffic residential neighborhood; concentrated off-spawn chests cluster inside multiple house attics and hidden basements. Rotates each season — check before you drop.",
+      name: "Loot Lagoon (Buggy's Beachhead)",
+      tier: "Lagoon Basin",
+      description: "Sprawling water basin; grounded pirate vessels, shoreline encampments, and rocky islet nooks feature scattered chest nodes. Rotates each season — check before you drop.",
     },
     {
-      name: "Dirty Docks",
-      tier: "Industrial Port",
-      description: "Sprawling industrial shipping harbor; elevated crane cabins, multi-story warehouse rafters, and container stacks shelter multiple chests. Rotates each season — check before you drop.",
+      name: "Rubber Resort (Friendship Villa)",
+      tier: "Beachfront Resort",
+      description: "Luxury beachfront compound; multi-floor villa suites, poolside cabanas, and private yacht docks feature high-density chest routes. Rotates each season — check before you drop.",
     },
   ];
 

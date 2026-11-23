@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.9] - 2026-11-23
+
+### Fixed & Enhanced (Chapter 7 Treasure Hunters Active Map POIs Replacement)
+- **Active Season Named POI Alignment (`ComparisonTable.tsx`)**:
+  - Replaced legacy Chapter 1/2 locations (Retail Row, Pleasant Park, Sweaty Sands, Lazy Lake, Salty Springs, Dirty Docks) with 6 verified Chapter 7 Treasure Hunters active map POIs from DigitalTQ (Nov 16, 2026 update):
+    1. `Plunder Port`
+    2. `Busy Bay`
+    3. `The Chest`
+    4. `Fortune's Fort (Lil' Uzi's Stronghold)`
+    5. `Loot Lagoon (Buggy's Beachhead)`
+    6. `Rubber Resort (Friendship Villa)`
+  - Preserved verbatim nomenclature (no abbreviations, no translations, no phrasing alterations).
+  - Maintained structured container route descriptions and the disclaimer `"Rotates each season — check before you drop."` on every POI card.
+  - Zero directional terms reintroduced; intact `id="poi-chest-routes"` anchor target and H3 heading.
+- **Cross-Site Legacy Location Scrubbing (`/pirate-token-odds`)**:
+  - Replaced `(like Retail Row or Pleasant Park)` with `(like Plunder Port or Busy Bay)` in the fastest routing FAQ, eliminating all residual Chapter 1/2 named POI traces across the entire codebase.
+
 ## [1.6.8] - 2026-11-23
 
 ### Fixed & Enhanced (Unified Map POI Taxonomy, Directional Term Removal & Config Alignment)

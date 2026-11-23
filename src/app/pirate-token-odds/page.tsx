@@ -360,7 +360,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1">
             <h3 className="font-bold text-white">What is the fastest looting route to maximize Pirate Token odds?</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Land at high-density suburban POIs (like Retail Row or Pleasant Park) where dense building clusters put many wooden chests within a short rotation. Use our companion counter to record your tally as you loot before rotating along coastline nodes.
+              Land at high-density coastal POIs (like Plunder Port or Busy Bay) where dense building clusters put many wooden chests within a short rotation. Use our companion counter to record your tally as you loot before rotating along coastline nodes.
             </p>
           </div>
         </div>

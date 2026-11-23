@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.1] - 2026-11-23
+
+### Fixed & Enhanced (Claim De-Officialization, Named POI Clusters & Final SEO De-Stuffing)
+- **Removal of Unverifiable Official Claims (`/pirate-token-odds`, `site.ts`)**:
+  - Replaced "Epic's official Pirate Token odds" in metadata description with clean factual statement.
+  - Converted H2 from "Official Epic Games Drop Odds" to "Pirate Token Drop Odds (1 in 137,500)".
+  - Updated subtitle to "Community-Verified Odds • Chapter 7 Treasure Hunters" with unified date "Nov 17, 2026".
+  - Normalized all copy across `/pirate-token-odds` and homepage FAQ from "Epic Games confirmed" / "official drop rates" to community-tracked and widely reported terminology.
+- **Directory Copy Refinement (`SiteDirectoryNav.tsx`)**:
+  - Removed "Verified" from Leekcapper card description across all 9 pages.
+- **Chapter 7 Named POI Chest Routes (`ComparisonTable.tsx`)**:
+  - Injected SSR-rendered section detailing 9 confirmed named POIs (Plunder Port, Retail Row, Pleasant Park, Friendship Villa, Reckless Railways, Grim Gate, Snooty Steppes, Mount Olympus, Brawler's Battleground) with vertical floor levels, cardinal directions, nearby landmarks, and natural internal links to `/chest-types`.
+- **Final Keyword De-Stuffing**:
+  - `/leekcapper-fortnite`: Naturalized awkward SEO query phrase into authentic player text ("Most players hunt for the weapon to complete the Week 2 Syndicate challenge...").
+  - `/fortnite-chest-counter`: Rewrote meta description into natural gaming English ("Track Standard, Rare, Sprite, and Vault chests in four parallel columns during Chapter 7 squad matches.").
+
 ## [1.6.0] - 2026-11-23
 
 ### Fixed & Cleaned (Data Rigor, Self-Link Removal & Telemetry Realism)

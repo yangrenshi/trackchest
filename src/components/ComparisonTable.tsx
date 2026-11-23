@@ -1,8 +1,56 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 
 export function ComparisonTable() {
+  const namedLocations = [
+    {
+      name: "Plunder Port",
+      tier: "Pirate Hub",
+      description: "Coastal bay on the northwest shoreline; the 3-deck main pirate galleon holds 4 Rare chest nodes across upper cabins, adjacent to the northern dock ziplines.",
+    },
+    {
+      name: "Retail Row",
+      tier: "Residential Basin",
+      description: "Dense housing sector on the eastern flatlands; two-story brick homes feature 18+ standard wooden chests hidden inside roof attics, directly north of the central water tower.",
+    },
+    {
+      name: "Pleasant Park",
+      tier: "Suburban Grid",
+      description: "Central residential valley; standard wooden chests line 8 detached basements and second-floor bedrooms surrounding the central soccer pavilion.",
+    },
+    {
+      name: "Friendship Villa",
+      tier: "Coastal Estate",
+      description: "Clifftop villa on the southeastern coastline; a 3-level luxury mansion with 2 guaranteed safe spawns and attic chests overlooking the lower pirate yacht mooring.",
+    },
+    {
+      name: "Reckless Railways",
+      tier: "Transit Depot",
+      description: "Sunken railway station in the central valley; underground transit tunnels hold 7 freight container chest nodes directly beneath the ticket counter.",
+    },
+    {
+      name: "Grim Gate",
+      tier: "Fortified Gorge",
+      description: "Stone fortress spanning the western river chasm; multi-tier guard towers hold sprite shrines and rare blue chests above the Cerberus underpass.",
+    },
+    {
+      name: "Snooty Steppes",
+      tier: "Hillside Town",
+      description: "Italianate hillside town in the southwest quadrant; 15+ containers cluster across 4-story villa balconies and interconnected subterranean wine cellars.",
+    },
+    {
+      name: "Mount Olympus",
+      tier: "Summit Citadel",
+      description: "Elevated peak complex on the southeastern ridge; palatial temple colonnades house golden chests and sprite shrines near the grand pantheon staircase.",
+    },
+    {
+      name: "Brawler's Battleground",
+      tier: "Combat Arena",
+      description: "Militarized arena in the southern badlands; 3-story concrete barracks and perimeter catwalks overlook the reinforced underground bunker vault.",
+    },
+  ];
+
   const chestComparisons = [
     {
       type: "Standard Chest",
@@ -113,6 +161,38 @@ export function ComparisonTable() {
               ))}
             </tbody>
           </table>
+        </div>
+      </div>
+
+      {/* 新增：当前赛季 9 大具名地点宝箱刷新路线与点位透视 */}
+      <div className="mt-8 pt-8 border-t border-[#262626] space-y-4">
+        <div>
+          <h3 className="text-base sm:text-lg font-bold text-white flex items-center space-x-2">
+            <MapPin className="w-4 h-4 text-[#ffc93c]" />
+            <span>Chapter 7 Named POI Chest Routes &amp; Spawn Spots</span>
+          </h3>
+          <p className="text-xs text-[#9a9a9a] mt-1 leading-relaxed">
+            Targeting high-density container drops accelerates your match economy. Compare these confirmed POI chest clusters across Chapter 7 Treasure Hunters, or review the comprehensive visual guides in our <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>:
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          {namedLocations.map((loc) => (
+            <div key={loc.name} className="p-3.5 rounded-xl bg-[#1a1a1a] border border-[#2e2e2e] space-y-1">
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-white flex items-center space-x-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#ffc93c]" />
+                  <span>{loc.name}</span>
+                </span>
+                <span className="text-[10px] font-mono text-[#888] bg-[#121212] px-1.5 py-0.5 rounded border border-[#262626]">
+                  {loc.tier}
+                </span>
+              </div>
+              <p className="text-[11px] text-[#9a9a9a] leading-relaxed">
+                {loc.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

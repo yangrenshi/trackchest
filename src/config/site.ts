@@ -126,9 +126,9 @@ export const siteConfig: SiteConfig = {
     },
     {
       q: "How do Pirate Token chests and the 1 in 137,500 odds work?",
-      a: "In Chapter 7 Treasure Hunters, Epic confirmed Pirate Shop Access Tokens drop from containers at a 1 in 137,500 rate (0.000007273%). TrackChest lets you track opened containers and calculate your statistical progress toward the 50% median threshold.",
+      a: "In Chapter 7 Treasure Hunters, community tracking established that Pirate Shop Access Tokens drop from eligible containers at a 1 in 137,500 rate (0.000007273%). TrackChest lets you track opened containers and calculate your statistical progress toward the 50% median threshold.",
       question: "How do Pirate Token chests and the 1 in 137,500 odds work?",
-      answer: "In Chapter 7 Treasure Hunters, Epic confirmed Pirate Shop Access Tokens drop from containers at a 1 in 137,500 rate (0.000007273%). TrackChest lets you track opened containers and calculate your statistical progress toward the 50% median threshold.",
+      answer: "In Chapter 7 Treasure Hunters, community tracking established that Pirate Shop Access Tokens drop from eligible containers at a 1 in 137,500 rate (0.000007273%). TrackChest lets you track opened containers and calculate your statistical progress toward the 50% median threshold.",
     },
     {
       q: "Will my chest counts be lost if I refresh or close the tab?",

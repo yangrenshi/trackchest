@@ -51,7 +51,7 @@ export function SiteDirectoryNav() {
       title: "Fortnite Leekcapper Quest & Drop Guide",
       href: "/leekcapper-fortnite",
       badge: "Quest Guide",
-      description: "Verified chest and floor loot drop rates, pirate galleon locations, and ship boarding quest walkthrough.",
+      description: "Chest and floor loot drop rates, pirate galleon locations, and ship boarding quest walkthrough.",
       icon: Crosshair,
     },
   ];

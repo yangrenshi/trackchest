@@ -8,13 +8,13 @@ import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 
 export const metadata: Metadata = {
   title: "Fortnite Pirate Token Odds — Drop Rates",
-  description: "Epic's official Pirate Token odds: 1 in 137,500. See how many chests you need for 50%, 90% and 99% — plus Treasure Hours multipliers.",
+  description: "Pirate Token drop odds: 1 in 137,500. See how many chests you need for 50%, 90% and 99% — plus Treasure Hours multipliers.",
   alternates: {
     canonical: `${siteConfig.url}/pirate-token-odds`,
   },
   openGraph: {
     title: "Fortnite Pirate Token Odds — Drop Rates",
-    description: "Epic's official Pirate Token odds: 1 in 137,500. Calculate required chests and Treasure Hours odds.",
+    description: "Pirate Token drop odds: 1 in 137,500. Calculate required chests and Treasure Hours odds.",
     url: `${siteConfig.url}/pirate-token-odds`,
     siteName: siteConfig.name,
     type: "article",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Fortnite Pirate Token Odds — Drop Rates",
-    description: "Official 1 in 137,500 token odds and Treasure Hours multiplier calculator.",
+    description: "Community-verified 1 in 137,500 token odds and Treasure Hours multiplier calculator.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
 };
@@ -43,7 +43,7 @@ export default function PirateTokenOddsPage() {
     applicationCategory: "GameApplication",
     operatingSystem: "All",
     url: `${siteConfig.url}/pirate-token-odds`,
-    description: "Official Epic Games statistical odds simulator for Pirate Shop Access tokens (1 in 137,500). Treasure Hours multiplier events boost container drop odds by 1.5x in Wave 1 and 2x in Waves 2 & 3.",
+    description: "Statistical odds simulator for Pirate Shop Access tokens (1 in 137,500). Treasure Hours multiplier events boost container drop odds by 1.5x in Wave 1 and 2x in Waves 2 & 3.",
     offers: {
       "@type": "Offer",
       price: "0",
@@ -68,7 +68,7 @@ export default function PirateTokenOddsPage() {
         name: "Is there bad luck protection or a guaranteed pity timer for Pirate Tokens?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Epic Games confirmed that every eligible container open is an independent Bernoulli trial. There is zero cumulative bad luck protection or pity counter—opening 137,500 chests gives roughly a 63.2% statistical chance, never a 100% guarantee.",
+          text: "No. Community tracking and drop calculations confirm that every eligible container open is an independent Bernoulli trial. There is zero cumulative bad luck protection or pity counter—opening 137,500 chests gives roughly a 63.2% statistical chance, never a 100% guarantee.",
         },
       },
       {
@@ -127,17 +127,17 @@ export default function PirateTokenOddsPage() {
       <div className="space-y-2">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-semibold text-[#ffc93c] uppercase tracking-wider block">
-            Official Epic Games Drop Rates
+            Community-Verified Odds • Chapter 7 Treasure Hunters
           </span>
           <span className="text-[11px] font-mono text-[#9a9a9a] bg-[#242424] border border-[#2e2e2e] px-2 py-0.5 rounded">
-            Updated Nov 17, 2026 • Chapter 7 Treasure Hunters
+            Updated Nov 17, 2026
           </span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
           Fortnite Pirate Token Odds Calculator
         </h1>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          On November 9, 2026, Epic Games officially revealed the confirmed drop probabilities for the Chapter 7 Treasure Hunters mini-season (Nov 1 – Dec 4, 2026). Understanding the mathematical <strong>pirate token odds</strong> allows competitive players to simulate realistic looting requirements across standard matches and weekend boost windows.
+          In Chapter 7 Treasure Hunters (Nov 1 – Dec 4, 2026), community tracking and widely reported match data established the baseline drop probability for the Pirate Shop Access Token at 1 in 137,500. Understanding these mathematical <strong>pirate token odds</strong> allows competitive players to simulate realistic looting requirements across standard matches and weekend boost windows.
         </p>
       </div>
 
@@ -151,7 +151,7 @@ export default function PirateTokenOddsPage() {
           <span>The Math Behind the 1 in 137,500 Drop Rate</span>
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          In the Chapter 7 Treasure Hunters collaboration season, opening standard, rare, sprite, or boss vault containers (detailed in our <Link href="/chest-types" className="text-[#ffc93c] underline">Fortnite chest types guide</Link>) grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. According to Epic&apos;s official drop rates (published Nov 9, 2026):
+          In the Chapter 7 Treasure Hunters collaboration season, opening standard, rare, sprite, or boss vault containers (detailed in our <Link href="/chest-types" className="text-[#ffc93c] underline">Fortnite chest types guide</Link>) grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. Based on widely reported community drop data (updated Nov 17, 2026):
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -164,7 +164,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
             <h3 className="font-semibold text-white">Ultra-Rare Golden Skin (1 in 1.56M)</h3>
             <p className="text-[#9a9a9a] text-[11px] leading-relaxed">
-              The season-exclusive Golden Skin variant drops at 1 per 1,562,500 chests. Epic has not disclosed how many accounts will unlock it organically before Chapter 8 launches on December 4, making it one of the rarest cosmetic drops in Fortnite history.
+              The season-exclusive Golden Skin variant drops at roughly 1 per 1,562,500 chests based on community drop tables. It remains unconfirmed how many accounts will unlock it organically before Chapter 8 launches on December 4, making it one of the rarest cosmetic drops in Fortnite history.
             </p>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function PirateTokenOddsPage() {
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          A common misconception among players heading into weekend scrims is that only special event chests trigger the drop roll. Under Epic Games&apos; confirmed architecture, the baseline <strong>pirate token odds</strong> apply across multiple standard Battle Royale container tiers:
+          A common misconception among players heading into weekend scrims is that only special event chests trigger the drop roll. Based on community-tracked match data, the baseline <strong>pirate token odds</strong> apply across multiple standard Battle Royale container tiers:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
@@ -333,7 +333,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1">
             <h3 className="font-bold text-white">Is there bad luck protection or a guaranteed pity timer in Fortnite?</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              No. Epic Games confirmed that every container open is an independent Bernoulli event. There is no cumulative pity counter. Searching 137,500 chests gives roughly a 63.2% mathematical chance, never a 100% guarantee.
+              No. Community tracking confirms that every container open is an independent Bernoulli event. There is no cumulative pity counter. Searching 137,500 chests gives roughly a 63.2% mathematical chance, never a 100% guarantee.
             </p>
           </div>
 

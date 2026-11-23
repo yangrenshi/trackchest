@@ -35,7 +35,7 @@ export function PirateTokenCalculator() {
           <div className="flex items-center space-x-2">
             <ShieldCheck className="w-4 h-4 text-[#49d6ff]" />
             <h2 className="text-sm font-bold text-white uppercase tracking-wider">
-              Official Epic Games Drop Odds
+              Pirate Token Drop Odds (1 in 137,500)
             </h2>
           </div>
           <span className="text-[11px] font-mono text-[#ffc93c] bg-[#ffc93c]/10 border border-[#ffc93c]/20 px-2 py-0.5 rounded">
@@ -70,7 +70,7 @@ export function PirateTokenCalculator() {
         </div>
 
         <p className="text-[11px] text-[#777] leading-relaxed">
-          * Source: Epic&apos;s official drop rates, published Nov 9, 2026. Season active Nov 1 – Dec 4, 2026.
+          * Source: Community-tracked drop data (updated Nov 17, 2026). Season active Nov 1 – Dec 4, 2026.
         </p>
       </div>
 

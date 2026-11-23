@@ -270,7 +270,7 @@ export default function LeekCaperFortnitePage() {
           <span>3. How to Complete the &quot;Board a Ship with the Leekcapper&quot; Quest</span>
         </h2>
         <p className="text-[#aaa] leading-relaxed">
-          The main driver behind the spike in <strong className="text-white">leek caper fortnite</strong> searches is the Week 2 Syndicate challenge: <em className="text-white">&quot;Board a ship with the Leekcapper equipped.&quot;</em> Follow these exact steps to complete the quest in a single match:
+          Most players hunt for the weapon to complete the Week 2 Syndicate challenge: <em className="text-white">&quot;Board a ship with the Leekcapper equipped.&quot;</em> Follow these exact steps to complete the quest in a single match:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

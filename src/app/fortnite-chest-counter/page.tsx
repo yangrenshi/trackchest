@@ -10,13 +10,13 @@ import {
 
 export const metadata: Metadata = {
   title: "Chest Counter Fortnite — 4-Column Tool",
-  description: "Chest counter Fortnite squads use to track Standard, Rare, Sprite, and Vault chests in parallel columns during Chapter 7 competitive matches.",
+  description: "Track Standard, Rare, Sprite, and Vault chests in four parallel columns during Chapter 7 squad matches.",
   alternates: {
     canonical: `${siteConfig.url}/fortnite-chest-counter`,
   },
   openGraph: {
     title: "Chest Counter Fortnite — 4-Column Tool",
-    description: "Chest counter Fortnite squads use to track Standard, Rare, Sprite, and Vault chests in parallel columns during Chapter 7 matches.",
+    description: "Track Standard, Rare, Sprite, and Vault chests in four parallel columns during Chapter 7 squad matches.",
     url: `${siteConfig.url}/fortnite-chest-counter`,
     siteName: siteConfig.name,
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Chest Counter Fortnite — 4-Column Tool",
-    description: "Chest counter Fortnite squads use for competitive Chapter 7 matches.",
+    description: "Track Standard, Rare, Sprite, and Vault chests in four parallel columns during Chapter 7 squad matches.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
 };

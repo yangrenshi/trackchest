@@ -186,10 +186,10 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
             <h3 className="font-bold text-white flex items-center space-x-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]" />
-              <span>Standard Wooden Chests (Eligible — Vast Majority of Map Volume, Community Est.)</span>
+              <span>Standard Wooden Chests (Eligible — Vast Majority of Map Volume, Player-Community Est.)</span>
             </h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Yes, standard wooden chests absolutely count! Because residential rooftops, attics, and warehouses are densely packed with wooden containers, standard chests represent the vast majority of all container spawns across the island (~75% of total spawns based on community estimates). Opening 20 standard chests grants 20 independent rolls against the baseline 1 in 137,500 rate.
+              Yes, standard wooden chests absolutely count! Because residential rooftops, attics, and warehouses are densely packed with wooden containers, standard chests represent the vast majority of all container spawns across the island (~75% of total spawns, player-community estimates, not official Epic data). Opening 20 standard chests grants 20 independent rolls against the baseline 1 in 137,500 rate.
             </p>
           </div>
 

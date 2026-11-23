@@ -174,7 +174,7 @@ export default function ChestCounterPage() {
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          While casual players can get by with a simple single-button clicker, competitive tournament trios and ranked squads understand that all containers in Fortnite Battle Royale are not created equal. Opening 15 standard wooden chests gives you plenty of common ammunition and bandages, but it guarantees zero high-tier rifles and zero guaranteed shields. Using a specialized <strong>chest counter fortnite 4-column squad tool</strong> transforms raw looting into actionable tactical telemetry.
+          While casual players can get by with a simple single-button clicker, competitive tournament trios and ranked squads understand that all containers in Fortnite Battle Royale are not created equal. Opening 15 standard wooden chests gives you plenty of common ammunition and bandages, but it guarantees zero high-tier rifles and zero guaranteed shields. Using this 4-column squad counter transforms raw looting into actionable tactical telemetry.
         </p>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
           In Chapter 7 Treasure Hunters, the map is filled with differentiated loot tiers. By separating your counts into Standard, Rare Blue, Sprite Shrines, and Boss Vaults, your in-game leader (IGL) knows exactly when your team has crossed the statistical threshold required to initiate mid-game rotations without getting caught out-gunned across open fields.
@@ -190,7 +190,7 @@ export default function ChestCounterPage() {
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          In high-tier ranked lobbies and tournament scrims, opening containers as a chaotic free-for-all leads to lopsided ammunition reserves and wasted shield rotations. Experienced squads using our <strong>chest counter fortnite squad companion</strong> assign each player a specific container tier:
+          In high-tier ranked lobbies and tournament scrims, opening containers as a chaotic free-for-all leads to lopsided ammunition reserves and wasted shield rotations. Experienced squads using this counter assign each player a specific container tier:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
@@ -249,21 +249,21 @@ export default function ChestCounterPage() {
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          Understanding the mathematical drop distribution behind each column in our <strong>chest counter fortnite squad tool</strong> prevents costly macro rotation errors. For exact visual identification markers and sound cues across all active rarities, check our comprehensive <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>:
+          Understanding the mathematical drop distribution behind each column in this tool prevents costly macro rotation errors. For exact visual identification markers and sound cues across all active rarities, check our comprehensive <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>:
         </p>
 
         <div className="space-y-3 text-xs">
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
-            <h3 className="font-bold text-white">Standard Chests (~70%–80% Active Node Activation, Community Est.)</h3>
+            <h3 className="font-bold text-white">Standard Chests (~70%–80% Active Node Activation, Player-Community Est.)</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Standard chests spawn dynamically each match across residential POIs (roughly 70%–80% node spawn rate based on community estimates). Each container reliably dispenses 1 weapon (Common to Rare tier), 30 building materials in standard Battle Royale modes, 1 recovery item stack, and ammunition. While essential for early off-spawn defense, standard chests rarely yield the purple or gold weapons required for long-range surge trades.
+              Standard chests spawn dynamically each match across residential POIs (roughly 70%–80% node spawn rate, player-community estimates, not official Epic data). Each container reliably dispenses 1 weapon (Common to Rare tier), 30 building materials in standard Battle Royale modes, 1 recovery item stack, and ammunition. While essential for early off-spawn defense, standard chests rarely yield the purple or gold weapons required for long-range surge trades.
             </p>
           </div>
 
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
-            <h3 className="font-bold text-white">Rare Blue Super Chests (~2%–5% Natural Spawn Odds, Community Est.)</h3>
+            <h3 className="font-bold text-white">Rare Blue Super Chests (~2%–5% Natural Spawn Odds, Player-Community Est.)</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Emitting a distinctive high-pitched musical resonance and cyan glow, Rare Chests replace standard spawn nodes at a roughly 2% to 5% rate based on community estimates. They guarantee at least one Rare (Blue), Epic (Purple), or Legendary (Gold) weapon, alongside guaranteed big shield potions or Chug Splashes. Logging 2 or more Rare Chests in column 2 ensures your squad has at least two primary fighters equipped for immediate team fights.
+              Emitting a distinctive high-pitched musical resonance and cyan glow, Rare Chests replace standard spawn nodes at a roughly 2% to 5% rate (player-community estimates, not official Epic data). They guarantee at least one Rare (Blue), Epic (Purple), or Legendary (Gold) weapon, alongside guaranteed big shield potions or Chug Splashes. Logging 2 or more Rare Chests in column 2 ensures your squad has at least two primary fighters equipped for immediate team fights.
             </p>
           </div>
 
@@ -292,7 +292,7 @@ export default function ChestCounterPage() {
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          Before your team initiates your first macro rotation out of your drop POI, spend 5 seconds running this quick audio check using our <strong>chest counter fortnite companion</strong>:
+          Before your team initiates your first macro rotation out of your drop POI, spend 5 seconds running this quick audio check using the tool:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
@@ -377,7 +377,7 @@ export default function ChestCounterPage() {
           </h2>
         </div>
         <p className="leading-relaxed">
-          All 4 columns update your browser&apos;s LocalStorage on every single tap. Designed as an offline-ready <strong>chest counter fortnite squad companion</strong> you can run without tab lags, you can refresh the page, close your browser between tournaments, or lock your phone screen without losing count. When starting a fresh competitive match set, click &ldquo;Reset All&rdquo; to clear all four columns simultaneously. To cross-reference your session tally with the in-game Milestones tab, review our guide on <Link href="/how-to-check-chests" className="text-[#ffc93c] underline font-medium">how to check chests opened in Fortnite</Link>. If your squad is also targeting special pirate weapons, consult our <Link href="/leekcapper-fortnite" className="text-[#ffc93c] underline font-medium">Leekcapper drop rates and quest guide</Link>.
+          All 4 columns update your browser&apos;s LocalStorage on every single tap. Designed as an offline-ready companion you can run without tab lags, you can refresh the page, close your browser between tournaments, or lock your phone screen without losing count. When starting a fresh competitive match set, click &ldquo;Reset All&rdquo; to clear all four columns simultaneously. To cross-reference your session tally with the in-game Milestones tab, review our guide on <Link href="/how-to-check-chests" className="text-[#ffc93c] underline font-medium">how to check chests opened in Fortnite</Link>. If your squad is also targeting special pirate weapons, consult our <Link href="/leekcapper-fortnite" className="text-[#ffc93c] underline font-medium">Leekcapper drop rates and quest guide</Link>.
         </p>
       </section>
 

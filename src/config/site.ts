@@ -114,9 +114,9 @@ export const siteConfig: SiteConfig = {
     },
     {
       q: "What is the difference between a Regular Chest and a Rare Chest?",
-      a: "In Fortnite, Regular standard chests have a high spawn rate (community estimates range around 70-80% active nodes per POI) and drop common to rare weapons. Rare (blue glowing) chests are significantly scarcer (community estimates put them around 2% to 5% spawn chance) and guarantee at least a Rare (blue), Epic (purple), or Legendary (gold) weapon, plus high-tier shield potions.",
+      a: "In Fortnite, Regular standard chests have a high spawn rate (player-community estimates range around 70-80% active nodes per POI, not official Epic data) and drop common to rare weapons. Rare (blue glowing) chests are significantly scarcer (player-community estimates put them around 2% to 5% spawn chance, not official Epic data) and guarantee at least a Rare (blue), Epic (purple), or Legendary (gold) weapon, plus high-tier shield potions.",
       question: "What is the difference between a Regular Chest and a Rare Chest?",
-      answer: "In Fortnite, Regular standard chests have a high spawn rate (community estimates range around 70-80% active nodes per POI) and drop common to rare weapons. Rare (blue glowing) chests are significantly scarcer (community estimates put them around 2% to 5% spawn chance) and guarantee at least a Rare (blue), Epic (purple), or Legendary (gold) weapon, plus high-tier shield potions.",
+      answer: "In Fortnite, Regular standard chests have a high spawn rate (player-community estimates range around 70-80% active nodes per POI, not official Epic data) and drop common to rare weapons. Rare (blue glowing) chests are significantly scarcer (player-community estimates put them around 2% to 5% spawn chance, not official Epic data) and guarantee at least a Rare (blue), Epic (purple), or Legendary (gold) weapon, plus high-tier shield potions.",
     },
     {
       q: "Are Fortnite chests predetermined?",

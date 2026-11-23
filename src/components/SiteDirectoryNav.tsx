@@ -1,8 +1,13 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { Box, Layers, Calculator, BookOpen, Compass, Crosshair, ShieldCheck } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Box, Layers, Calculator, BookOpen, Compass, Crosshair } from "lucide-react";
 
 export function SiteDirectoryNav() {
+  const pathname = usePathname();
+
   const tools = [
     {
       title: "Live Chest Tracker",
@@ -78,6 +83,34 @@ export function SiteDirectoryNav() {
             <div className="space-y-2.5">
               {tools.map((item) => {
                 const IconComponent = item.icon;
+                const isCurrent = pathname === item.href;
+
+                if (isCurrent) {
+                  return (
+                    <div
+                      key={item.href}
+                      className="p-3.5 rounded-xl bg-[#202020] border border-[#ffc93c]/60 flex items-start space-x-3 cursor-default"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-[#ffc93c]/20 text-[#ffc93c] flex items-center justify-center shrink-0 mt-0.5">
+                        <IconComponent className="w-4 h-4" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center space-x-2">
+                          <span className="font-semibold text-xs text-[#ffc93c]">
+                            {item.title}
+                          </span>
+                          <span className="text-[10px] font-semibold text-[#ffc93c] bg-[#ffc93c]/15 border border-[#ffc93c]/30 px-1.5 py-0.5 rounded">
+                            Current Page
+                          </span>
+                        </div>
+                        <p className="text-[11px] text-[#a0a0a0] mt-1 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={item.href}
@@ -114,6 +147,34 @@ export function SiteDirectoryNav() {
             <div className="space-y-2.5">
               {guides.map((item) => {
                 const IconComponent = item.icon;
+                const isCurrent = pathname === item.href;
+
+                if (isCurrent) {
+                  return (
+                    <div
+                      key={item.href}
+                      className="p-3.5 rounded-xl bg-[#202020] border border-[#49d6ff]/60 flex items-start space-x-3 cursor-default"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-[#49d6ff]/20 text-[#49d6ff] flex items-center justify-center shrink-0 mt-0.5">
+                        <IconComponent className="w-4 h-4" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center space-x-2">
+                          <span className="font-semibold text-xs text-[#49d6ff]">
+                            {item.title}
+                          </span>
+                          <span className="text-[10px] font-semibold text-[#49d6ff] bg-[#49d6ff]/15 border border-[#49d6ff]/30 px-1.5 py-0.5 rounded">
+                            Current Page
+                          </span>
+                        </div>
+                        <p className="text-[11px] text-[#a0a0a0] mt-1 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={item.href}
@@ -147,15 +208,27 @@ export function SiteDirectoryNav() {
         <div className="pt-4 border-t border-[#222] flex flex-wrap items-center justify-between gap-3 text-[11px] text-[#777]">
           <span>TrackChest &bull; Free Fortnite Battle Royale Companion</span>
           <div className="flex items-center space-x-4">
-            <Link href="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
-              Contact Us
-            </Link>
+            {pathname === "/privacy" ? (
+              <span className="text-[#ffc93c] font-semibold cursor-default">Privacy Policy (Current)</span>
+            ) : (
+              <Link href="/privacy" className="hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+            )}
+            {pathname === "/terms" ? (
+              <span className="text-[#ffc93c] font-semibold cursor-default">Terms of Service (Current)</span>
+            ) : (
+              <Link href="/terms" className="hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+            )}
+            {pathname === "/contact" ? (
+              <span className="text-[#ffc93c] font-semibold cursor-default">Contact Us (Current)</span>
+            ) : (
+              <Link href="/contact" className="hover:text-white transition-colors">
+                Contact Us
+              </Link>
+            )}
           </div>
         </div>
       </div>

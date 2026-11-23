@@ -95,13 +95,13 @@ export function SeoContentSection() {
           <div className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
             <h4 className="font-semibold text-white mb-1">No Game Memory Injection</h4>
             <p className="text-[11px] text-[#888]">
-              This fortnite chest tracker runs completely outside the game. It does not hook into Fortnite game files, read memory addresses, or trigger anti-cheat software (Easy Anti-Cheat / BattlEye).
+              TrackChest runs completely outside the game. It does not hook into Fortnite game files, read memory addresses, or trigger anti-cheat software (Easy Anti-Cheat / BattlEye).
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">
             <h4 className="font-semibold text-white mb-1">No Epic Account Login</h4>
             <p className="text-[11px] text-[#888]">
-              We never ask for your Epic Games username, email, or OAuth tokens. This fortnite chest tracker companion functions with zero credentials required.
+              We never ask for your Epic Games username, email, or OAuth tokens. The counter functions with zero credentials required.
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-[#242424] border border-[#2e2e2e]">

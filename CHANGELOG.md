@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.9] - 2026-11-23
+
+### Fixed & Enhanced (Title Cleanup, Keyword De-Stufing, Community Data Disclosure & Nav Self-Link Guard)
+- **Title Dedup (`/leekcapper-fortnite`)**:
+  - Removed redundant `| TrackChest` in metadata title to prevent template double-nesting (`Fortnite Leekcapper — Location & Drop Guide | TrackChest`).
+- **Keyword De-Stuffing & Naturalization**:
+  - `/fortnite-chest-counter`: Replaced 4 instances of rigid keyword phrase `chest counter fortnite squad companion/tool` with natural contextual pronouns (`this 4-column squad counter`, `this counter`, `this tool`, `an offline-ready companion`).
+  - `/leekcapper-fortnite`: Rewrote unnatural search-engine phrased sentence into natural gaming prose (`Because of its phonetic pronunciation, the weapon is widely referred to in the community as the "leek caper" while completing the weekly syndicate challenge...`).
+  - Homepage (`SeoContentSection.tsx`): Reduced `fortnite chest tracker` in body down to 1 natural occurrence, avoiding keyword repetition penalties.
+- **Unverified Community Percentage Standardization**:
+  - Across Homepage (`ComparisonTable.tsx`, `site.ts`), `/fortnite-chest-counter`, and `/pirate-token-odds`: explicitly labeled all non-Epic percentages (`~70%–80%`, `~2%–5%`, `~75%`) as `player-community estimates, not official Epic data`.
+- **SiteDirectoryNav Self-Link Guard (`SiteDirectoryNav.tsx`)**:
+  - Implemented dynamic `usePathname()` check. When viewing a specific tool, guide, or legal page, the navigation entry renders as an unclickable active element with a `Current Page` badge instead of linking back to itself.
+
 ## [1.5.8] - 2026-11-23
 
 ### Added (Site-Wide SEO Internal Linking Architecture - Step 1)

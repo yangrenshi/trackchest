@@ -17,13 +17,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fortnite Leekcapper — Location & Drop Guide | TrackChest",
+  title: "Fortnite Leekcapper — Location & Drop Guide",
   description: "Find the Leekcapper in Fortnite Chapter 7. Complete chest and floor loot drop rates, pirate ship locations, and the board a ship quest guide.",
   alternates: {
     canonical: `${siteConfig.url}/leekcapper-fortnite`,
   },
   openGraph: {
-    title: "Fortnite Leekcapper — Location & Drop Guide | TrackChest",
+    title: "Fortnite Leekcapper — Location & Drop Guide",
     description: "How to get the Leekcapper in Fortnite Chapter 7: chest and floor loot spawn odds, pirate ship locations, and quest walkthrough.",
     url: `${siteConfig.url}/leekcapper-fortnite`,
     siteName: siteConfig.name,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fortnite Leekcapper — Location & Drop Guide | TrackChest",
+    title: "Fortnite Leekcapper — Location & Drop Guide",
     description: "Where to find the Leekcapper in Fortnite: container drop rates and board a ship quest guide.",
     images: [`${siteConfig.url}/opengraph-image`],
   },
@@ -171,7 +171,7 @@ export default function LeekCaperFortnitePage() {
         </div>
 
         <p className="text-[#aaa] leading-relaxed">
-          Because of the phonetic similarity, thousands of players searching for the weapon type <strong className="text-white">&quot;leek caper fortnite&quot;</strong> into search engines while trying to resolve the weekly syndicate quest. While in your hand, it grants passive agility buffs, making it an essential tactical swap during high-intensity rotatings across open coastal terrain.
+          Because of its phonetic pronunciation, the weapon is widely referred to in the community as the <strong className="text-white">&quot;leek caper&quot;</strong> while completing the weekly syndicate challenge. While held, it grants passive sprint and agility buffs, making it an essential tactical swap during high-intensity rotations across open coastal terrain.
         </p>
       </section>
 

@@ -7,7 +7,7 @@ export function ComparisonTable() {
     {
       type: "Standard Chest",
       rarity: "Common",
-      spawnRate: "High (~70%–80% community est.)",
+      spawnRate: "High (~70%–80%, player-community estimate, not official Epic data)",
       guaranteedLoot: "1 Weapon (Grey to Rare), Ammo, Consumable, 30 Mats",
       bestLocations: "Houses, attics, roofs, barns",
       badgeClass: "rarity-common",
@@ -16,7 +16,7 @@ export function ComparisonTable() {
     {
       type: "Rare Chest (Blue Glow)",
       rarity: "Rare",
-      spawnRate: "Low (~2%–5% community est.)",
+      spawnRate: "Low (~2%–5%, player-community estimate, not official Epic data)",
       guaranteedLoot: "Guaranteed Blue/Purple/Gold weapon + Big Pot / Chug Splash",
       bestLocations: "High-tier POIs, basements, landmarks",
       badgeClass: "rarity-rare",

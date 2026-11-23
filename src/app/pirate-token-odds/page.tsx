@@ -363,7 +363,7 @@ export default function PirateTokenOddsPage() {
       {/* 怎么用计数器统计 */}
       <section className="p-5 sm:p-6 rounded-2xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-3">
         <h2 className="text-sm font-bold text-white uppercase tracking-wider">
-          How to Track Your Progress Against Official Pirate Token Odds
+          How to Track Your Progress Against Pirate Token Odds
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
           Because Fortnite does not show your progress toward the 137,500 container milestone in real-time (learn <Link href="/how-to-check-chests" className="text-[#ffc93c] underline">how to check chests opened in Fortnite</Link>), competitive players use our companion tools while playing:

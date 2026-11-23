@@ -7,17 +7,17 @@ export function ComparisonTable() {
     {
       name: "Retail Row",
       tier: "Residential Basin",
-      description: "Dense housing sector on the eastern flatlands; two-story homes feature 18+ standard wooden chests hidden inside roof attics and store basements, directly north of the central water tower. Rotates each season — check before you drop.",
+      description: "Dense housing sector on the eastern flatlands; two-story homes feature dense wooden chest clusters hidden inside roof attics and store basements, directly north of the central water tower. Rotates each season — check before you drop.",
     },
     {
       name: "Pleasant Park",
       tier: "Suburban Grid",
-      description: "Iconic northern residential valley; standard wooden chests line 8 detached basements and second-floor bedrooms surrounding the central soccer pavilion. Rotates each season — check before you drop.",
+      description: "Iconic northern residential valley; standard wooden chests line multiple detached basements and second-floor bedrooms surrounding the central soccer pavilion. Rotates each season — check before you drop.",
     },
     {
       name: "Sweaty Sands",
       tier: "Coastal Resort",
-      description: "High-rise beachfront retreat on the western shore; multi-floor hotel suites, pier boardwalks, and waterfront trailers contain 20+ chest nodes. Rotates each season — check before you drop.",
+      description: "High-rise beachfront retreat on the western shore; multi-floor hotel suites, pier boardwalks, and waterfront trailers contain numerous chest nodes. Rotates each season — check before you drop.",
     },
     {
       name: "Lazy Lake",
@@ -27,7 +27,7 @@ export function ComparisonTable() {
     {
       name: "Salty Springs",
       tier: "Central Valley",
-      description: "High-traffic central residential neighborhood; concentrated off-spawn chests cluster inside 5 multi-level house attics and hidden basements. Rotates each season — check before you drop.",
+      description: "High-traffic central residential neighborhood; concentrated off-spawn chests cluster inside multiple house attics and hidden basements. Rotates each season — check before you drop.",
     },
     {
       name: "Dirty Docks",
@@ -67,7 +67,7 @@ export function ComparisonTable() {
     {
       type: "Pirate Token (Shop Access)",
       rarity: "Special",
-      spawnRate: "1 in 137,500 (Official)",
+      spawnRate: "1 in 137,500 (community-tracked)",
       guaranteedLoot: "Shop unlock, Golden skin lottery (1 in 1.56M), Mythic loot",
       bestLocations: "Any standard, rare, sprite, or vault container — not Pirate Crates",
       badgeClass: "rarity-legendary",
@@ -157,7 +157,7 @@ export function ComparisonTable() {
             <span>Chapter 7 Named POI Chest Routes &amp; Spawn Spots</span>
           </h3>
           <p className="text-xs text-[#9a9a9a] mt-1 leading-relaxed">
-            Targeting high-density container drops accelerates your match economy. Compare these confirmed POI chest clusters across Chapter 7 Treasure Hunters, or review the comprehensive visual guides in our <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>:
+            Targeting high-density container drops accelerates your match economy. Compare these commonly reported POI chest clusters across Chapter 7 Treasure Hunters, or review the comprehensive visual guides in our <Link href="/chest-types" className="text-[#ffc93c] underline font-medium">Fortnite chest types encyclopedia</Link>:
           </p>
         </div>
 

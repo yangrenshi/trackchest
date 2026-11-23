@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [1.6.3] - 2026-11-23
+
+### Fixed & Enhanced (Drop Rate De-Officialization & Qualitative POI Refinement)
+- **Global Drop Rate De-Officialization**:
+  - Replaced `"1 in 137,500 (Official)"` with `"1 in 137,500 (community-tracked)"` in homepage comparison table (`ComparisonTable.tsx`).
+  - Removed `"official"` in career progress paragraph (`SeoContentSection.tsx`).
+  - Removed `"Official"` from H2 heading in `/pirate-token-odds` (`pirate-token-odds/page.tsx`).
+  - Updated directory navigation card description from `"Official 1 in 137,500..."` to `"Community-tracked 1 in 137,500..."` (`SiteDirectoryNav.tsx`).
+  - Removed `"Official"` from bottom cross-link in `/chest-types` (`chest-types/page.tsx`).
+- **POI Clusters Qualitative Refinement (`ComparisonTable.tsx`)**:
+  - Replaced unverified exact counts (`18+`, `8 detached`, `20+`, `5 multi-level`) with natural qualitative descriptions (`dense wooden chest clusters`, `multiple detached basements`, `numerous chest nodes`, `multiple house attics`).
+  - Softened intro claim from `"these confirmed POI chest clusters"` to `"these commonly reported POI chest clusters"`.
+  - Retained explicit rotation disclaimer `"Rotates each season — check before you drop"` across all locations.
+- **Anchor Target Verification**:
+  - Confirmed `#poi-chest-routes` anchor presence and scroll-margin compatibility with the incoming reciprocal link from `/chest-types`.
+
 ## [1.6.2] - 2026-11-23
 
 ### Fixed & Enhanced (Community-Tracked Wording, Active POI Audit & Reciprocal Internal Linking)

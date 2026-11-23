@@ -27,7 +27,7 @@ export function SiteDirectoryNav() {
       title: "Pirate Token Odds Calculator",
       href: "/pirate-token-odds",
       badge: "Odds & Math",
-      description: "Official 1 in 137,500 drop probability simulator, milestone thresholds, and Treasure Hours math.",
+      description: "Community-tracked 1 in 137,500 drop probability simulator, milestone thresholds, and Treasure Hours math.",
       icon: Calculator,
     },
   ];

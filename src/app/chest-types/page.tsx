@@ -233,7 +233,7 @@ export default function ChestTypesPage() {
           Leekcapper Guide &rarr;
         </Link>
         <Link href="/pirate-token-odds" className="text-[#9a9a9a] hover:text-white underline">
-          Pirate Token Odds (Official 1/137.5k) &rarr;
+          Pirate Token Odds (1/137.5k) &rarr;
         </Link>
       </div>
     </div>

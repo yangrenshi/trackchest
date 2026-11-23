@@ -78,7 +78,7 @@ export function SeoContentSection() {
             <span>Season Resets &amp; Archiving Career Data</span>
           </h3>
           <p className="text-xs text-[#9a9a9a] leading-relaxed">
-            Whenever Epic Games rolls out a new Fortnite season, in-game milestone quests reset to zero, wiping your seasonal container tally. With TrackChest, your career logs stay safely preserved in browser LocalStorage. Use the built-in &ldquo;Backup&rdquo; button at the end of each season to export your historical JSON snapshot, allowing you to archive lifetime chest milestones across all Chapters while verifying your cumulative progress against official <Link href="/pirate-token-odds" className="text-[#ffc93c] underline font-medium">Pirate Token odds</Link>.
+            Whenever Epic Games rolls out a new Fortnite season, in-game milestone quests reset to zero, wiping your seasonal container tally. With TrackChest, your career logs stay safely preserved in browser LocalStorage. Use the built-in &ldquo;Backup&rdquo; button at the end of each season to export your historical JSON snapshot, allowing you to archive lifetime chest milestones across all Chapters while verifying your cumulative progress against <Link href="/pirate-token-odds" className="text-[#ffc93c] underline font-medium">Pirate Token odds</Link>.
           </p>
         </section>
       </div>

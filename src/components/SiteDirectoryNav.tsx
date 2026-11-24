@@ -21,7 +21,7 @@ export function SiteDirectoryNav() {
       title: "4-Column Squad Chest Counter",
       href: "/fortnite-chest-counter",
       badge: "Squad Tool",
-      description: "Dedicated 4-column counter tracking Standard, Rare, Sprite, and Boss Vault chests in parallel.",
+      description: "Dedicated 4-column counter tracking Standard, Rare, Sprite, and Island Vault chests in parallel.",
       icon: Layers,
     },
     {

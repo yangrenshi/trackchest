@@ -157,7 +157,7 @@ export default function PirateTokenOddsPage() {
           <span>The Math Behind the 1 in 137,500 Drop Rate</span>
         </h2>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          In the {SEASON_CONFIG.name} collaboration season, opening standard, rare, sprite, or boss vault containers (detailed in our <Link href="/chest-types" className="text-[#ffc93c] underline">Fortnite chest types guide</Link>) grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. Based on widely reported community drop data (updated {SEASON_CONFIG.lastUpdated}):
+          In the {SEASON_CONFIG.name} collaboration season, opening standard, rare, sprite, or island vault containers (detailed in our <Link href="/chest-types" className="text-[#ffc93c] underline">Fortnite chest types guide</Link>) grants a tiny statistical probability of rolling the coveted <strong className="text-white">Pirate Shop Access Token</strong>. Based on widely reported community drop data (updated {SEASON_CONFIG.lastUpdated}):
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -247,7 +247,7 @@ export default function PirateTokenOddsPage() {
             Because loot generation relies on real-time server-side random number generation, containers do not hold static predetermined contents. In custom games, creative replays, or duplicate match seeds, searching the identical chest location across separate instances consistently yields entirely different weapons, shield items, and ammunition drops.
           </p>
           <p>
-            For players hunting the Chapter 7 Pirate Shop Access Token, this dynamic architecture means every container interaction functions as an independent Bernoulli trial. There is zero memory, cumulative momentum, or hidden bad-luck pity timer in the game engine. Opening 50, 100, or even 10,000 containers without finding a token does not improve your odds on the next search; every single eligible chest—whether standard wooden chests, rare blue containers, sprite shrines, or boss vaults—rolls against the identical baseline 1 in 137,500 probability. Statistically, reaching a 50% cumulative probability requires opening 95,307 chests, meaning extended dry spells are mathematically expected rather than proof of a rigged seed.
+            For players hunting the Chapter 7 Pirate Shop Access Token, this dynamic architecture means every container interaction functions as an independent Bernoulli trial. There is zero memory, cumulative momentum, or hidden bad-luck pity timer in the game engine. Opening 50, 100, or even 10,000 containers without finding a token does not improve your odds on the next search; every single eligible chest—whether standard wooden chests, rare blue containers, sprite shrines, or island vaults—rolls against the identical baseline 1 in 137,500 probability. Statistically, reaching a 50% cumulative probability requires opening 95,307 chests, meaning extended dry spells are mathematically expected rather than proof of a rigged seed.
           </p>
           <p>
             To model your squad&apos;s realistic mathematical progress across thousands of independent container opens, use our companion Pirate Token odds calculator.

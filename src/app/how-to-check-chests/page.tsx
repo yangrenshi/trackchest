@@ -132,7 +132,7 @@ export default function HowToCheckChestsPage() {
         <ul className="list-disc pl-5 space-y-1 text-xs text-[#9a9a9a]">
           <li><strong>Chest Specialist:</strong> Awarded for opening 7+ chests in a single game.</li>
           <li><strong>Chest Expert:</strong> Awarded for opening 12+ chests in a single game.</li>
-          <li><strong>Vault Raider:</strong> Awarded for accessing and opening all chests inside a boss vault.</li>
+          <li><strong>Vault Raider:</strong> Awarded for accessing and opening all chests inside an island vault.</li>
         </ul>
       </section>
 

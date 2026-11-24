@@ -99,11 +99,11 @@ export function CategorizedCounterView() {
     {
       key: "vault" as const,
       name: "Vault Bunker",
-      rarity: "Mythic / Boss",
+      rarity: "Mythic",
       color: "#ffd510",
       bgClass: "rarity-mythic",
       btnColor: "bg-[#c4980a] hover:bg-[#deb017] active:bg-[#a88206]",
-      desc: "Double gold gear & medallions",
+      desc: "Rare Blue Chests & guaranteed Sprite Chest",
     },
   ];
 

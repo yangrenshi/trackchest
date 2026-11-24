@@ -53,7 +53,7 @@ export default function ChestCounterPage() {
       price: "0",
       priceCurrency: "USD",
     },
-    description: "Specialized 4-column categorized chest tracker Fortnite competitive squads use for Standard, Rare Blue, Sprite Shrine, and Boss Vault containers.",
+    description: "Specialized 4-column categorized chest tracker Fortnite competitive squads use for Standard, Rare Blue, Sprite Shrine, and Island Vault containers.",
   };
 
   // 专享 FAQ 结构化数据 (拉满 10/10)
@@ -134,7 +134,7 @@ export default function ChestCounterPage() {
           Chest Counter Fortnite — 4-Column Squad Loot Companion
         </h1>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          The dedicated 4-column chest counter Fortnite squads and tournament duos rely on during competitive rotations. Log Standard, Rare Blue, Sprite Shrine, and Boss Vault containers in parallel columns with zero latency and instant LocalStorage backups.
+          The dedicated 4-column chest counter Fortnite squads and tournament duos rely on during competitive rotations. Log Standard, Rare Blue, Sprite Shrine, and Island Vault containers in parallel columns with zero latency and instant LocalStorage backups.
         </p>
       </div>
 
@@ -158,7 +158,7 @@ export default function ChestCounterPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/fortnite-chest-counter-match-hud.png"
-            alt="Fortnite Chest Counter 4-column UI display example showing counts for Standard, Rare, Sprite, and Boss Vault chests"
+            alt="Fortnite Chest Counter 4-column UI display example showing counts for Standard, Rare, Sprite, and Island Vault chests"
             width={1280}
             height={860}
             loading="eager"
@@ -182,7 +182,7 @@ export default function ChestCounterPage() {
           While casual players can get by with a simple single-button clicker, competitive tournament trios and ranked squads understand that all containers in Fortnite Battle Royale are not created equal. Opening 15 standard wooden chests gives you plenty of common ammunition and bandages, but it guarantees zero high-tier rifles and zero guaranteed shields. Using this 4-column squad counter transforms raw looting into actionable tactical telemetry.
         </p>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          In {SEASON_CONFIG.name}, the map is filled with differentiated loot tiers. By separating your counts into Standard, Rare Blue, Sprite Shrines, and Boss Vaults, your in-game leader (IGL) knows exactly when your team has crossed the statistical threshold required to initiate mid-game rotations without getting caught out-gunned across open fields.
+          In {SEASON_CONFIG.name}, the map is filled with differentiated loot tiers. By separating your counts into Standard, Rare Blue, Sprite Shrines, and Island Vaults, your in-game leader (IGL) knows exactly when your team has crossed the statistical threshold required to initiate mid-game rotations without getting caught out-gunned across open fields.
         </p>
       </section>
 

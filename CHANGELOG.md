@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.1] - 2026-11-24
+
+### Fixed & Enhanced (Counter Page Residual Boss Vault Scrubbing & Loot Realignment)
+- **Boss Vault Residual Scrubbing**:
+  - Replaced `Boss Vault containers` with `Island Vault containers` in `/fortnite-chest-counter` header paragraph and metadata description.
+  - Normalized column 4 card sub-badge from `Mythic / Boss` to `Mythic`, preserving the title `Vault Bunker`.
+  - Replaced `and Boss Vaults` with `and Island Vaults` in competitive rotation strategy paragraph.
+  - Updated universal directory component (`SiteDirectoryNav.tsx`) description to `"Dedicated 4-column counter tracking Standard, Rare, Sprite, and Island Vault chests in parallel."`, propagating across Homepage, `/chest-types`, `/leekcapper-fortnite`, and `/fortnite-chest-counter`.
+  - Scrubbed legacy `boss vault` mentions in `/pirate-token-odds` and `/how-to-check-chests`.
+- **Column 4 Loot Yield Alignment (`CategorizedCounterView.tsx`)**:
+  - Replaced unverified `"Double gold gear & medallions"` with `"Rare Blue Chests & guaranteed Sprite Chest"`, eliminating unsourced medallions and aligning 100% with `/chest-types` and counter body text.
+
 ## [1.7.0] - 2026-11-23
 
 ### Fixed & Enhanced (Vault Mechanic Realignment & Verified Vessel Names)

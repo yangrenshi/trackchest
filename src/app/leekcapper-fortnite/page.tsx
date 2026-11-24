@@ -191,7 +191,7 @@ export default function LeekCaperFortnitePage() {
           <span>2. Where to Find the Leekcapper: Container &amp; Floor Loot Drop Rates</span>
         </h2>
         <p className="text-[#aaa] leading-relaxed">
-          In the Chapter 7 general Battle Royale loot pool, the Leekcapper drops across three main sources: <strong>Floor Loot, Standard Chests, and Rare Chests</strong>. The most reliable way to secure it in any match is the combined volume of residential Chests and Floor Loot. Below is an overview based on player-community observations:
+          In the Chapter 7 general Battle Royale loot pool, the Leekcapper drops across three primary sources—<strong>Floor Loot, Standard Chests, and Rare Chests</strong>—with auxiliary potential from select special containers. The most reliable way to secure it in any match is the combined volume of residential Chests and Floor Loot. Below is an overview based on player-community observations:
         </p>
 
         <div className="p-3 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] text-xs text-[#9a9a9a] leading-relaxed">
@@ -243,7 +243,7 @@ export default function LeekCaperFortnitePage() {
                   <span>Sprite Shrines</span>
                 </td>
                 <td className="p-3 text-[#aaa]">Biome exclusive</td>
-                <td className="p-3">3–5 minutes</td>
+                <td className="p-3">—</td>
                 <td className="p-3">Interact with floating sprites around jungle glades for quick auxiliary loot bursts.</td>
               </tr>
               <tr>
@@ -252,7 +252,7 @@ export default function LeekCaperFortnitePage() {
                   <span>Island Vault Bunkers</span>
                 </td>
                 <td className="p-3 text-[#aaa]">Vault only</td>
-                <td className="p-3">5–8 minutes</td>
+                <td className="p-3">—</td>
                 <td className="p-3">Requires a Vault Key found in chests; grants access to multiple Rare Chests and a guaranteed Sprite Chest at the lock-marked vault.</td>
               </tr>
               <tr className="bg-[#141414] text-[#777]">

@@ -21,47 +21,28 @@ export function getTreasureBannerState(date: Date = new Date()): TreasureBannerS
   const utcDay = String(date.getUTCDate()).padStart(2, "0");
   const utcDateStr = `${utcYear}-${utcMonth}-${utcDay}`;
 
-  for (const w of TREASURE_WAVES) {
-    const isLocalLive = localDateStr >= w.startDate && localDateStr <= w.endDate;
-    const isUtcLive = utcDateStr >= w.startDate && utcDateStr <= w.endDate;
-    if (isLocalLive || isUtcLive) {
-      return {
-        status: "live",
-        mainText: w.wave === 3 ? SEASON_CONFIG.wave3ActiveBannerText : `Wave ${w.wave} is live — ${w.multiplierText} (${w.oddsText})`,
-        badgeText: w.wave === 3 ? "Wave 3 Active" : `LIVE • ${w.multiplierText.toUpperCase()}`,
-      };
-    }
-  }
-
-  if (localDateStr < TREASURE_WAVES[0].startDate && utcDateStr < TREASURE_WAVES[0].startDate) {
-    const w1 = TREASURE_WAVES[0];
+  // 档位 2: 11/28 当天 (Wave 3 active)
+  if (localDateStr === "2026-11-28" || utcDateStr === "2026-11-28") {
     return {
-      status: "upcoming",
-      mainText: `Wave ${w1.wave}: Starts ${w1.dateStr} • ${w1.multiplierText}`,
-      badgeText: w1.badge,
+      status: "live",
+      mainText: SEASON_CONFIG.wave3ActiveBannerText,
+      badgeText: "Wave 3 Active",
     };
   }
 
-  if (localDateStr < TREASURE_WAVES[1].startDate) {
+  // 档位 3: 11/29 起 (Wave 3 ended)
+  if (localDateStr >= "2026-11-29" || utcDateStr >= "2026-11-29") {
     return {
       status: "ended",
-      mainText: `Wave ${TREASURE_WAVES[0].wave} ended — next: ${TREASURE_WAVES[0].nextInfo}`,
-      badgeText: `Wave ${TREASURE_WAVES[0].wave} Ended`,
+      mainText: SEASON_CONFIG.postWave3BannerText,
+      badgeText: SEASON_CONFIG.postWave3BadgeText,
     };
   }
 
-  if (localDateStr < TREASURE_WAVES[2].startDate) {
-    return {
-      status: "ended",
-      mainText: `Wave ${TREASURE_WAVES[1].wave} ended — next: ${TREASURE_WAVES[1].nextInfo}`,
-      badgeText: `Wave ${TREASURE_WAVES[1].wave} Ended`,
-    };
-  }
-
-  // 11/28 之后（11/29 起）生效的最终结束状态
+  // 档位 1: 今天至 11/27 (Wave 2 ended — next: Nov 28 (2x))
   return {
     status: "ended",
-    mainText: SEASON_CONFIG.postWave3BannerText,
-    badgeText: SEASON_CONFIG.postWave3BadgeText,
+    mainText: `Wave ${TREASURE_WAVES[1].wave} ended — next: ${TREASURE_WAVES[1].nextInfo}`,
+    badgeText: `Wave ${TREASURE_WAVES[1].wave} Ended`,
   };
 }

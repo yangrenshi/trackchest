@@ -88,7 +88,7 @@ export const SEASON_CONFIG: SeasonConfig = {
       shortDateStr: "Sat, Nov 28",
       fullDateStr: "Saturday, November 28, 2026",
       startDate: "2026-11-28",
-      endDate: "2026-11-29",
+      endDate: "2026-11-28",
       nextInfo: "Season Finale",
       multiplier: 2.0,
       multiplierText: "2.0x drops",

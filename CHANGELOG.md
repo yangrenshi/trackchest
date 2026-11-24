@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.6] - 2026-11-24
+
+### Fixed & Verified (Single Source of Truth Date Verification, 3-Tier Banner & Leekcapper Sources)
+- **Leekcapper Table & Intro Alignment (`/leekcapper-fortnite`)**:
+  - Rephrased section intro to strictly distinguish primary sources from auxiliary containers: `"In the Chapter 7 general Battle Royale loot pool, the Leekcapper drops across three primary sources—Floor Loot, Standard Chests, and Rare Chests—with auxiliary potential from select special containers."`
+  - Cleared misleading search durations for auxiliary containers: set Average Search Time for Sprite Shrines and Island Vault Bunkers to `—` (matching Commercial Safes and Buried Crates).
+- **Banner 3-Tier Schedule Locked (`treasureHours.ts` & `season.ts`)**:
+  - Wave 3 end date normalized to `2026-11-28`, ensuring zero-latency automatic turnover on Nov 29 00:00:
+    - Today through Nov 27: `Wave 2 ended — next: Nov 28 (2x)`
+    - Nov 28 live state: `Wave 3 active — 2x Treasure Hours`
+    - Nov 29+ concluded state: `Wave 3 ended — Treasure Hours complete`
+- **Confirmed Zero Page Residuals**:
+  - Validated that Homepage, `/chest-types`, `/fortnite-chest-counter`, `/pirate-token-odds`, and `/leekcapper-fortnite` have zero hardcoded date literals and are strictly bound to `SEASON_CONFIG` and `TreasureHoursBanner`.
+
 ## [1.7.5] - 2026-11-24
 
 ### Fixed & Enhanced (Leekcapper Spawn Alignments, Odds Phrasing & Future Banners)

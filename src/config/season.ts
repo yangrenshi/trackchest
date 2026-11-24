@@ -26,6 +26,8 @@ export interface SeasonConfig {
   endMaintenanceDate: string; // e.g., "December 4–5, 2026"
   nextChapter: string; // e.g., "Chapter 8"
   lastUpdated: string; // e.g., "Nov 17, 2026"
+  postWave3BannerText: string; // e.g., "Wave 3 ended — Treasure Hours complete"
+  postWave3BadgeText: string; // e.g., "Concluded"
   wave1ButtonLabel: string; // e.g., "Sat, Nov 14 Boost (1.5x)"
   waves2And3ButtonLabel: string; // e.g., "Sat, Nov 21 & 28 (2.0x)"
   waves: TreasureWave[];
@@ -43,6 +45,8 @@ export const SEASON_CONFIG: SeasonConfig = {
   endMaintenanceDate: "December 4–5, 2026",
   nextChapter: "Chapter 8",
   lastUpdated: "Nov 24, 2026",
+  postWave3BannerText: "Wave 3 ended — Treasure Hours complete",
+  postWave3BadgeText: "Concluded",
   wave1ButtonLabel: "Sat, Nov 14 Boost (1.5x)",
   waves2And3ButtonLabel: "Sat, Nov 21 & 28 (2.0x)",
   waves: [

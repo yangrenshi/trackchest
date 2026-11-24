@@ -98,7 +98,7 @@ export default function PirateTokenOddsPage() {
         name: `What happens to unspent Pirate Tokens when ${SEASON_CONFIG.chapter} ends on ${SEASON_CONFIG.endDateShort}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `All unspent Pirate Tokens expire immediately when servers shut down for ${SEASON_CONFIG.nextChapter} maintenance on ${SEASON_CONFIG.endMaintenanceDate}. Tokens do not convert to V-Bucks or carry forward into the next season, though redeemed cosmetics remain permanent.`,
+          text: `All unspent Pirate Tokens expire immediately when servers shut down for season maintenance on ${SEASON_CONFIG.endMaintenanceDate}. Tokens do not convert to V-Bucks or carry forward into the next season, though redeemed cosmetics remain permanent.`,
         },
       },
     ],
@@ -170,7 +170,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
             <h3 className="font-semibold text-white">Ultra-Rare Golden Skin (1 in 1.56M)</h3>
             <p className="text-[#9a9a9a] text-[11px] leading-relaxed">
-              The season-exclusive Golden Skin variant drops at roughly 1 per 1,562,500 chests based on community drop tables. It remains unconfirmed how many accounts will unlock it organically before {SEASON_CONFIG.nextChapter} launches on {SEASON_CONFIG.endDateShort}, making it one of the rarest cosmetic drops in Fortnite history.
+              The season-exclusive Golden Skin variant drops at roughly 1 per 1,562,500 chests based on community drop tables. It remains unconfirmed how many accounts will unlock it organically before the season ends on Dec 4, making it one of the rarest cosmetic drops in Fortnite history.
             </p>
           </div>
         </div>
@@ -306,14 +306,14 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
             <h3 className="font-bold text-white">Expiration Without Carry-Over</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              Any unspent Pirate Tokens will expire permanently when the {SEASON_CONFIG.nextChapter} seasonal update goes live on {SEASON_CONFIG.endMaintenanceDate}. Tokens do not roll over into your inventory for future seasons, nor will they convert into V-Bucks or Battle Pass stars. If you secure a token during a match, ensure you utilize it immediately at the secret shop rather than postponing your redemption.
+              Any unspent Pirate Tokens will expire permanently when the season ends on Dec 4. Tokens do not roll over into your inventory for future seasons, nor will they convert into V-Bucks or Battle Pass stars. If you secure a token during a match, ensure you utilize it immediately at the secret shop rather than postponing your redemption.
             </p>
           </div>
 
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-2">
             <h3 className="font-bold text-white">Permanent Account Cosmetic Retention</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              While the tokens themselves are ephemeral, all cosmetic rewards redeemed through the Pirate Shop—including the ultra-rare 1 in 1.56M Golden Skin variant, weapon wraps, and lobby tracks—are bound permanently to your Epic Games Locker. Because this mini-season is non-recurring, items earned will likely stand among the rarest legacy cosmetics in Fortnite history.
+              While the tokens themselves are ephemeral, all cosmetic rewards redeemed through the Pirate Shop—including the ultra-rare 1 in 1.56M Golden Skin variant unlocked before the season ends on Dec 4, weapon wraps, and lobby tracks—are bound permanently to your Epic Games Locker. Because this mini-season is non-recurring, items earned will likely stand among the rarest legacy cosmetics in Fortnite history.
             </p>
           </div>
         </div>

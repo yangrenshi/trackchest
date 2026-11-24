@@ -58,9 +58,10 @@ export function getTreasureBannerState(date: Date = new Date()): TreasureBannerS
     };
   }
 
+  // 11/28 之后（11/29 起）生效的最终结束状态
   return {
     status: "ended",
-    mainText: `Treasure Hours concluded — season ends ${SEASON_CONFIG.endMaintenanceDate}`,
-    badgeText: "Concluded",
+    mainText: SEASON_CONFIG.postWave3BannerText,
+    badgeText: SEASON_CONFIG.postWave3BadgeText,
   };
 }

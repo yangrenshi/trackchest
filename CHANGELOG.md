@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.3] - 2026-11-24
+
+### Fixed & Enhanced (Decouple Chapter 8 Launch & Pre-configure Post-Wave 3 Banner)
+- **Decoupled Season Conclusion from Chapter 8 Launch (`/pirate-token-odds`)**:
+  - Replaced `before Chapter 8 launches on December 4` with `before the season ends on Dec 4` across both Golden Skin paragraphs (odds summary card and permanent locker retention section).
+  - Aligned phrasing strictly with the section heading `"What Happens to Pirate Tokens When Chapter 7 Concludes on December 4"`.
+- **Pre-configured Post-Wave 3 State (Nov 29+ Single Source of Truth)**:
+  - Added centralized configuration fields `postWave3BannerText: "Wave 3 ended — Treasure Hours complete"` and `postWave3BadgeText: "Concluded"` to `season.ts`.
+  - Wired `treasureHours.ts` fallback state directly to `SEASON_CONFIG.postWave3BannerText`, enabling zero-maintenance automatic transition after the Nov 28 finale.
+  - Successfully validated propagation across all 5 core routes with simulated build and confirmed 100% restoration to active Wave 2/3 countdown state.
+
 ## [1.7.2] - 2026-11-24
 
 ### Verified (Single Source of Truth Proof of Date Configuration)

@@ -191,7 +191,7 @@ export default function LeekCaperFortnitePage() {
           <span>2. Where to Find the Leekcapper: Container &amp; Floor Loot Drop Rates</span>
         </h2>
         <p className="text-[#aaa] leading-relaxed">
-          In the Chapter 7 general Battle Royale loot pool, the Leekcapper drops across three main sources: <strong>Floor Loot, Standard Chests, and Rare Chests</strong>. The most reliable way to secure it in any match is the combined volume of residential Chests and Floor Loot. Below is an overview based on player-community observations:
+          In the Chapter 7 general Battle Royale loot pool, the Leekcapper drops across three main sources: <strong>Floor Loot, Standard Chests, and Rare Chests</strong>. The most reliable way to secure it in any match is the combined volume of residential Chests and Floor Loot. Rates in the table below reflect how frequently each container itself spawns across the map, not the weapon's internal drop rate; because the Leekcapper is an Epic-rarity weapon with no reliable public drop data from Epic Games, this table serves to evaluate which spawn source offers the highest tactical search efficiency. Below is an overview based on player-community observations:
         </p>
 
         {/* 原生 React HTML <table> 对比组件 */}
@@ -200,7 +200,7 @@ export default function LeekCaperFortnitePage() {
             <thead>
               <tr className="bg-[#1f1f1f] text-white border-b border-[#2e2e2e]">
                 <th className="p-3 font-semibold">Spawn Source</th>
-                <th className="p-3 font-semibold">Drop Probability</th>
+                <th className="p-3 font-semibold">Container Spawn Rate</th>
                 <th className="p-3 font-semibold">Average Search Time</th>
                 <th className="p-3 font-semibold">Tactical Grinding Recommendation</th>
               </tr>

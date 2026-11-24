@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.4] - 2026-11-24
+
+### Fixed & Verified (Leekcapper Container Spawn Rate Clarification & Dec 05/08 SSOT Proof)
+- **Leekcapper Table Header & Drop Odds Disclaimer (`/leekcapper-fortnite`)**:
+  - Ensured table column header accurately displays `Container Spawn Rate`.
+  - Added dedicated informational disclaimer above the table: clarifies that percentages denote island-wide container spawn frequencies rather than weapon drop probabilities, noting that Epic-rarity Leekcapper drop rates have no official public odds, and that the table is designed strictly for evaluating search efficiency.
+  - Kept all table rates, percentages, and source citations 100% intact.
+- **Single Source of Truth Date Proof (`Dec 05` / `Dec 08` Multi-Page Verification)**:
+  - Temporarily updated `season.ts` with `next: Dec 05 (2x)` and season end date `Dec 08, 2026`.
+  - Executed static production build and verified exact matching HTML output across all 5 core routes (Homepage, `/chest-types`, `/fortnite-chest-counter`, `/pirate-token-odds`, `/leekcapper-fortnite`).
+  - Restored configuration back to `Nov 28 (2x)` and `Dec 4, 2026`, re-ran production build, and verified complete recovery with zero residuals.
+
 ## [1.7.3] - 2026-11-24
 
 ### Fixed & Enhanced (Decouple Chapter 8 Launch & Pre-configure Post-Wave 3 Banner)

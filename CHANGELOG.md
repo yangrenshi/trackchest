@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.2] - 2026-11-24
+
+### Verified (Single Source of Truth Proof of Date Configuration)
+- **Zero-Residual Date Configuration Verification**:
+  - Successfully proved centralized single-source date configuration across all 5 core routes (Homepage, `/pirate-token-odds`, `/chest-types`, `/fortnite-chest-counter`, `/leekcapper-fortnite`).
+  - Executed temporary test build with next Wave date shifted from `Nov 28` to `Dec 05`:
+    - All 5 pages dynamically transformed to `Wave 2 ended — next: Dec 05 (2x)` with zero residual occurrences of `Nov 28` across the entire rendered static output.
+  - Advanced centralized `lastUpdated` timestamp in `season.ts` to actual modification date `Nov 24, 2026`, propagating simultaneously across all five pages.
+  - Reverted next Wave date strictly to `Nov 28` and verified 100% restoration across all routes via fresh static production build.
+
 ## [1.7.1] - 2026-11-24
 
 ### Fixed & Enhanced (Counter Page Residual Boss Vault Scrubbing & Loot Realignment)

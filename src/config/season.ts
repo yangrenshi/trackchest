@@ -29,6 +29,8 @@ export interface SeasonConfig {
   wave3ActiveBannerText: string; // e.g., "Wave 3 active — 2x Treasure Hours"
   postWave3BannerText: string; // e.g., "Wave 3 ended — Treasure Hours complete"
   postWave3BadgeText: string; // e.g., "Concluded"
+  seasonEndedBannerText: string; // e.g., "Season ended — Chapter 7 complete"
+  seasonEndedBadgeText: string; // e.g., "Season Ended"
   wave1ButtonLabel: string; // e.g., "Sat, Nov 14 Boost (1.5x)"
   waves2And3ButtonLabel: string; // e.g., "Sat, Nov 21 & 28 (2.0x)"
   waves: TreasureWave[];
@@ -49,6 +51,8 @@ export const SEASON_CONFIG: SeasonConfig = {
   wave3ActiveBannerText: "Wave 3 active — 2x Treasure Hours",
   postWave3BannerText: "Wave 3 ended — Treasure Hours complete",
   postWave3BadgeText: "Concluded",
+  seasonEndedBannerText: "Season ended — Chapter 7 complete",
+  seasonEndedBadgeText: "Season Ended",
   wave1ButtonLabel: "Sat, Nov 14 Boost (1.5x)",
   waves2And3ButtonLabel: "Sat, Nov 21 & 28 (2.0x)",
   waves: [

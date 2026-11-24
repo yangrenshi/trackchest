@@ -7,6 +7,9 @@ import { DETAILED_CHEST_TYPES } from "@/config/chestTypes";
 import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 import { ArrowLeft, MapPin, Eye, Compass, AlertCircle, PackageCheck, ArrowRight } from "lucide-react";
 
+// ISR: 每小时后台自动重新验证与静态再生成
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Fortnite Chest Types — Chapter 7 Spawns",
   description: "Chapter 7 chest guide: spawn locations, visual cues and routing for Standard, Rare, Sprite and Vault chests, plus Pirate Crates and Safes.",

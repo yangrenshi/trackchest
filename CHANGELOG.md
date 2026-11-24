@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.7] - 2026-11-24
+
+### Fixed & Enhanced (America/New_York Single Timezone, 4-Tier Banner, ISR & QA Docs)
+- **Unified Timezone to America/New_York (EST)**:
+  - Eliminated dual-timezone `localDateStr || utcDateStr` race conditions.
+  - Implemented `getEasternDateString()` as the single source of truth using `Intl.DateTimeFormat` (`timeZone: "America/New_York"`), strictly matching Fortnite's US Eastern event schedule.
+- **Added 4th Banner Tier (Season Ended)**:
+  - Configured 4th tier: `Season ended — Chapter 7 complete` triggered for Eastern dates `>= 2026-12-05`.
+  - Maintained full 4-tier lifecycle:
+    - Current (thru Nov 27): `Wave 2 ended — next: Nov 28 (2x)`
+    - Wave 3 Active (Nov 28): `Wave 3 active — 2x Treasure Hours`
+    - Post-Wave 3 (Nov 29 – Dec 4): `Wave 3 ended — Treasure Hours complete`
+    - Post-Season (Dec 5+): `Season ended — Chapter 7 complete`
+- **Enabled ISR (Incremental Static Regeneration) on Core Routes**:
+  - Exported `revalidate = 3600` across all 5 core routes (`/`, `/chest-types`, `/fortnite-chest-counter`, `/pirate-token-odds`, `/leekcapper-fortnite`).
+  - Ensures server-side HTML automatically regenerates every hour on Vercel without manual redeployments, keeping social crawlers and search indexers fresh.
+- **QA Parameter Documentation**:
+  - Documented `?date=YYYY-MM-DD` query parameter in `README.md` for internal preview, staging, and automated QA diagnosis.
+
 ## [1.7.6] - 2026-11-24
 
 ### Fixed & Verified (Single Source of Truth Date Verification, 3-Tier Banner & Leekcapper Sources)

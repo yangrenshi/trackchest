@@ -10,6 +10,9 @@ import {
   HelpCircle, Compass, Target, Trophy, Flame
 } from "lucide-react";
 
+// ISR: 每小时后台自动重新验证与静态再生成
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Chest Counter Fortnite — 4-Column Tool",
   description: "Track Standard, Rare, Sprite, and Vault chests in four parallel columns during Chapter 7 squad matches.",

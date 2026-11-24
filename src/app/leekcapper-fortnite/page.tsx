@@ -18,6 +18,9 @@ import {
   Box
 } from "lucide-react";
 
+// ISR: 每小时后台自动重新验证与静态再生成
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Fortnite Leekcapper — Location & Drop Guide",
   description: "Find the Leekcapper in Fortnite Chapter 7. Complete chest and floor loot drop rates, pirate ship locations, and the board a ship quest guide.",

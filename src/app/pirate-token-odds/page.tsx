@@ -8,6 +8,9 @@ import { PirateTokenCalculator } from "@/components/PirateTokenCalculator";
 import { ArrowLeft, CheckCircle2, Calendar, ShieldCheck, Flame, Box, HelpCircle, AlertTriangle, Coins } from "lucide-react";
 import { TreasureHoursBanner } from "@/components/TreasureHoursBanner";
 
+// ISR: 每小时后台自动重新验证与静态再生成
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Fortnite Pirate Token Odds — Drop Rates",
   description: "Pirate Token drop odds: 1 in 137,500. See how many chests you need for 50%, 90% and 99% — plus Treasure Hours multipliers.",

@@ -52,7 +52,7 @@ export const SEASON_CONFIG: SeasonConfig = {
   postWave3BannerText: "Wave 3 ended — Treasure Hours complete",
   postWave3BadgeText: "Concluded",
   seasonEndedBannerText: "Season ended — Chapter 7 complete",
-  seasonEndedBadgeText: "Season Ended",
+  seasonEndedBadgeText: "Season Over",
   wave1ButtonLabel: "Sat, Nov 14 Boost (1.5x)",
   waves2And3ButtonLabel: "Sat, Nov 21 & 28 (2.0x)",
   waves: [

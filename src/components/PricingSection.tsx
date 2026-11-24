@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Check, ShieldCheck } from "lucide-react";
 
 export function PricingSection() {
@@ -35,12 +36,12 @@ export function PricingSection() {
         </div>
 
         <div className="shrink-0">
-          <a
-            href="#tracker-app"
+          <Link
+            href="/#tracker-app"
             className="px-5 py-2.5 rounded-lg bg-[#ffc93c] hover:bg-[#ffd766] text-[#121212] font-semibold text-xs transition-colors btn-press inline-block"
           >
             Start Tracking
-          </a>
+          </Link>
         </div>
       </div>
     </section>

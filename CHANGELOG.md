@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.8] - 2026-11-24
+
+### Fixed (Start Tracking Absolute Href & Season Over Badge)
+- **Start Tracking Button Href Fix (`PricingSection.tsx`)**:
+  - Replaced relative hash anchor `<a href="#tracker-app">` with Next.js `<Link href="/#tracker-app">`, eliminating query string retention (e.g. `?date=...`) in button target URL.
+- **Season Ended Badge Text (`season.ts`)**:
+  - Normalized badge text for the 4th tier to `"Season Over"`.
+- **Cleaned Up Diagnostic Scripts**:
+  - Removed temporary test scripts from scratch environment.
+
 ## [1.7.7] - 2026-11-24
 
 ### Fixed & Enhanced (America/New_York Single Timezone, 4-Tier Banner, ISR & QA Docs)

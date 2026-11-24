@@ -27,8 +27,8 @@ export function getTreasureBannerState(date: Date = new Date()): TreasureBannerS
     if (isLocalLive || isUtcLive) {
       return {
         status: "live",
-        mainText: `Wave ${w.wave} is live — ${w.multiplierText} (${w.oddsText})`,
-        badgeText: `LIVE • ${w.multiplierText.toUpperCase()}`,
+        mainText: w.wave === 3 ? SEASON_CONFIG.wave3ActiveBannerText : `Wave ${w.wave} is live — ${w.multiplierText} (${w.oddsText})`,
+        badgeText: w.wave === 3 ? "Wave 3 Active" : `LIVE • ${w.multiplierText.toUpperCase()}`,
       };
     }
   }

@@ -90,7 +90,7 @@ export default function PirateTokenOddsPage() {
         name: `Does buying the ${SEASON_CONFIG.chapter} Battle Pass boost your base Pirate Token odds?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. The baseline 1 in 137,500 drop probability is identical for all players regardless of Battle Pass ownership, account level, or cosmetic loadout. The only official boost occurs during designated Treasure Hours events.",
+          text: "No. The baseline 1 in 137,500 drop probability is identical for all players regardless of Battle Pass ownership, account level, or cosmetic loadout. The only boost observed by the community occurs during designated Treasure Hours events.",
         },
       },
       {
@@ -264,7 +264,7 @@ export default function PirateTokenOddsPage() {
           </h2>
         </div>
         <p className="text-xs text-[#9a9a9a] leading-relaxed">
-          During official weekend Treasure Hours, container drop odds are boosted significantly. Taking advantage of these limited-time windows drastically compresses the cumulative grinding hours required:
+          During weekend Treasure Hours, container drop odds are boosted significantly. Taking advantage of these limited-time windows drastically compresses the cumulative grinding hours required:
         </p>
 
         <div className="space-y-3.5 text-xs">
@@ -353,7 +353,7 @@ export default function PirateTokenOddsPage() {
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1">
             <h3 className="font-bold text-white">Does purchasing the {SEASON_CONFIG.chapter} Battle Pass boost your drop probability?</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
-              No. The baseline 1 in 137,500 drop rate is identical across all accounts. The only official way to increase your drop odds is logging in during the scheduled weekend Treasure Hours events.
+              No. The baseline 1 in 137,500 drop rate is identical across all accounts. The only way the community has observed to increase your drop odds is logging in during the scheduled weekend Treasure Hours events.
             </p>
           </div>
 

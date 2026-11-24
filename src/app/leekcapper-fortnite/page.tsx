@@ -195,7 +195,7 @@ export default function LeekCaperFortnitePage() {
         </p>
 
         <div className="p-3 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] text-xs text-[#9a9a9a] leading-relaxed">
-          <strong className="text-white">Note on Container Rates vs. Weapon Odds:</strong> The percentages below reflect container spawn frequencies across the island, not the Leekcapper&apos;s specific drop rate. As an Epic-rarity weapon, exact Leekcapper drop odds have no reliable public data; this table serves strictly to evaluate which spawn source offers the highest relative search efficiency.
+          <strong className="text-white">Note on Container Rates vs. Weapon Odds:</strong> The percentages below reflect container spawn frequencies across the island, not the Leekcapper&apos;s specific drop rate. As an Epic-rarity weapon, exact Leekcapper drop odds have no reliable public data; this table serves strictly to evaluate which spawn source offers the highest relative search efficiency. Excluded sources (Commercial Safes and Buried Pirate Crates) still spawn normally across matches, but do not contain the Leekcapper in their loot tables.
         </div>
 
         {/* 原生 React HTML <table> 对比组件 */}
@@ -215,7 +215,7 @@ export default function LeekCaperFortnitePage() {
                   <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                   <span>Floor Loot (Ground Spawns)</span>
                 </td>
-                <td className="p-3 text-[#22c55e] font-semibold">Active Node Spawn</td>
+                <td className="p-3 text-[#22c55e] font-semibold">Common</td>
                 <td className="p-3">Immediate (on drop)</td>
                 <td className="p-3">Inspect floor spawns inside residential attics, roofs, and pirate docks.</td>
               </tr>
@@ -242,7 +242,7 @@ export default function LeekCaperFortnitePage() {
                   <span className="w-2 h-2 rounded-full bg-[#ffc93c]"></span>
                   <span>Sprite Shrines</span>
                 </td>
-                <td className="p-3 text-[#aaa]">Biome Exclusive</td>
+                <td className="p-3 text-[#aaa]">Biome exclusive</td>
                 <td className="p-3">3–5 minutes</td>
                 <td className="p-3">Interact with floating sprites around jungle glades for quick auxiliary loot bursts.</td>
               </tr>
@@ -251,19 +251,19 @@ export default function LeekCaperFortnitePage() {
                   <span className="w-2 h-2 rounded-full bg-purple-500"></span>
                   <span>Island Vault Bunkers</span>
                 </td>
-                <td className="p-3 text-[#aaa]">Vault Exclusive</td>
+                <td className="p-3 text-[#aaa]">Vault only</td>
                 <td className="p-3">5–8 minutes</td>
                 <td className="p-3">Requires a Vault Key found in chests; grants access to multiple Rare Chests and a guaranteed Sprite Chest at the lock-marked vault.</td>
               </tr>
               <tr className="bg-[#141414] text-[#777]">
                 <td className="p-3 font-medium line-through">Commercial Safes</td>
-                <td className="p-3 text-red-400 font-semibold">0% (Excluded)</td>
+                <td className="p-3 text-red-400 font-semibold">Not eligible for Leekcapper</td>
                 <td className="p-3">—</td>
                 <td className="p-3">Safes only spawn gold bars and chug splashes; skip when searching.</td>
               </tr>
               <tr className="bg-[#141414] text-[#777]">
                 <td className="p-3 font-medium line-through">Buried Pirate Crates</td>
-                <td className="p-3 text-red-400 font-semibold">0% (Excluded)</td>
+                <td className="p-3 text-red-400 font-semibold">Not eligible for Leekcapper</td>
                 <td className="p-3">—</td>
                 <td className="p-3">Only dispenses Flint-Knocks and Cannons; does not roll melee weapons.</td>
               </tr>

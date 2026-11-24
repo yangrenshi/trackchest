@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.5] - 2026-11-24
+
+### Fixed & Enhanced (Leekcapper Spawn Alignments, Odds Phrasing & Future Banners)
+- **Leekcapper Table Alignment (`/leekcapper-fortnite`)**:
+  - Replaced ambiguous spawn rates with qualitative entries: `Common` (Floor Loot), `Biome exclusive` (Sprite Shrines), `Vault only` (Island Vault Bunkers).
+  - Explicitly marked Commercial Safes and Buried Pirate Crates as `Not eligible for Leekcapper`.
+  - Expanded the table's note box clarifying that excluded containers still spawn normally in matches, but simply do not include the Leekcapper in their loot pools.
+- **Odds Page Terminology Standardization (`/pirate-token-odds`)**:
+  - Normalized date range to `November 1 to December 4, 2026` (scrubbing `-5` anomaly).
+  - Cleaned up `official` occurrences: `During weekend Treasure Hours` and `The only way the community has observed to increase your drop odds...`.
+- **Pre-set Nov 28 & Post-Event Banners across All 5 Routes**:
+  - Configured `Wave 3 active — 2x Treasure Hours` for Nov 28 live state.
+  - Configured `Wave 3 ended — Treasure Hours complete` for Nov 29+ conclusion state.
+  - Retained current state `Wave 2 ended — next: Nov 28 (2x)` until Nov 28.
+
 ## [1.7.4] - 2026-11-24
 
 ### Fixed & Verified (Leekcapper Container Spawn Rate Clarification & Dec 05/08 SSOT Proof)

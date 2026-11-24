@@ -26,6 +26,7 @@ export interface SeasonConfig {
   endMaintenanceDate: string; // e.g., "December 4–5, 2026"
   nextChapter: string; // e.g., "Chapter 8"
   lastUpdated: string; // e.g., "Nov 17, 2026"
+  wave3ActiveBannerText: string; // e.g., "Wave 3 active — 2x Treasure Hours"
   postWave3BannerText: string; // e.g., "Wave 3 ended — Treasure Hours complete"
   postWave3BadgeText: string; // e.g., "Concluded"
   wave1ButtonLabel: string; // e.g., "Sat, Nov 14 Boost (1.5x)"
@@ -39,12 +40,13 @@ export const SEASON_CONFIG: SeasonConfig = {
   name: "Chapter 7 Treasure Hunters",
   seasonLiveText: "Season live Nov 1 – Dec 4, 2026",
   shortDateRange: "Nov 1 – Dec 4, 2026",
-  fullDateRange: "November 1 to December 4–5, 2026",
+  fullDateRange: "November 1 to December 4, 2026",
   endDateShort: "December 4",
   endDate: "December 4, 2026",
-  endMaintenanceDate: "December 4–5, 2026",
+  endMaintenanceDate: "December 4, 2026",
   nextChapter: "Chapter 8",
   lastUpdated: "Nov 24, 2026",
+  wave3ActiveBannerText: "Wave 3 active — 2x Treasure Hours",
   postWave3BannerText: "Wave 3 ended — Treasure Hours complete",
   postWave3BadgeText: "Concluded",
   wave1ButtonLabel: "Sat, Nov 14 Boost (1.5x)",

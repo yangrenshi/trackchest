@@ -10,7 +10,7 @@ import { PricingSection } from "@/components/PricingSection";
 import { FaqSection } from "@/components/FaqSection";
 import { SeoContentSection } from "@/components/SeoContentSection";
 
-// ISR: 每小时后台自动重新验证与静态再生成，确保服务器直出 HTML 保持最新
+// ISR: 每小时后台自动重新验证与静态再生成 (Revalidate: 3600s)，确保服务器直出 HTML 保持最新
 export const revalidate = 3600;
 
 export default function HomePage() {

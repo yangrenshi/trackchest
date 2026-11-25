@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.9] - 2026-11-25
+
+### Verified & Deployed (ISR Verification & Absolute Start Tracking Anchor)
+- **Verified ISR across 5 Core Routes**:
+  - Re-verified `export const revalidate = 3600;` on all 5 routes (`/`, `/chest-types`, `/fortnite-chest-counter`, `/pirate-token-odds`, `/leekcapper-fortnite`).
+  - Confirmed Next.js SSG build tables show `Revalidate: 1h` with zero `output: export` static export locks.
+- **Start Tracking Absolute Anchor**:
+  - Confirmed `src/components/PricingSection.tsx` uses `<Link href="/#tracker-app">` with zero relative `#tracker-app` anchors.
+  - Verified local and production build chunks show updated hash `page-bf1112654b7f6853.js`.
+
 ## [1.7.8] - 2026-11-24
 
 ### Fixed (Start Tracking Absolute Href & Season Over Badge)

@@ -47,7 +47,7 @@ export const SEASON_CONFIG: SeasonConfig = {
   endDate: "December 4, 2026",
   endMaintenanceDate: "December 4, 2026",
   nextChapter: "Chapter 8",
-  lastUpdated: "Nov 24, 2026",
+  lastUpdated: "Nov 25, 2026",
   wave3ActiveBannerText: "Wave 3 active — 2x Treasure Hours",
   postWave3BannerText: "Wave 3 ended — Treasure Hours complete",
   postWave3BadgeText: "Concluded",

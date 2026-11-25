@@ -276,7 +276,7 @@ export default function ChestCounterPage() {
           </div>
 
           <div className="p-4 rounded-xl bg-[#1d1d1d] border border-[#2e2e2e] space-y-1.5">
-            <h3 className="font-bold text-white">Sprite Shrines and Elemental Containers (Biome Exclusive)</h3>
+            <h3 className="font-bold text-white">Sprite Shrines (Biome Exclusive)</h3>
             <p className="text-[#9a9a9a] leading-relaxed text-[11px]">
               Located primarily within the enchanted grottos and mystical groves of Chapter 7, Sprite Shrines provide kinetic movement powerups, elemental charms, and utility shards that allow players to cross rivers, scale vertical bluffs, and escape third-party pinch points without expending launch pads.
             </p>

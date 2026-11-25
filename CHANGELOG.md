@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.10] - 2026-11-25
+
+### Fixed & Enhanced (Timestamp Update & Sprite Shrines Header Normalization)
+- **Updated Timestamp to Nov 25, 2026 (`season.ts`)**:
+  - Advanced centralized `lastUpdated` timestamp from `Nov 24, 2026` to `Nov 25, 2026`, automatically propagating across all 5 core routes.
+- **Normalized Subheading (`/fortnite-chest-counter`)**:
+  - Cleaned up unverified container naming: trimmed `Sprite Shrines and Elemental Containers (Biome Exclusive)` to `Sprite Shrines (Biome Exclusive)`.
+- **Zero-Residual Verification Confirmation**:
+  - Re-confirmed that scratch test files (`test_ts.js`, `verify_1204_1205.ts`) are 100% removed and untracked.
+  - Re-confirmed that all 5 route files export `export const revalidate = 3600;` and Next.js builds with standard ISR without any `output: export` errors.
+
 ## [1.7.9] - 2026-11-25
 
 ### Verified & Deployed (ISR Verification & Absolute Start Tracking Anchor)
